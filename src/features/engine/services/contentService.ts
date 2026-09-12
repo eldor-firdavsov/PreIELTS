@@ -156,22 +156,24 @@ export async function listTests(): Promise<TestSummary[]> {
     .order('created_at', { ascending: false });
   if (error) throw new Error(error.message);
 
-  return (data ?? []).map((row) => {
-    const sections = row.sections ?? [];
-    const present = new Set(sections.map((section) => section.kind as SectionKind));
-    return {
-      id: row.id,
-      external_id: row.external_id,
-      title: formatTestTitle(row.title, row.external_id, KIND_ORDER.find((kind) => present.has(kind))),
-      is_full_mock: row.is_full_mock,
-      created_at: row.created_at,
-      kinds: KIND_ORDER.filter((kind) => present.has(kind)),
-      sectionCount: sections.length,
-      // "Do I have an hour right now?" is the question a student is actually
-      // asking when they look at this list, and it was not answered anywhere.
-      durationSeconds: sections.reduce((total, section) => total + (section.duration_seconds ?? 0), 0),
-    };
-  });
+  return (data ?? [])
+    .map((row) => {
+      const sections = row.sections ?? [];
+      const present = new Set(sections.map((section) => section.kind as SectionKind));
+      return {
+        id: row.id,
+        external_id: row.external_id,
+        title: formatTestTitle(row.title, row.external_id, KIND_ORDER.find((kind) => present.has(kind))),
+        is_full_mock: row.is_full_mock,
+        created_at: row.created_at,
+        kinds: KIND_ORDER.filter((kind) => present.has(kind)),
+        sectionCount: sections.length,
+        // "Do I have an hour right now?" is the question a student is actually
+        // asking when they look at this list, and it was not answered anywhere.
+        durationSeconds: sections.reduce((total, section) => total + (section.duration_seconds ?? 0), 0),
+      };
+    })
+    .filter((test) => test.kinds.length > 0);
 }
 
 /** Where a test opens. A full mock starts on its first section's skill. */
