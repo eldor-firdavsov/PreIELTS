@@ -6,12 +6,12 @@ describe('formatTestTitle', () => {
   it('maps known external_ids to numbered IELTS test names', () => {
     assert.equal(formatTestTitle('legacy title', 'original-listening-1'), 'IELTS Listening Test 1');
     assert.equal(formatTestTitle('legacy title', 'listening'), 'IELTS Listening Test 2');
-    assert.equal(formatTestTitle('legacy title', 'listening-1'), 'IELTS Listening Test 3');
-    assert.equal(formatTestTitle('legacy title', 'listening-2'), 'IELTS Listening Test 4');
+    assert.equal(formatTestTitle('legacy title', 'listening-2'), 'IELTS Listening Test 3');
+    assert.equal(formatTestTitle('legacy title', 'listening-4'), 'IELTS Listening Test 4');
 
     assert.equal(formatTestTitle('legacy title', 'original-reading-1'), 'IELTS Reading Test 1');
-    assert.equal(formatTestTitle('legacy title', 'reading'), 'IELTS Reading Test 2');
-    assert.equal(formatTestTitle('legacy title', 'reading-2'), 'IELTS Reading Test 3');
+    assert.equal(formatTestTitle('legacy title', 'reading-2'), 'IELTS Reading Test 2');
+    assert.equal(formatTestTitle('legacy title', 'reading-4'), 'IELTS Reading Test 3');
   });
 
   it('normalises lowercase or irregular test titles to Title Case', () => {

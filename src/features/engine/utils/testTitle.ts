@@ -2,10 +2,10 @@ export const CANONICAL_TEST_TITLES: Record<string, string> = {
   // Listening
   'original-listening-1': 'IELTS Listening Test 1',
   'listening': 'IELTS Listening Test 2',
-  'listening-1': 'IELTS Listening Test 3',
-  'listening-2': 'IELTS Listening Test 4',
-  'listening-3': 'IELTS Listening Test 5',
-  'listening-4': 'IELTS Listening Test 6',
+  'listening-2': 'IELTS Listening Test 3',
+  'listening-4': 'IELTS Listening Test 4',
+  'listening-1': 'IELTS Listening Test 5',
+  'listening-3': 'IELTS Listening Test 6',
   'listening-5': 'IELTS Listening Test 7',
   'cdi-listening-test-master-listening-1': 'IELTS Listening Test 8',
   'full-cd-ielts-listening-practice-master-2': 'IELTS Listening Test 9',
@@ -13,13 +13,13 @@ export const CANONICAL_TEST_TITLES: Record<string, string> = {
 
   // Reading
   'original-reading-1': 'IELTS Reading Test 1',
-  'reading': 'IELTS Reading Test 2',
-  'reading-2': 'IELTS Reading Test 3',
-  'reading-3': 'IELTS Reading Test 4',
-  'reading-4': 'IELTS Reading Test 5',
-  'full-cd-reading-m1': 'IELTS Reading Test 6',
-  'full-cdi-reading-test-practice-3-2': 'IELTS Reading Test 7',
-  'full-cd-ielts-reading-practice-test-3-3': 'IELTS Reading Test 8',
+  'reading-2': 'IELTS Reading Test 2',
+  'reading-4': 'IELTS Reading Test 3',
+  'full-cd-reading-m1': 'IELTS Reading Test 4',
+  'full-cd-ielts-reading-practice-test-3-3': 'IELTS Reading Test 5',
+  'reading': 'IELTS Reading Test 6',
+  'reading-3': 'IELTS Reading Test 7',
+  'full-cdi-reading-test-practice-3-2': 'IELTS Reading Test 8',
 };
 
 /**
