@@ -101,6 +101,15 @@
     color: var(--fg);
   }
 
+  /* Interactive accent links */
+  a {
+    color: var(--primary);
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    color: var(--primary-hover);
+  }
+
   /* Scrollbars inside the exam panes, which scroll independently. */
   * {
     scrollbar-color: var(--border-strong) transparent;
@@ -109,6 +118,21 @@
 }
 
 @layer utilities {
+  /* Modernist accent rule & tags */
+  .accent-rule {
+    border-left: 3px solid var(--primary);
+  }
+
+  .tag-accent {
+    background: var(--primary-subtle);
+    color: var(--primary);
+    border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+  }
+
+  .tag-accent-solid {
+    background: var(--primary);
+    color: var(--primary-on);
+  }
   /*
    * Exam material, set to be read rather than scanned.
    *

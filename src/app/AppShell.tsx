@@ -69,7 +69,7 @@ export function AppShell() {
                   cn(
                     'rounded-pill px-3.5 py-1.5 text-sm font-heading font-semibold transition-all duration-200 active:scale-[0.97]',
                     isActive
-                      ? 'bg-primary-subtle text-primary shadow-xs font-bold'
+                      ? 'bg-primary text-white shadow-sm font-bold'
                       : 'text-ink-muted hover:bg-surface/60 hover:text-ink',
                   )
                 }
@@ -126,7 +126,7 @@ export function AppShell() {
                   cn(
                     'flex min-h-12 flex-col items-center justify-center gap-0.5 px-1 py-1.5',
                     'text-2xs font-semibold transition-colors',
-                    isActive ? 'text-primary' : 'text-ink-muted',
+                    isActive ? 'text-primary font-bold' : 'text-ink-muted',
                   )
                 }
               >
@@ -136,12 +136,12 @@ export function AppShell() {
                       aria-hidden="true"
                       className={cn(
                         'flex h-6 w-10 items-center justify-center rounded-pill text-sm transition-colors',
-                        isActive ? 'bg-primary-subtle text-primary' : 'bg-transparent text-ink-muted',
+                        isActive ? 'bg-primary text-white shadow-xs font-bold' : 'bg-transparent text-ink-muted',
                       )}
                     >
                       {item.icon}
                     </span>
-                    {item.label}
+                    <span>{item.label}</span>
                   </>
                 )}
               </NavLink>

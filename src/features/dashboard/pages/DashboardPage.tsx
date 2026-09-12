@@ -52,7 +52,7 @@ export default function DashboardPage() {
         <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
           <h2 className="font-heading text-lg font-bold text-ink sm:text-[20px]">Estimated band by skill</h2>
           {!loading && data?.targetBand !== null && data?.targetBand !== undefined && (
-            <span className="text-xs text-ink-muted sm:text-[13px]">
+            <span className="rounded-pill border border-primary/30 bg-primary-subtle px-2.5 py-0.5 text-xs font-heading font-extrabold text-primary">
               {`Target ${formatBand(data.targetBand)}`}
             </span>
           )}
@@ -83,9 +83,12 @@ export default function DashboardPage() {
               return (
                 <div
                   key={kind}
-                  className="rounded-xl border border-glass-bd/80 bg-surface/55 backdrop-blur-md p-4 sm:p-5 transition-all duration-200 hover:bg-surface/75 hover:shadow-xs"
+                  className={cn(
+                    'rounded-xl border border-glass-bd/80 bg-surface/55 backdrop-blur-md p-4 sm:p-5 transition-all duration-200 hover:bg-surface/75 hover:shadow-xs',
+                    hasBand && 'border-l-4 border-l-primary',
+                  )}
                 >
-                  <div className="h6l">{SKILL_LABEL[kind] ?? kind}</div>
+                  <div className={cn('h6l', hasBand && 'text-primary')}>{SKILL_LABEL[kind] ?? kind}</div>
                   <div
                     className={cn(
                       'mono font-mono text-2xl font-extrabold leading-[1] sm:text-[31px] mt-1.5',
@@ -224,7 +227,7 @@ function NextAction({
       <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/20 blur-[70px]" aria-hidden="true" />
       <div className="relative flex items-center justify-between gap-3 border-b border-[#f7f5f1]/15 px-4 py-3.5 sm:px-5">
         <h2 className="font-heading text-lg font-bold text-[#fdf6f4] sm:text-[20px]">Recommended next action</h2>
-        <span className="rounded-pill border border-white/20 bg-white/10 px-3 py-0.5 text-[11px] font-heading font-extrabold uppercase tracking-wider text-[#fdf6f4] backdrop-blur-md">
+        <span className="rounded-pill border border-primary/40 bg-primary/25 px-3 py-0.5 text-[11px] font-heading font-extrabold uppercase tracking-wider text-white backdrop-blur-md shadow-xs">
           {SKILL[action.skill] ?? action.skill}
         </span>
       </div>
@@ -238,9 +241,9 @@ function NextAction({
         <Link
           to={`/tests?skill=${action.skill}`}
           className={cn(
-            'mt-2 inline-flex min-h-[48px] items-center justify-center rounded-base px-5 py-3',
-            'bg-[#fdf6f4] text-sm font-heading font-extrabold text-[#2a0c09] shadow-sm transition-all sm:text-base',
-            'hover:bg-white hover:scale-[1.01] active:scale-[0.98]',
+            'mt-2 inline-flex min-h-[48px] items-center justify-center rounded-base px-6 py-3',
+            'bg-primary text-sm font-heading font-extrabold text-white shadow-md shadow-primary/30 transition-all sm:text-base',
+            'hover:bg-primary-hover hover:scale-[1.01] active:scale-[0.98]',
           )}
         >
           {`Start a ${SKILL[action.skill]?.toLowerCase() ?? action.skill} test →`}

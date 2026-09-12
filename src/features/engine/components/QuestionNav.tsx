@@ -63,7 +63,8 @@ export function QuestionNav({
             if (isActive) {
               return (
                 <div key={sec.id} className="flex items-center gap-3 shrink-0">
-                  <span className="font-heading font-bold text-ink text-sm sm:text-[15px] select-none shrink-0 tracking-tight">
+                  <span className="font-heading font-bold text-primary text-sm sm:text-[15px] select-none shrink-0 tracking-tight flex items-center gap-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary inline-block" />
                     {label}
                   </span>
                   <div className="flex items-center gap-1.5 shrink-0">
@@ -84,8 +85,8 @@ export function QuestionNav({
                           className={cn(
                             'relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] text-xs sm:text-[13px] font-mono font-bold transition-all select-none',
                             isCurrent
-                              ? 'bg-[#2563eb] text-white font-bold border border-[#2563eb] shadow-xs'
-                              : 'border border-[#d1d5db] bg-white text-ink hover:border-ink hover:text-ink dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200',
+                              ? 'bg-primary text-white font-bold border border-primary shadow-xs shadow-primary/25'
+                              : 'border border-[#d1d5db] bg-white text-ink hover:border-primary/60 hover:text-primary dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200',
                           )}
                         >
                           <span
@@ -173,8 +174,8 @@ export function QuestionNav({
               className={cn(
                 'relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] text-xs sm:text-[13px] font-mono font-bold transition-all select-none',
                 current
-                  ? 'bg-[#2563eb] text-white font-bold border border-[#2563eb] shadow-xs'
-                  : 'border border-[#d1d5db] bg-white text-ink hover:border-ink hover:text-ink dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200',
+                  ? 'bg-primary text-white font-bold border border-primary shadow-xs shadow-primary/25'
+                  : 'border border-[#d1d5db] bg-white text-ink hover:border-primary/60 hover:text-primary dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200',
               )}
             >
               <span className={cn(answered && !current && 'underline decoration-2 underline-offset-2 font-semibold')}>

@@ -12,11 +12,11 @@ import { cn } from '../lib/utils/cn.ts';
 type Tone = 'neutral' | 'primary' | 'success' | 'warn' | 'danger';
 
 const TONES: Record<Tone, string> = {
-  neutral: 'bg-sunken text-ink-muted',
-  primary: 'bg-primary-subtle text-primary',
-  success: 'bg-success-subtle text-success',
-  warn:    'bg-warn-subtle text-warn',
-  danger:  'bg-danger-subtle text-danger',
+  neutral: 'bg-sunken text-ink-muted border border-border-subtle/50',
+  primary: 'bg-primary-subtle text-primary border border-primary/30 font-bold',
+  success: 'bg-success-subtle text-success border border-success/25 font-semibold',
+  warn:    'bg-warn-subtle text-warn border border-warn/25 font-semibold',
+  danger:  'bg-danger-subtle text-danger border border-danger/25 font-semibold',
 };
 
 export function Badge({

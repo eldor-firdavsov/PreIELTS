@@ -77,12 +77,24 @@
   --fg-muted: #5c574d;
   --fg-faint: #6e6959;
 
-  /* ── primary: interactive, and only interactive ───────────────────── */
+  /* ── primary / accent: interactive, and only interactive ──────────── */
   --primary:        #ec3013;
   --primary-hover:  #dd2b0f;
   --primary-solid:  #ec3013;
   --primary-on:     #ffffff;
   --primary-subtle: #fff2ef;
+
+  --accent:         var(--primary);
+  --accent-hover:   var(--primary-hover);
+  --accent-subtle:  var(--primary-subtle);
+  --accent-on:      var(--primary-on);
+  --color-accent:   #ec3013;
+  --color-accent-100: #fff2ef;
+  --color-accent-200: #ffe0d9;
+  --color-accent-500: #ec3013;
+  --color-accent-600: #dd2b0f;
+  --color-accent-700: #ae1800;
+  --color-accent-800: #7c1405;
 
   /* ── status ───────────────────────────────────────────────────────── */
   /* Danger is darker than primary so an error is never a call to action. */
@@ -234,6 +246,18 @@
   --primary-on:     #17130f;
   --primary-subtle: #3d1a16;
 
+  --accent:         var(--primary);
+  --accent-hover:   var(--primary-hover);
+  --accent-subtle:  var(--primary-subtle);
+  --accent-on:      var(--primary-on);
+  --color-accent:   #ff6f60;
+  --color-accent-100: #3d1a16;
+  --color-accent-200: #54221d;
+  --color-accent-500: #ff6f60;
+  --color-accent-600: #ff8a7e;
+  --color-accent-700: #ffa59c;
+  --color-accent-800: #ffd3cf;
+
   --danger:         #ff9284;
   --danger-subtle:  #3d1a16;
   --success:        #6fc396;
@@ -274,6 +298,12 @@
   --color-primary-solid:  var(--primary-solid);
   --color-primary-on:     var(--primary-on);
   --color-primary-subtle: var(--primary-subtle);
+
+  --color-accent:         var(--primary);
+  --color-accent-hover:   var(--primary-hover);
+  --color-accent-solid:   var(--primary-solid);
+  --color-accent-on:      var(--primary-on);
+  --color-accent-subtle:  var(--primary-subtle);
 
   --color-danger:         var(--danger);
   --color-danger-subtle:  var(--danger-subtle);

@@ -135,8 +135,8 @@ export function ExamChrome({
               className={cn(
                 'shrink-0 rounded-pill px-3.5 py-1.5 min-h-[34px] text-xs sm:text-[13px] font-semibold transition-all duration-200 active:scale-[0.97]',
                 index === activeIndex
-                  ? 'border border-primary/40 bg-primary-subtle text-primary shadow-xs'
-                  : 'border border-glass-bd bg-surface/50 text-ink-muted hover:border-ink/40 hover:text-ink hover:bg-surface/80',
+                  ? 'bg-primary text-white shadow-xs font-bold'
+                  : 'border border-glass-bd bg-surface/50 text-ink-muted hover:border-primary/40 hover:text-ink hover:bg-surface/80',
               )}
             >
               {tab.label}

@@ -25,12 +25,12 @@ export function ScoreSummary({
     <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 p-3.5 sm:p-4">
         {/* Estimated band */}
-        <div className="col-span-2 sm:col-span-1 rounded-xl border border-primary/30 bg-primary-subtle/30 backdrop-blur-md p-4 sm:p-5 transition-all duration-200 hover:bg-primary-subtle/50">
+        <div className="col-span-2 sm:col-span-1 rounded-xl border border-primary/40 border-l-4 border-l-primary bg-primary-subtle/40 backdrop-blur-md p-4 sm:p-5 transition-all duration-200 hover:bg-primary-subtle/60 shadow-xs">
           <div className="h6l text-primary mb-1">Estimated band</div>
-          <div className="mono font-mono text-3xl sm:text-[40px] font-extrabold leading-[1.05] mt-1 text-ink whitespace-nowrap">
+          <div className="mono font-mono text-3xl sm:text-[40px] font-extrabold leading-[1.05] mt-1 text-primary whitespace-nowrap">
             {band !== null && band !== undefined ? band.toFixed(1) : '—'}
           </div>
-          <div className="text-xs sm:text-[13px] text-ink-muted mt-1">
+          <div className="text-xs sm:text-[13px] text-ink-muted mt-1 font-medium">
             {`${skillName}, whole paper`}
           </div>
         </div>

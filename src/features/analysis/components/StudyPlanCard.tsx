@@ -171,7 +171,7 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
 
         {/* Right Column: Next action highlight & practice plan */}
         <div>
-          <div className="border border-primary/30 bg-primary-subtle/40 backdrop-blur-md rounded-xl p-3.5 sm:p-4 mb-4.5">
+          <div className="border border-primary/30 border-l-4 border-l-primary bg-primary-subtle/50 backdrop-blur-md rounded-xl p-3.5 sm:p-4 mb-4.5 shadow-xs">
             <div className="h6l text-primary mb-1">Next action ({SKILL_LABEL[plan.next_action.skill] ?? plan.next_action.skill})</div>
             <div className="font-heading text-sm sm:text-[15px] font-bold text-ink mt-1">
               {plan.next_action.headline}
