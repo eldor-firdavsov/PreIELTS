@@ -38,7 +38,7 @@ export default function ListeningTestPage() {
     <ExamSurface
       session={session}
       registry={listeningRenderers}
-      partLabel={(order) => `Section ${order}`}
+      partLabel={(order) => `Part ${order}`}
       paneLabels={{ stimulus: 'Recording', main: 'Questions' }}
       stimulus={
         <ListeningPlayer

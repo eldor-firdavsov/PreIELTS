@@ -81,9 +81,9 @@ export function ExamChrome({
   /** Save status, or anything else that belongs beside the clock. */
   headerExtra?: ReactNode;
   secondsRemaining: number | null;
-  tabs: ExamTab[];
-  activeIndex: number;
-  onSelectTab: (index: number) => void;
+  tabs?: ExamTab[];
+  activeIndex?: number;
+  onSelectTab?: (index: number) => void;
   /** A note pinned to the right of the tab row, e.g. the Task 2 weighting. */
   tabsNote?: ReactNode;
   /** Left pane: passage, player, task prompt, cue card. */
@@ -124,30 +124,32 @@ export function ExamChrome({
       </header>
 
       {/* ----------------------------------------------------------- tabs */}
-      <div className="strip flex shrink-0 items-center gap-2 border-b border-glass-bd bg-glass-strong backdrop-blur-xl px-3 py-2 sm:px-4 overflow-x-auto">
-        {tabs.map((tab, index) => (
-          <button
-            key={tab.id}
-            type="button"
-            onClick={() => onSelectTab(index)}
-            aria-current={index === activeIndex ? 'true' : undefined}
-            className={cn(
-              'shrink-0 rounded-pill px-3.5 py-1.5 min-h-[34px] text-xs sm:text-[13px] font-semibold transition-all duration-200 active:scale-[0.97]',
-              index === activeIndex
-                ? 'border border-primary/40 bg-primary-subtle text-primary shadow-xs'
-                : 'border border-glass-bd bg-surface/50 text-ink-muted hover:border-ink/40 hover:text-ink hover:bg-surface/80',
-            )}
-          >
-            {tab.label}
-            {tab.complete && (
-              <span className="ml-1.5 text-success" aria-label="recorded">✓</span>
-            )}
-          </button>
-        ))}
-        {tabsNote && (
-          <span className="hidden shrink-0 text-xs text-ink-faint lg:inline ml-auto">{tabsNote}</span>
-        )}
-      </div>
+      {tabs && tabs.length > 0 && onSelectTab && (
+        <div className="strip flex shrink-0 items-center gap-2 border-b border-glass-bd bg-glass-strong backdrop-blur-xl px-3 py-2 sm:px-4 overflow-x-auto">
+          {tabs.map((tab, index) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => onSelectTab(index)}
+              aria-current={index === activeIndex ? 'true' : undefined}
+              className={cn(
+                'shrink-0 rounded-pill px-3.5 py-1.5 min-h-[34px] text-xs sm:text-[13px] font-semibold transition-all duration-200 active:scale-[0.97]',
+                index === activeIndex
+                  ? 'border border-primary/40 bg-primary-subtle text-primary shadow-xs'
+                  : 'border border-glass-bd bg-surface/50 text-ink-muted hover:border-ink/40 hover:text-ink hover:bg-surface/80',
+              )}
+            >
+              {tab.label}
+              {tab.complete && (
+                <span className="ml-1.5 text-success" aria-label="recorded">✓</span>
+              )}
+            </button>
+          ))}
+          {tabsNote && (
+            <span className="hidden shrink-0 text-xs text-ink-faint lg:inline ml-auto">{tabsNote}</span>
+          )}
+        </div>
+      )}
 
       {/* ------------------------------------------- narrow-screen switcher */}
       {/*

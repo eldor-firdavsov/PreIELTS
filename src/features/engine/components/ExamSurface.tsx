@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { QuestionRenderer, RendererProvider, type RendererRegistry } from '../QuestionRenderer.tsx';
 import { submitSession, UnflushedAnswersError } from '../submit.ts';
 import { isAnswered, useAnswerStore } from '../answerStore.ts';
-import { findGroupOf } from '../types.ts';
+import { findGroupOf, flattenQuestions } from '../types.ts';
 import type { TestSession } from '../useTestSession.ts';
 import { ExamChrome } from './ExamChrome.tsx';
 import { SaveStatus } from './SaveStatus.tsx';
@@ -67,6 +67,20 @@ export function ExamSurface({
       session.goToQuestion(indexOrId);
     },
     [session],
+  );
+
+  const handleSelectSection = useCallback(
+    async (index: number) => {
+      await session.goToSection(index);
+      const targetSec = session.sections[index];
+      if (targetSec) {
+        const secQuestions = flattenQuestions(targetSec);
+        if (secQuestions[0]) {
+          jumpTo(secQuestions[0].id);
+        }
+      }
+    },
+    [session, jumpTo],
   );
 
   const currentQuestionId = session.currentQuestion?.id;
@@ -148,13 +162,7 @@ export function ExamSurface({
           </>
         }
         secondsRemaining={session.secondsRemaining}
-        tabs={session.sections.map((section) => ({
-          id: section.id,
-          label: partLabel(section.order),
-        }))}
         paneLabels={paneLabels}
-        activeIndex={session.sectionIndex}
-        onSelectTab={(index) => void session.goToSection(index)}
         stimulus={stimulus}
         main={
           group ? (
@@ -212,17 +220,21 @@ export function ExamSurface({
           )
         }
         footer={
-          <>
+          <div className="flex w-full min-w-0 items-center justify-between gap-3 sm:gap-4">
             <button
               type="button"
               onClick={session.previous}
               disabled={!session.canPrevious}
-              className="shrink-0 min-h-[40px] px-3.5 py-2 rounded-base border border-line-strong text-sm font-semibold text-ink hover:bg-sunken transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="shrink-0 min-h-[38px] px-3.5 py-1.5 rounded-base border border-line-strong text-sm font-semibold text-ink hover:bg-sunken transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Prev
             </button>
             <div className="min-w-0 flex-1 overflow-x-auto">
               <QuestionNav
+                sections={session.sections}
+                activeSectionIndex={session.sectionIndex}
+                onSelectSection={handleSelectSection}
+                partLabel={partLabel}
                 questions={session.allQuestions.length > 0 ? session.allQuestions : session.questions}
                 currentIndex={session.currentIndex}
                 currentQuestionId={session.currentQuestion?.id}
@@ -233,11 +245,11 @@ export function ExamSurface({
               type="button"
               onClick={session.next}
               disabled={!session.canNext}
-              className="shrink-0 min-h-[40px] px-3.5 py-2 rounded-base border border-line-strong text-sm font-semibold text-ink hover:bg-sunken transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="shrink-0 min-h-[38px] px-3.5 py-1.5 rounded-base border border-line-strong text-sm font-semibold text-ink hover:bg-sunken transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Next
             </button>
-          </>
+          </div>
         }
         submit={{
           busy: submitting,
