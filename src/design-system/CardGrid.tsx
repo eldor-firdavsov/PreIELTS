@@ -36,6 +36,8 @@ interface CardGridProps<Item> {
   emptyAction?: ReactNode;
   /** Placeholder cards to show while loading. */
   skeletonCount?: number;
+  /** Custom skeleton renderer that matches the exact shape of the card. */
+  renderSkeleton?: (index: number) => ReactNode;
   className?: string;
 }
 
@@ -51,6 +53,7 @@ export function CardGrid<Item>({
   emptyDescription,
   emptyAction,
   skeletonCount = 6,
+  renderSkeleton,
   className,
 }: CardGridProps<Item>) {
   if (error) {
@@ -76,19 +79,35 @@ export function CardGrid<Item>({
   if (loading) {
     return (
       <div role="status" aria-busy="true" aria-label={loadingLabel} className={grid}>
-        {Array.from({ length: skeletonCount }, (_, i) => (
-          <div
-            key={i}
-            className="glass flex flex-col gap-3 rounded-lg p-4"
-          >
-            <Skeleton className="h-4 w-3/4" />
-            <Skeleton className="h-3 w-1/2" />
-            <div className="mt-1 flex gap-2">
-              <Skeleton className="h-5 w-16 rounded-pill" />
-              <Skeleton className="h-5 w-20 rounded-pill" />
+        {Array.from({ length: skeletonCount }, (_, i) =>
+          renderSkeleton ? (
+            <div key={i} className="flex">{renderSkeleton(i)}</div>
+          ) : (
+            <div
+              key={i}
+              className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest"
+            >
+              <div className="flex items-center gap-1.5">
+                <Skeleton className="h-5 w-16 rounded-pill" />
+              </div>
+              <Skeleton className="mt-2.5 h-5 w-3/4" />
+              <Skeleton className="mt-1.5 h-3.5 w-1/2" />
+              <div className="mt-auto flex items-baseline gap-6 pt-3">
+                <div className="flex flex-col gap-1">
+                  <Skeleton className="h-2.5 w-10" />
+                  <Skeleton className="h-4 w-12" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <Skeleton className="h-2.5 w-10" />
+                  <Skeleton className="h-4 w-8" />
+                </div>
+              </div>
+              <div className="mt-3 border-t border-line pt-3">
+                <Skeleton className="h-4 w-28" />
+              </div>
             </div>
-          </div>
-        ))}
+          ),
+        )}
       </div>
     );
   }

@@ -9,7 +9,7 @@ import { ExamChrome } from './ExamChrome.tsx';
 import { SaveStatus } from './SaveStatus.tsx';
 import { QuestionNav } from './QuestionNav.tsx';
 import { FlagToggle } from './FlagToggle.tsx';
-import { ErrorState, SkeletonLines, errorMessage } from '../../../design-system/index.ts';
+import { ErrorState, Skeleton, SkeletonLines, errorMessage } from '../../../design-system/index.ts';
 import { cn } from '../../../lib/utils/cn.ts';
 
 /**
@@ -271,8 +271,69 @@ export function ExamGate({ session }: { session: { error: unknown; refetch: () =
     );
   }
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 py-16">
-      <SkeletonLines lines={6} />
+    <div className="flex h-screen flex-col overflow-hidden bg-bg-canvas animate-pulse" role="status" aria-label="Loading test">
+      {/* Top chrome bar */}
+      <header className="flex h-14 shrink-0 items-center justify-between border-b border-line px-4 sm:px-6">
+        <div className="flex items-center gap-3">
+          <Skeleton className="h-5 w-40 sm:w-56" />
+          <Skeleton className="h-5 w-16 rounded-pill" />
+        </div>
+        <div className="flex items-center gap-4">
+          <Skeleton className="h-6 w-20 rounded-base" />
+          <Skeleton className="h-8 w-24 rounded-base" />
+        </div>
+      </header>
+
+      {/* Main split work surface */}
+      <div className="flex flex-1 overflow-hidden p-4 sm:p-6 gap-6">
+        {/* Left pane: Stimulus / passage */}
+        <div className="flex-1 glass rounded-lg p-6 flex flex-col gap-4 overflow-hidden">
+          <div className="flex justify-between items-center border-b border-line pb-4">
+            <Skeleton className="h-6 w-48" />
+            <Skeleton className="h-5 w-20 rounded-pill" />
+          </div>
+          <div className="space-y-2.5 pt-2">
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-11/12" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-4/5" />
+          </div>
+          <div className="space-y-2.5 pt-4">
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-3/4" />
+          </div>
+        </div>
+
+        {/* Right pane: Questions */}
+        <div className="flex-1 glass rounded-lg p-6 flex flex-col gap-5 overflow-hidden">
+          <div className="border-b border-line pb-4">
+            <Skeleton className="h-5 w-36" />
+            <Skeleton className="mt-2 h-3.5 w-64" />
+          </div>
+          <div className="space-y-4 pt-1">
+            {Array.from({ length: 3 }, (_, i) => (
+              <div key={i} className="p-4 rounded-base border border-line bg-surface/50 flex flex-col gap-3">
+                <div className="flex items-center gap-2">
+                  <Skeleton className="h-5 w-8 rounded-base" />
+                  <Skeleton className="h-4 w-48" />
+                </div>
+                <Skeleton className="h-9 w-full rounded-base" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer navigator */}
+      <footer className="h-14 shrink-0 border-t border-line px-4 sm:px-6 flex items-center justify-between">
+        <div className="flex gap-1.5 overflow-x-auto">
+          {Array.from({ length: 8 }, (_, i) => (
+            <Skeleton key={i} className="h-8 w-8 rounded-base" />
+          ))}
+        </div>
+        <Skeleton className="h-8 w-20 rounded-base" />
+      </footer>
     </div>
   );
 }

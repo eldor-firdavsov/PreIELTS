@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Badge, CardGrid } from '../../../design-system/index.ts';
+import { Badge, CardGrid, Skeleton } from '../../../design-system/index.ts';
 import { formatBand, formatDate, formatDuration } from '../../../lib/utils/format.ts';
 import { cn } from '../../../lib/utils/cn.ts';
 import { useHistory } from '../hooks/useHistory.ts';
@@ -41,6 +41,7 @@ export default function HistoryPage() {
         itemKey={(row) => row.result_id ?? String(row.session_id)}
         renderItem={(row) => <ResultCard row={row} />}
         loading={history.isLoading}
+        renderSkeleton={() => <ResultCardSkeleton />}
         error={history.error}
         onRetry={() => void history.refetch()}
         loadingLabel="Loading your past results"
@@ -52,6 +53,42 @@ export default function HistoryPage() {
           </Link>
         }
       />
+    </div>
+  );
+}
+
+function ResultCardSkeleton() {
+  return (
+    <div className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest">
+      <div className="flex items-start justify-between gap-3.5">
+        <div className="min-w-0 flex-1">
+          <Skeleton className="h-5 w-3/4" />
+          <Skeleton className="mt-2 h-3.5 w-1/3" />
+        </div>
+        <div className="flex flex-col items-end gap-1 shrink-0">
+          <Skeleton className="h-9 w-12 rounded-base" />
+          <Skeleton className="h-2.5 w-8" />
+        </div>
+      </div>
+
+      <div className="mt-3.5 flex items-center gap-1.5">
+        <Skeleton className="h-5 w-16 rounded-pill" />
+      </div>
+
+      <div className="mt-auto flex items-baseline gap-6 pt-3">
+        <div className="flex flex-col gap-1">
+          <Skeleton className="h-2.5 w-10" />
+          <Skeleton className="h-4 w-12" />
+        </div>
+        <div className="flex flex-col gap-1">
+          <Skeleton className="h-2.5 w-10" />
+          <Skeleton className="h-4 w-14" />
+        </div>
+      </div>
+
+      <div className="mt-3 border-t border-line pt-3">
+        <Skeleton className="h-4 w-32" />
+      </div>
     </div>
   );
 }

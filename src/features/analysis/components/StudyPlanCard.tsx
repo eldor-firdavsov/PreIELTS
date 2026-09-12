@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import {
-  Button, EmptyState, ErrorState, SkeletonLines, errorMessage,
+  Button, EmptyState, ErrorState, Skeleton, errorMessage,
 } from '../../../design-system/index.ts';
 import type { StudyPlan, StudySkill } from '../../../lib/ai/study-plan.ts';
 import { useStudyPlan } from '../hooks/useAnalysis.ts';
@@ -40,8 +40,27 @@ export function StudyPlanCard() {
       </div>
 
       {stored.isLoading && (
-        <div className="p-4 sm:p-[18px]">
-          <SkeletonLines lines={4} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-[18px] animate-pulse">
+          <div>
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="mt-1.5 h-4 w-4/5" />
+            <Skeleton className="mt-5 h-3 w-20" />
+            <Skeleton className="mt-2 h-3.5 w-full" />
+            <Skeleton className="mt-1.5 h-3.5 w-3/4" />
+            <Skeleton className="mt-5 h-3 w-24" />
+            <Skeleton className="mt-2 h-3.5 w-5/6" />
+            <Skeleton className="mt-1.5 h-3.5 w-2/3" />
+          </div>
+          <div>
+            <div className="rounded-r-base border-l-2 border-primary/40 bg-surface p-3 sm:p-3.5 mb-4">
+              <Skeleton className="h-3 w-24" />
+              <Skeleton className="mt-2 h-4 w-48" />
+              <Skeleton className="mt-1.5 h-3 w-full" />
+            </div>
+            <Skeleton className="h-3 w-24" />
+            <Skeleton className="mt-2 h-3.5 w-full" />
+            <Skeleton className="mt-1.5 h-3.5 w-4/5" />
+          </div>
         </div>
       )}
 

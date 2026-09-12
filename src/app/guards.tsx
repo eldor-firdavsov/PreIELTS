@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../features/auth/hooks/useAuth.tsx';
 import { useProfile } from '../features/onboarding/hooks/useProfile.ts';
-import { ErrorState, SkeletonLines, errorMessage } from '../design-system/index.ts';
+import { ErrorState, Skeleton, errorMessage } from '../design-system/index.ts';
 
 /**
  * Route guards.
@@ -14,8 +14,16 @@ import { ErrorState, SkeletonLines, errorMessage } from '../design-system/index.
 
 function Waiting() {
   return (
-    <div className="mx-auto w-full max-w-md px-4 py-16">
-      <SkeletonLines lines={3} />
+    <div className="flex flex-col gap-6 py-8 animate-pulse" role="status" aria-label="Authenticating">
+      <div>
+        <Skeleton className="h-8 w-48 sm:w-60" />
+        <Skeleton className="mt-2 h-4 w-72 sm:w-80" />
+      </div>
+      <div className="glass rounded-lg p-5 sm:p-6 flex flex-col gap-3.5">
+        <Skeleton className="h-5 w-44" />
+        <Skeleton className="h-4 w-full max-w-lg" />
+        <Skeleton className="h-4 w-2/3" />
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Link, useSearchParams } from 'react-router-dom';
 import { listTests, testRoute, type TestSummary } from '../../engine/index.ts';
-import { Badge, CardGrid } from '../../../design-system/index.ts';
+import { Badge, CardGrid, Skeleton } from '../../../design-system/index.ts';
 import { formatDuration } from '../../../lib/utils/format.ts';
 import { cn } from '../../../lib/utils/cn.ts';
 
@@ -87,6 +87,7 @@ export default function TestsPage() {
         itemKey={(row) => row.id}
         renderItem={(row) => <TestCard test={row} />}
         loading={tests.isLoading}
+        renderSkeleton={() => <TestCardSkeleton />}
         error={tests.error}
         onRetry={() => void tests.refetch()}
         loadingLabel="Loading the available tests"
@@ -97,6 +98,31 @@ export default function TestsPage() {
             : 'Nothing is published, and this account is not on the content tester allowlist.'
         }
       />
+    </div>
+  );
+}
+
+function TestCardSkeleton() {
+  return (
+    <div className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest">
+      <div className="flex items-center gap-1.5">
+        <Skeleton className="h-5 w-16 rounded-pill" />
+      </div>
+      <Skeleton className="mt-2.5 h-5 w-3/4" />
+      <Skeleton className="mt-1.5 h-4 w-1/2" />
+      <div className="mt-auto flex items-baseline gap-6 pt-3">
+        <div className="flex flex-col gap-1">
+          <Skeleton className="h-2.5 w-10" />
+          <Skeleton className="h-4 w-14" />
+        </div>
+        <div className="flex flex-col gap-1">
+          <Skeleton className="h-2.5 w-10" />
+          <Skeleton className="h-4 w-8" />
+        </div>
+      </div>
+      <div className="mt-3 border-t border-line pt-3">
+        <Skeleton className="h-4 w-28" />
+      </div>
     </div>
   );
 }

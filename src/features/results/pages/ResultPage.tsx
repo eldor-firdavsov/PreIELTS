@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { Card, EmptyState, ErrorState, SkeletonLines, errorMessage } from '../../../design-system/index.ts';
+import { Card, EmptyState, ErrorState, Skeleton, errorMessage } from '../../../design-system/index.ts';
 import { formatDate } from '../../../lib/utils/format.ts';
 import { useResult } from '../hooks/useResult.ts';
 import { ScoreSummary } from '../components/ScoreSummary.tsx';
@@ -27,11 +27,7 @@ export default function ResultPage() {
   const result = useResult(resultId);
 
   if (result.isLoading) {
-    return (
-      <div className="w-full py-8">
-        <SkeletonLines lines={8} />
-      </div>
-    );
+    return <ResultPageSkeleton />;
   }
   if (result.error) {
     return (
@@ -98,6 +94,101 @@ export default function ResultPage() {
         ) : (
           mistakes.map((mistake) => <MistakeCard key={mistake.mistake_id} mistake={mistake} />)
         )}
+      </section>
+    </div>
+  );
+}
+
+function ResultPageSkeleton() {
+  return (
+    <div className="flex flex-col gap-5 sm:gap-6 animate-pulse" role="status" aria-label="Loading test results">
+      <div>
+        <Skeleton className="h-8 w-64 sm:w-80" />
+        <Skeleton className="mt-2 h-4 w-48" />
+      </div>
+
+      {/* Score Summary card skeleton */}
+      <section className="glass overflow-hidden rounded-lg">
+        <div className="flex flex-wrap gap-px bg-border">
+          {/* Estimated band */}
+          <div className="flex-[1.3_1_210px] bg-surface p-4 sm:p-[18px]">
+            <Skeleton className="h-3 w-24" />
+            <Skeleton className="mt-2.5 h-10 w-16" />
+            <Skeleton className="mt-2 h-3 w-36" />
+          </div>
+          {/* Raw score */}
+          <div className="flex-[1_1_170px] bg-surface p-4 sm:p-[18px]">
+            <Skeleton className="h-3 w-16" />
+            <Skeleton className="mt-2.5 h-8 w-20" />
+          </div>
+          {/* Percentage */}
+          <div className="flex-[1_1_170px] bg-surface p-4 sm:p-[18px]">
+            <Skeleton className="h-3 w-16" />
+            <Skeleton className="mt-2.5 h-8 w-16" />
+          </div>
+          {/* Total time */}
+          <div className="flex-[1_1_170px] bg-surface p-4 sm:p-[18px]">
+            <Skeleton className="h-3 w-16" />
+            <Skeleton className="mt-2.5 h-8 w-20" />
+          </div>
+        </div>
+      </section>
+
+      {/* Accuracy tables side by side */}
+      <div className="grid gap-5 md:grid-cols-2 sm:gap-6">
+        <section className="glass overflow-hidden rounded-lg">
+          <div className="border-b border-line px-4 py-3.5 sm:px-[18px]">
+            <Skeleton className="h-5 w-44" />
+          </div>
+          <div className="p-4 sm:p-[18px] flex flex-col gap-3">
+            {Array.from({ length: 3 }, (_, i) => (
+              <div key={i} className="flex justify-between items-center py-1">
+                <Skeleton className="h-4 w-40" />
+                <Skeleton className="h-4 w-12" />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="glass overflow-hidden rounded-lg">
+          <div className="border-b border-line px-4 py-3.5 sm:px-[18px]">
+            <Skeleton className="h-5 w-44" />
+          </div>
+          <div className="p-4 sm:p-[18px] flex flex-col gap-3">
+            {Array.from({ length: 3 }, (_, i) => (
+              <div key={i} className="flex justify-between items-center py-1">
+                <Skeleton className="h-4 w-32" />
+                <Skeleton className="h-4 w-12" />
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* Review mistakes cards */}
+      <section className="flex flex-col gap-3.5">
+        <div className="flex items-baseline justify-between">
+          <Skeleton className="h-6 w-48" />
+          <Skeleton className="h-4 w-16" />
+        </div>
+        <div className="flex flex-col gap-3">
+          {Array.from({ length: 2 }, (_, i) => (
+            <div key={i} className="glass rounded-lg p-4 sm:p-5 flex flex-col gap-3.5 shadow-rest">
+              <div className="flex items-center gap-2">
+                <Skeleton className="h-5 w-12 rounded-base" />
+                <Skeleton className="h-5 w-24 rounded-pill" />
+              </div>
+              <div className="space-y-1.5">
+                <Skeleton className="h-4 w-full max-w-xl" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+              <div className="flex gap-2.5 pt-1">
+                <Skeleton className="h-9 w-36 rounded-base" />
+                <Skeleton className="h-9 w-32 rounded-base" />
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

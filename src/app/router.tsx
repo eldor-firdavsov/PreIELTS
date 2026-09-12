@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { RequireAuth, RequireGuest, RequireOnboarding, RequireProfile } from './guards.tsx';
 import { ErrorBoundary } from './ErrorBoundary.tsx';
 import { AppShell } from './AppShell.tsx';
-import { Card, EmptyState, SkeletonLines } from '../design-system/index.ts';
+import { Card, EmptyState, Skeleton } from '../design-system/index.ts';
 
 /**
  * Route tree with a lazy boundary per feature, so the exam engine and its
@@ -23,8 +23,36 @@ const ListeningTestPage = lazy(() => import('../features/listening/pages/Listeni
 
 function RouteFallback() {
   return (
-    <div className="mx-auto w-full max-w-2xl px-4 py-12">
-      <SkeletonLines lines={4} />
+    <div className="flex flex-col gap-6 py-6 animate-pulse" role="status" aria-label="Loading page">
+      <div>
+        <Skeleton className="h-8 w-48 sm:w-64" />
+        <Skeleton className="mt-2 h-4 w-72 sm:w-96" />
+      </div>
+
+      <div className="glass rounded-lg p-5 sm:p-6 flex flex-col gap-3">
+        <Skeleton className="h-5 w-40" />
+        <Skeleton className="mt-1 h-4 w-full max-w-xl" />
+        <Skeleton className="h-4 w-2/3" />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {Array.from({ length: 3 }, (_, i) => (
+          <div key={i} className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[160px] shadow-rest">
+            <div className="flex items-center gap-1.5">
+              <Skeleton className="h-5 w-16 rounded-pill" />
+            </div>
+            <Skeleton className="mt-2.5 h-5 w-3/4" />
+            <Skeleton className="mt-1.5 h-3.5 w-1/2" />
+            <div className="mt-auto flex items-baseline gap-6 pt-3">
+              <Skeleton className="h-4 w-16" />
+              <Skeleton className="h-4 w-12" />
+            </div>
+            <div className="mt-3 border-t border-line pt-3">
+              <Skeleton className="h-4 w-28" />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

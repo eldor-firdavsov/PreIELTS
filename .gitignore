@@ -17,3 +17,4 @@ content/normalized-repaired/
 .DS_Store
 *.swp
 .claude/
+.vercel

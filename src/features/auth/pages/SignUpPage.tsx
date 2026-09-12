@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Button, Card, CardBody, EmptyState, Input, errorMessage } from '../../../design-system/index.ts';
+import { Button, Card, CardBody, Input, errorMessage } from '../../../design-system/index.ts';
 import { useSignUp } from '../hooks/useAuthActions.ts';
 import { AuthLayout } from './AuthLayout.tsx';
 
@@ -22,34 +22,11 @@ export default function SignUpPage() {
     signUp.mutate(
       { email: email.trim(), password },
       {
-        onSuccess: (result) => {
-          // A new account has no profile, so the next stop is onboarding rather
-          // than the dashboard, which would only bounce them here anyway.
-          if (!result.needsEmailConfirmation) navigate('/onboarding', { replace: true });
+        onSuccess: () => {
+          // A new account has no profile, so navigate directly to onboarding
+          navigate('/onboarding', { replace: true });
         },
       },
-    );
-  }
-
-  // Sign-up is meant to hand back a session immediately. If it does not, the
-  // project still has "Confirm email" switched on, which is a configuration
-  // state rather than a step of this product's flow — so this says what is
-  // actually true instead of presenting a confirmation email as normal.
-  if (signUp.isSuccess && signUp.data.needsEmailConfirmation) {
-    return (
-      <AuthLayout title="Almost there" subtitle="Your account was created.">
-        <Card>
-          <EmptyState
-            title="This project still requires email confirmation"
-            description={`A confirmation link went to ${email.trim()}. Open it, then sign in. To let accounts start immediately, turn off "Confirm email" in Supabase under Authentication → Sign In / Providers → Email.`}
-            action={
-              <Link to="/sign-in" className="text-sm font-medium text-primary hover:text-primary-hover">
-                Back to sign in
-              </Link>
-            }
-          />
-        </Card>
-      </AuthLayout>
     );
   }
 
