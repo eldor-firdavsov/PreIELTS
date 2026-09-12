@@ -22,10 +22,9 @@ export function Card({
   return (
     <section
       className={cn(
-        'glass overflow-hidden rounded-lg',
+        'glass overflow-hidden rounded-xl transition-all duration-200',
         interactive &&
-          'cursor-pointer transition-[box-shadow,border-color] duration-150 ' +
-          'hover:shadow-lift',
+          'cursor-pointer hover:shadow-lift hover:-translate-y-0.5 hover:border-glass-bd/90 active:scale-[0.99]',
         className,
       )}
     >

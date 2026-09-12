@@ -18,17 +18,21 @@ interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'cla
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    'bg-primary-solid text-primary-on shadow-rest hover:bg-primary-hover ' +
-    'disabled:hover:bg-primary-solid',
+    'bg-gradient-to-b from-primary to-primary-hover text-primary-on shadow-rest hover:shadow-md hover:shadow-primary/20 ' +
+    'active:scale-[0.985] transition-all duration-200 ' +
+    'disabled:hover:from-primary disabled:hover:to-primary disabled:active:scale-100',
   secondary:
-    'bg-transparent text-ink border border-line-strong hover:bg-sunken ' +
-    'disabled:hover:bg-transparent',
+    'glass text-ink border border-line-strong/60 hover:border-line-strong hover:bg-surface/70 ' +
+    'active:scale-[0.985] transition-all duration-200 ' +
+    'disabled:hover:bg-transparent disabled:active:scale-100',
   ghost:
     'bg-transparent text-primary hover:bg-primary-subtle ' +
-    'disabled:hover:bg-transparent',
+    'active:scale-[0.985] transition-all duration-200 ' +
+    'disabled:hover:bg-transparent disabled:active:scale-100',
   danger:
     'bg-surface text-danger border border-danger/45 hover:bg-danger-subtle ' +
-    'hover:border-danger disabled:hover:bg-surface',
+    'hover:border-danger active:scale-[0.985] transition-all duration-200 ' +
+    'disabled:hover:bg-surface disabled:active:scale-100',
 };
 
 /**

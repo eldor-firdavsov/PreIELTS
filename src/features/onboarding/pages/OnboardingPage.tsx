@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Button, Card, CardBody, ErrorState, Input, ThemeToggle, errorMessage } from '../../../design-system/index.ts';
+import { Button, ErrorState, Input, ThemeToggle, errorMessage } from '../../../design-system/index.ts';
 import { useCompleteOnboarding } from '../hooks/useProfile.ts';
 import type { CefrLevel, LevelScale } from '../services/profileService.ts';
 import { cn } from '../../../lib/utils/cn.ts';
@@ -86,17 +86,17 @@ export default function OnboardingPage() {
     <div className="relative min-h-dvh flex flex-col bg-canvas text-ink selection:bg-primary-subtle">
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-32 left-1/2 h-[450px] w-[700px] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
-        <div className="absolute bottom-10 -right-20 h-[350px] w-[450px] rounded-full bg-amber-500/10 blur-[100px]" />
+        <div className="absolute -top-32 left-1/4 h-[520px] w-[520px] rounded-full bg-primary/16 blur-[130px] animate-float-slow" />
+        <div className="absolute bottom-10 -right-20 h-[420px] w-[420px] rounded-full bg-amber-500/14 blur-[120px] animate-float-reverse" />
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex h-16 w-full items-center justify-between px-4 sm:px-8 border-b border-line/40 backdrop-blur-sm">
-        <Link to="/" className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary-hover text-white shadow-sm">
-            <span className="font-mono text-xs font-black">IQ</span>
+      <header className="relative z-10 flex h-16 w-full items-center justify-between px-5 sm:px-8 border-b border-line/40 backdrop-blur-md">
+        <Link to="/" className="flex items-center gap-2.5 transition-opacity hover:opacity-90">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-hover text-white shadow-md shadow-primary/20">
+            <span className="font-mono text-sm font-black tracking-tight">IQ</span>
           </div>
-          <span className="text-sm sm:text-base font-bold tracking-tight text-ink">
+          <span className="text-base font-bold tracking-tight text-ink">
             IELTS <span className="text-primary">Practice</span>
           </span>
         </Link>
@@ -107,11 +107,11 @@ export default function OnboardingPage() {
 
       {/* Main Container */}
       <main className="relative z-10 flex flex-1 items-center justify-center px-4 py-8 sm:py-12">
-        <div className="w-full max-w-xl">
+        <div className="w-full max-w-xl smooth-in">
           {/* Step Progress Header */}
           <div className="mb-6">
             <div className="flex items-center justify-between text-xs font-semibold text-ink-muted">
-              <span className="uppercase tracking-wider text-primary">Step {step} of 3</span>
+              <span className="uppercase tracking-wider text-primary font-bold">Step {step} of 3</span>
               <span>
                 {step === 1 && 'Profile'}
                 {step === 2 && 'Baseline Level'}
@@ -119,9 +119,9 @@ export default function OnboardingPage() {
               </span>
             </div>
             {/* Progress Bar */}
-            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-line-strong">
+            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-line/60">
               <div
-                className="h-full bg-primary transition-all duration-300 ease-out"
+                className="h-full bg-gradient-to-r from-primary to-primary-hover transition-all duration-300 ease-out"
                 style={{ width: `${(step / 3) * 100}%` }}
               />
             </div>
@@ -138,8 +138,7 @@ export default function OnboardingPage() {
           </div>
 
           <form onSubmit={(e) => void handleSubmit(e)}>
-            <Card className="glass overflow-hidden border-glass-bd shadow-rest transition-all">
-              <CardBody className="p-5 sm:p-7">
+            <div className="glass-panel overflow-hidden rounded-2xl p-6 sm:p-8 shadow-float transition-all">
                 {/* STEP 1: Name */}
                 {step === 1 && (
                   <div className="flex flex-col gap-6">
@@ -389,14 +388,13 @@ export default function OnboardingPage() {
                     </div>
 
                     {/* Summary badge */}
-                    <div className="rounded-base border border-line bg-surface/60 p-3.5 flex items-center justify-between text-xs">
+                    <div className="rounded-xl border border-line bg-surface/60 p-3.5 flex items-center justify-between text-xs backdrop-blur-sm">
                       <span className="text-ink-muted">Student: <strong className="text-ink">{fullName}</strong></span>
                       <span className="text-ink-muted">Goal: <strong className="text-primary font-bold">{targetBand ? `Band ${targetBand}` : 'Flexible'}</strong></span>
                     </div>
                   </div>
                 )}
-              </CardBody>
-            </Card>
+            </div>
 
             {complete.isError && (
               <div className="mt-4">

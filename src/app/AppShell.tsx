@@ -47,7 +47,7 @@ export function AppShell() {
         Skip to content
       </a>
 
-      <header className="sticky top-0 z-30 border-b border-glass-bd bg-glass-strong backdrop-blur-xl">
+      <header className="sticky top-0 z-30 border-b border-glass-bd/80 bg-glass-strong backdrop-blur-2xl shadow-xs transition-all duration-200">
         <div className="shell flex h-14 items-center gap-3 sm:gap-6">
           <span className="text-base font-bold tracking-tight text-ink">
             IELTS <span className="text-primary">Practice</span>
@@ -60,10 +60,10 @@ export function AppShell() {
                 to={item.to}
                 className={({ isActive }) =>
                   cn(
-                    'rounded-pill px-3.5 py-1.5 text-sm font-semibold transition-colors',
+                    'rounded-pill px-3.5 py-1.5 text-sm font-semibold transition-all duration-200 active:scale-[0.97]',
                     isActive
-                      ? 'bg-primary-subtle text-primary'
-                      : 'text-ink-muted hover:bg-sunken/60 hover:text-ink',
+                      ? 'bg-primary-subtle text-primary shadow-xs'
+                      : 'text-ink-muted hover:bg-surface/60 hover:text-ink',
                   )
                 }
               >
@@ -79,7 +79,7 @@ export function AppShell() {
               size="sm"
               loading={signOut.isPending}
               loadingLabel="Signing out"
-              className="text-primary font-semibold hover:text-primary-hover"
+              className="text-primary font-semibold hover:text-primary-hover active:scale-[0.97]"
               onClick={() =>
                 signOut.mutate(undefined, {
                   onSuccess: () => navigate('/sign-in', { replace: true }),
@@ -92,7 +92,7 @@ export function AppShell() {
         </div>
       </header>
 
-      <main id="main" className="shell w-full flex-1 py-6 pb-24 sm:py-8 sm:pb-10">
+      <main id="main" className="shell w-full flex-1 py-6 pb-24 sm:py-8 sm:pb-10 smooth-in">
         {/* Inside the shell, not around it: switching tabs should not blank the
             navigation while the next page's chunk downloads. Outside the
             Suspense boundary, so a chunk that fails to arrive stops pulsing. */}
@@ -103,11 +103,10 @@ export function AppShell() {
         </ErrorBoundary>
       </main>
 
-      {/* Thumb-height navigation, phones only. */}
       <nav
-        aria-label="Main"
+        aria-label="Mobile main"
         className={cn(
-          'fixed inset-x-0 bottom-0 z-30 border-t border-glass-bd bg-glass-strong backdrop-blur-xl sm:hidden',
+          'fixed inset-x-0 bottom-0 z-30 border-t border-glass-bd bg-glass-strong backdrop-blur-2xl shadow-float sm:hidden',
           'pb-[env(safe-area-inset-bottom)]',
         )}
       >
