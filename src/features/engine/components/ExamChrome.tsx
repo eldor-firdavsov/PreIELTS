@@ -104,7 +104,7 @@ export function ExamChrome({
   return (
     <div className="flex h-dvh flex-col bg-surface">
       {/* --------------------------------------------------------- header */}
-      <header className="flex h-[52px] shrink-0 items-center gap-3 border-b border-glass-bd bg-glass-strong backdrop-blur-xl px-3 sm:gap-4 sm:px-4">
+      <header className="flex h-[54px] shrink-0 items-center gap-3 border-b border-glass-bd/80 bg-glass-strong backdrop-blur-2xl px-3 sm:gap-4 sm:px-5 shadow-xs">
         <span className="min-w-0 flex-1 truncate text-sm font-semibold text-ink">{title}</span>
         <div className="flex shrink-0 items-center gap-2 sm:gap-4">
           {/* The save indicator is prose and costs more room than it earns on a
@@ -124,7 +124,7 @@ export function ExamChrome({
       </header>
 
       {/* ----------------------------------------------------------- tabs */}
-      <div className="strip flex shrink-0 items-center gap-2 border-b border-glass-bd bg-glass backdrop-blur-md px-3 py-2 sm:px-4 overflow-x-auto">
+      <div className="strip flex shrink-0 items-center gap-2 border-b border-glass-bd bg-glass-strong backdrop-blur-xl px-3 py-2 sm:px-4 overflow-x-auto">
         {tabs.map((tab, index) => (
           <button
             key={tab.id}
@@ -132,10 +132,10 @@ export function ExamChrome({
             onClick={() => onSelectTab(index)}
             aria-current={index === activeIndex ? 'true' : undefined}
             className={cn(
-              'shrink-0 rounded-pill border px-3.5 py-1.5 min-h-[34px] text-xs sm:text-[13px] font-semibold transition-colors',
+              'shrink-0 rounded-pill px-3.5 py-1.5 min-h-[34px] text-xs sm:text-[13px] font-semibold transition-all duration-200 active:scale-[0.97]',
               index === activeIndex
-                ? 'border-primary bg-primary-subtle text-primary'
-                : 'border-line-strong bg-transparent text-ink-muted hover:border-ink hover:text-ink',
+                ? 'border border-primary/40 bg-primary-subtle text-primary shadow-xs'
+                : 'border border-glass-bd bg-surface/50 text-ink-muted hover:border-ink/40 hover:text-ink hover:bg-surface/80',
             )}
           >
             {tab.label}
@@ -155,7 +155,7 @@ export function ExamChrome({
         traversal and a labelled panel, and a control that announces itself as
         something it does not behave like is worse than one that claims less.
       */}
-      <div className="flex shrink-0 gap-1 border-b border-line p-1.5 lg:hidden bg-surface">
+      <div className="flex shrink-0 gap-1 border-b border-glass-bd p-1.5 lg:hidden bg-glass-strong backdrop-blur-xl">
         {([
           ['stimulus', paneLabels.stimulus, stimulusId],
           ['main', paneLabels.main, mainId],

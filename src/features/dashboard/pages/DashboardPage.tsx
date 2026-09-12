@@ -48,8 +48,8 @@ export default function DashboardPage() {
       </div>
 
       {/* ------------------------------------------------- band per skill */}
-      <section className="glass overflow-hidden rounded-lg">
-        <div className="flex items-baseline justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-[18px]">
+      <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+        <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
           <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Estimated band by skill</h2>
           {!loading && data?.targetBand !== null && data?.targetBand !== undefined && (
             <span className="text-xs text-ink-muted sm:text-[13px]">
@@ -62,26 +62,29 @@ export default function DashboardPage() {
           <div
             role="status"
             aria-label="Loading band estimates"
-            className="grid grid-cols-2 gap-px bg-border"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 sm:p-4"
           >
-            <div className="bg-surface p-4 sm:p-[18px]">
+            <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 sm:p-5">
               <Skeleton className="h-3 w-16" />
               <Skeleton className="mt-2.5 h-8 w-20" />
               <Skeleton className="mt-2 h-3 w-32" />
             </div>
-            <div className="bg-surface p-4 sm:p-[18px]">
+            <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 sm:p-5">
               <Skeleton className="h-3 w-16" />
               <Skeleton className="mt-2.5 h-8 w-20" />
               <Skeleton className="mt-2 h-3 w-32" />
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-px bg-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 sm:p-4">
             {SKILL_ORDER.map((kind) => {
               const skill = data?.skills.find((s) => s.kind === kind);
               const hasBand = skill?.band !== null && skill?.band !== undefined;
               return (
-                <div key={kind} className="bg-surface p-4 sm:p-[18px]">
+                <div
+                  key={kind}
+                  className="rounded-xl border border-glass-bd/80 bg-surface/55 backdrop-blur-md p-4 sm:p-5 transition-all duration-200 hover:bg-surface/75 hover:shadow-xs"
+                >
                   <div className="lbl">{SKILL_LABEL[kind] ?? kind}</div>
                   <div
                     className={cn(
@@ -107,7 +110,7 @@ export default function DashboardPage() {
       ) : !untested ? (
         <NextAction action={nextAction.data ?? null} loading={false} />
       ) : (
-        <section className="glass rounded-lg p-5 sm:p-7">
+        <section className="glass-panel rounded-2xl p-6 sm:p-8 shadow-lift">
           <h2 className="text-lg font-semibold text-ink sm:text-[20px]">No results yet</h2>
           <p className="mt-1.5 max-w-prose text-sm text-ink-muted">
             Take a paper and it is marked against the answer key the moment you submit. Your estimated band, your mistakes and your timings all appear from that one submission.
@@ -123,8 +126,8 @@ export default function DashboardPage() {
 
       {/* ---------------------------------------------------- recent work */}
       {(loading || (data && data.recent.length > 0)) && (
-        <section className="glass overflow-hidden rounded-lg">
-          <div className="flex items-baseline justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-[18px]">
+        <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+          <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
             <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Recent tests</h2>
             <Link
               to="/history"
@@ -133,11 +136,11 @@ export default function DashboardPage() {
               All results
             </Link>
           </div>
-          <div className="px-4 py-1 pb-3 sm:px-[18px] divide-y divide-line">
+          <div className="px-3 py-1 pb-3 sm:px-4 divide-y divide-glass-bd">
             {loading ? (
               <SkeletonRegion label="Loading your recent tests" className="flex flex-col gap-3 py-3">
                 {Array.from({ length: 3 }, (_, i) => (
-                  <div key={i} className="flex items-center justify-between gap-4 py-1">
+                  <div key={i} className="flex items-center justify-between gap-4 py-1.5 px-2">
                     <Skeleton className={cn('h-4', i === 0 ? 'w-56' : i === 1 ? 'w-48' : 'w-64')} />
                     <div className="flex items-center gap-3">
                       <Skeleton className="h-3.5 w-16" />
@@ -148,7 +151,10 @@ export default function DashboardPage() {
               </SkeletonRegion>
             ) : (
               data?.recent.map((row) => (
-                <div key={row.resultId} className="flex items-baseline gap-3.5 py-3 sm:gap-4 sm:py-3.5">
+                <div
+                  key={row.resultId}
+                  className="flex items-baseline gap-3.5 py-3 px-2 rounded-xl sm:gap-4 sm:py-3.5 hover:bg-surface/40 transition-colors"
+                >
                   <Link
                     to={`/results/${row.resultId}`}
                     className="min-w-0 flex-1 truncate text-sm font-semibold text-primary hover:underline hover:text-primary-hover"
@@ -189,7 +195,7 @@ function NextAction({
 
   if (loading) {
     return (
-      <section role="status" aria-label="Loading your recommendation" className="glass rounded-lg p-5">
+      <section role="status" aria-label="Loading your recommendation" className="glass-panel rounded-2xl p-5 sm:p-6 shadow-lift">
         <Skeleton className="h-4 w-44" />
         <Skeleton className="mt-3.5 h-3 w-full max-w-xl" />
         <Skeleton className="mt-2 h-3 w-3/4 max-w-md" />
@@ -200,7 +206,7 @@ function NextAction({
   if (!action) {
     return (
       <Card>
-        <div className="p-5">
+        <div className="p-5 sm:p-6">
           <p className="max-w-3xl text-sm leading-6 text-ink-muted">
             {'A recommendation appears here once you have asked for a study plan. '}
             <Link to="/analysis" className="font-semibold text-primary hover:underline hover:text-primary-hover">
@@ -214,18 +220,19 @@ function NextAction({
   }
 
   return (
-    <section className="overflow-hidden rounded-lg bg-[#2a0c09] text-[#fdf6f4] shadow-lift sm:rounded-2xl dark:bg-[#3d120e]">
-      <div className="flex items-center justify-between gap-3 border-b border-[#f7f5f1]/15 px-4 py-3.5 sm:px-5">
+    <section className="relative overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-[#2a0c09]/95 via-[#38100c]/90 to-[#1f0806]/95 text-[#fdf6f4] shadow-lift backdrop-blur-2xl">
+      <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/20 blur-[70px]" aria-hidden="true" />
+      <div className="relative flex items-center justify-between gap-3 border-b border-[#f7f5f1]/15 px-4 py-3.5 sm:px-5">
         <h2 className="text-lg font-semibold text-[#fdf6f4] sm:text-[20px]">Recommended next action</h2>
-        <span className="rounded-pill bg-[#f7f5f1]/15 px-2.5 py-0.5 text-xs font-semibold text-[#fdf6f4]">
+        <span className="rounded-pill border border-white/20 bg-white/10 px-3 py-0.5 text-xs font-semibold text-[#fdf6f4] backdrop-blur-md">
           {SKILL[action.skill] ?? action.skill}
         </span>
       </div>
-      <div className="flex flex-col items-start gap-2.5 p-4 sm:p-5 sm:py-5.5">
+      <div className="relative flex flex-col items-start gap-2.5 p-4 sm:p-5 sm:py-5.5">
         <div className="max-w-[36ch] text-xl font-bold tracking-tight text-[#fdf6f4] sm:text-2xl text-balance">
           {action.headline}
         </div>
-        <p className="max-w-[68ch] text-sm leading-relaxed text-[#fdf6f4]/80 sm:text-[15px] text-pretty">
+        <p className="max-w-[68ch] text-sm leading-relaxed text-[#fdf6f4]/85 sm:text-[15px] text-pretty">
           {action.detail}
         </p>
         <Link
@@ -233,7 +240,7 @@ function NextAction({
           className={cn(
             'mt-2 inline-flex min-h-[48px] items-center justify-center rounded-base px-5 py-3',
             'bg-[#fdf6f4] text-sm font-bold text-[#2a0c09] shadow-sm transition-all sm:text-base',
-            'hover:bg-white hover:scale-[1.01] active:scale-[0.99]',
+            'hover:bg-white hover:scale-[1.01] active:scale-[0.98]',
           )}
         >
           {`Start a ${SKILL[action.skill]?.toLowerCase() ?? action.skill} test →`}
@@ -248,9 +255,9 @@ function NextActionSkeleton() {
     <section
       role="status"
       aria-label="Loading recommendation"
-      className="glass overflow-hidden rounded-lg sm:rounded-2xl shadow-lift"
+      className="glass-panel overflow-hidden rounded-2xl shadow-lift"
     >
-      <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-5">
+      <div className="flex items-center justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
         <Skeleton className="h-5 w-48" />
         <Skeleton className="h-5 w-16 rounded-pill" />
       </div>

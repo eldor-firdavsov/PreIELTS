@@ -33,7 +33,14 @@ export function AppShell() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="relative flex min-h-dvh flex-col">
+      {/* Dynamic ambient floating glow lights for glassmorphic depth across all pages */}
+      <div className="pointer-events-none fixed inset-0 overflow-hidden z-0" aria-hidden="true">
+        <div className="absolute -top-32 left-1/4 h-[550px] w-[550px] rounded-full bg-primary/12 blur-[140px] animate-float-slow" />
+        <div className="absolute top-1/3 -right-28 h-[480px] w-[480px] rounded-full bg-amber-500/10 blur-[130px] animate-float-reverse" />
+        <div className="absolute bottom-10 left-1/3 h-[420px] w-[420px] rounded-full bg-rose-500/8 blur-[120px]" />
+      </div>
+
       {/* Keyboard users should not have to tab the whole nav on every page. */}
       <a
         href="#main"
@@ -92,7 +99,7 @@ export function AppShell() {
         </div>
       </header>
 
-      <main id="main" className="shell w-full flex-1 py-6 pb-24 sm:py-8 sm:pb-10 smooth-in">
+      <main id="main" className="shell relative z-10 w-full flex-1 py-6 pb-24 sm:py-8 sm:pb-10 smooth-in">
         {/* Inside the shell, not around it: switching tabs should not blank the
             navigation while the next page's chunk downloads. Outside the
             Suspense boundary, so a chunk that fails to arrive stops pulsing. */}

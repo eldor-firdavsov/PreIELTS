@@ -93,8 +93,8 @@ export default function AnalysisPage() {
       <StudyPlanCard />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <section className="glass overflow-hidden rounded-lg">
-          <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3 sm:px-[18px]">
+        <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+          <div className="flex items-center justify-between gap-3 border-b border-glass-bd px-4 py-3 sm:px-5">
             <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Band over time</h2>
             <Select
               label="Skill"
@@ -106,7 +106,7 @@ export default function AnalysisPage() {
               className="w-36 sm:w-40"
             />
           </div>
-          <div className="p-4 sm:p-[18px]">
+          <div className="p-4 sm:p-5">
             <Chart
               points={points}
               loading={analysis.isLoading}
@@ -118,8 +118,8 @@ export default function AnalysisPage() {
           </div>
         </section>
 
-        <section className="glass overflow-hidden rounded-lg">
-          <div className="flex items-baseline justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-[18px]">
+        <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+          <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
             <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Accuracy by question type</h2>
             {!analysis.isLoading && analysis.data && (
               <span className="text-xs text-ink-muted sm:text-[13px]">

@@ -52,10 +52,9 @@ export function Select({
         aria-invalid={error ? true : undefined}
         aria-describedby={error ? `${selectId}-error` : undefined}
         className={cn(
-          'h-10 rounded-base border bg-surface px-2.5 text-base text-ink sm:text-sm',
-          'transition-[border-color] duration-150 hover:border-line-strong',
+          'h-10 rounded-xl glass-input px-3 text-base text-ink sm:text-sm font-medium',
           'disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-60',
-          error ? 'border-danger' : 'border-line-strong',
+          error ? 'border-danger' : '',
           className,
         )}
         {...rest}

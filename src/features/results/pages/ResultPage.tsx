@@ -111,26 +111,22 @@ function ResultPageSkeleton() {
       </div>
 
       {/* Score Summary card skeleton */}
-      <section className="glass overflow-hidden rounded-lg">
-        <div className="flex flex-wrap gap-px bg-border">
-          {/* Estimated band */}
-          <div className="flex-[1.3_1_210px] bg-surface p-4 sm:p-[18px]">
+      <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-3.5 sm:p-4">
+          <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 sm:p-5">
             <Skeleton className="h-3 w-24" />
             <Skeleton className="mt-2.5 h-10 w-16" />
             <Skeleton className="mt-2 h-3 w-36" />
           </div>
-          {/* Raw score */}
-          <div className="flex-[1_1_170px] bg-surface p-4 sm:p-[18px]">
+          <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 sm:p-5">
             <Skeleton className="h-3 w-16" />
             <Skeleton className="mt-2.5 h-8 w-20" />
           </div>
-          {/* Percentage */}
-          <div className="flex-[1_1_170px] bg-surface p-4 sm:p-[18px]">
+          <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 sm:p-5">
             <Skeleton className="h-3 w-16" />
             <Skeleton className="mt-2.5 h-8 w-16" />
           </div>
-          {/* Total time */}
-          <div className="flex-[1_1_170px] bg-surface p-4 sm:p-[18px]">
+          <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 sm:p-5">
             <Skeleton className="h-3 w-16" />
             <Skeleton className="mt-2.5 h-8 w-20" />
           </div>
@@ -139,11 +135,11 @@ function ResultPageSkeleton() {
 
       {/* Accuracy tables side by side */}
       <div className="grid gap-5 md:grid-cols-2 sm:gap-6">
-        <section className="glass overflow-hidden rounded-lg">
-          <div className="border-b border-line px-4 py-3.5 sm:px-[18px]">
+        <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+          <div className="border-b border-glass-bd px-4 py-3.5 sm:px-5">
             <Skeleton className="h-5 w-44" />
           </div>
-          <div className="p-4 sm:p-[18px] flex flex-col gap-3">
+          <div className="p-4 sm:p-5 flex flex-col gap-3">
             {Array.from({ length: 3 }, (_, i) => (
               <div key={i} className="flex justify-between items-center py-1">
                 <Skeleton className="h-4 w-40" />
@@ -153,11 +149,11 @@ function ResultPageSkeleton() {
           </div>
         </section>
 
-        <section className="glass overflow-hidden rounded-lg">
-          <div className="border-b border-line px-4 py-3.5 sm:px-[18px]">
+        <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+          <div className="border-b border-glass-bd px-4 py-3.5 sm:px-5">
             <Skeleton className="h-5 w-44" />
           </div>
-          <div className="p-4 sm:p-[18px] flex flex-col gap-3">
+          <div className="p-4 sm:p-5 flex flex-col gap-3">
             {Array.from({ length: 3 }, (_, i) => (
               <div key={i} className="flex justify-between items-center py-1">
                 <Skeleton className="h-4 w-32" />
@@ -176,7 +172,7 @@ function ResultPageSkeleton() {
         </div>
         <div className="flex flex-col gap-3">
           {Array.from({ length: 2 }, (_, i) => (
-            <div key={i} className="glass rounded-lg p-4 sm:p-5 flex flex-col gap-3.5 shadow-rest">
+            <div key={i} className="glass-panel rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5 shadow-lift">
               <div className="flex items-center gap-2">
                 <Skeleton className="h-5 w-12 rounded-base" />
                 <Skeleton className="h-5 w-24 rounded-pill" />

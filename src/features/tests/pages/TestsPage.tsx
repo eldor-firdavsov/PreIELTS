@@ -60,28 +60,30 @@ export default function TestsPage() {
 
       {/* Both skills and an all. Small enough to show every option rather than
           hide them behind a select the student has to open to see. */}
-      <div className="strip flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Filter by skill">
-        {[{ value: null, label: 'All skills' }, ...SKILLS.map((v) => ({ value: v, label: readableKind(v) }))].map(
-          (option) => {
-            const selected = active === option.value;
-            return (
-              <button
-                key={option.label}
-                type="button"
-                aria-pressed={selected}
-                onClick={() => setSkill(option.value)}
-                className={cn(
-                  'shrink-0 rounded-pill border px-3.5 py-1.5 min-h-[36px] text-sm font-semibold transition-colors',
-                  selected
-                    ? 'border-primary bg-primary-subtle text-primary'
-                    : 'border-line-strong bg-transparent text-ink-muted hover:border-ink hover:text-ink',
-                )}
-              >
-                {option.label}
-              </button>
-            );
-          },
-        )}
+      <div>
+        <div className="glass-pill inline-flex items-center gap-1.5 p-1 rounded-pill overflow-x-auto max-w-full" role="group" aria-label="Filter by skill">
+          {[{ value: null, label: 'All skills' }, ...SKILLS.map((v) => ({ value: v, label: readableKind(v) }))].map(
+            (option) => {
+              const selected = active === option.value;
+              return (
+                <button
+                  key={option.label}
+                  type="button"
+                  aria-pressed={selected}
+                  onClick={() => setSkill(option.value)}
+                  className={cn(
+                    'shrink-0 rounded-pill px-4 py-1.5 min-h-[34px] text-xs sm:text-sm font-semibold transition-all duration-200 active:scale-[0.97]',
+                    selected
+                      ? 'bg-primary text-white shadow-xs'
+                      : 'text-ink-muted hover:text-ink hover:bg-surface/60',
+                  )}
+                >
+                  {option.label}
+                </button>
+              );
+            },
+          )}
+        </div>
       </div>
 
       <CardGrid
@@ -106,7 +108,7 @@ export default function TestsPage() {
 
 function TestCardSkeleton() {
   return (
-    <div className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest">
+    <div className="glass-panel flex w-full flex-col rounded-2xl p-5 min-h-[190px] shadow-rest">
       <div className="flex items-center gap-1.5">
         <Skeleton className="h-5 w-16 rounded-pill" />
       </div>
@@ -121,7 +123,7 @@ function TestCardSkeleton() {
           <Skeleton className="h-4 w-8" />
         </div>
       </div>
-      <div className="mt-3 border-t border-line pt-3">
+      <div className="mt-3 border-t border-glass-bd pt-3">
         <Skeleton className="h-4 w-28" />
       </div>
     </div>
@@ -148,7 +150,7 @@ function TestCard({ test }: { test: TestSummary }) {
 
       <h2
         className={cn(
-          'mt-1 text-sm sm:text-base font-semibold leading-snug',
+          'mt-2 text-sm sm:text-base font-semibold leading-snug',
           route ? 'text-ink group-hover:text-primary transition-colors' : 'text-ink',
         )}
       >
@@ -178,14 +180,14 @@ function TestCard({ test }: { test: TestSummary }) {
   );
 
   const shell = cn(
-    'glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest',
+    'glass-panel flex w-full flex-col rounded-2xl p-5 min-h-[190px] shadow-rest transition-all duration-200',
   );
 
   if (!route) {
     return (
       <div className={cn(shell, 'opacity-75')}>
         {body}
-        <p className="mt-3 border-t border-line pt-3 text-xs text-ink-muted sm:text-[13px]">
+        <p className="mt-3 border-t border-glass-bd pt-3 text-xs text-ink-muted sm:text-[13px]">
           No surface can run this paper yet.
         </p>
       </div>
@@ -202,12 +204,11 @@ function TestCard({ test }: { test: TestSummary }) {
       to={route}
       className={cn(
         shell,
-        'group transition-[border-color,box-shadow] duration-150',
-        'hover:border-line-strong hover:shadow-lift',
+        'group hover:border-primary/40 hover:shadow-lift hover:-translate-y-1 active:scale-[0.99]',
       )}
     >
       {body}
-      <span className="mt-3 border-t border-line pt-3 text-xs font-semibold text-primary sm:text-sm group-hover:underline">
+      <span className="mt-3 border-t border-glass-bd pt-3 text-xs font-semibold text-primary sm:text-sm group-hover:underline">
         Start this test →
       </span>
     </Link>

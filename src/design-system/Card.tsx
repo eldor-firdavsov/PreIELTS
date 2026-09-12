@@ -13,18 +13,22 @@ export function Card({
   children,
   className,
   interactive = false,
+  variant = 'panel',
 }: {
   children: ReactNode;
   className?: string;
   /** This card is itself a control. Adds hover lift and a pointer affordance. */
   interactive?: boolean;
+  /** 'panel' uses ultra-luminous frosted glass; 'subtle' uses lighter glass */
+  variant?: 'panel' | 'subtle';
 }) {
   return (
     <section
       className={cn(
-        'glass overflow-hidden rounded-xl transition-all duration-200',
+        variant === 'panel' ? 'glass-panel' : 'glass',
+        'overflow-hidden rounded-2xl transition-all duration-200',
         interactive &&
-          'cursor-pointer hover:shadow-lift hover:-translate-y-0.5 hover:border-glass-bd/90 active:scale-[0.99]',
+          'cursor-pointer hover:shadow-lift hover:-translate-y-1 hover:border-primary/40 active:scale-[0.99]',
         className,
       )}
     >
@@ -40,7 +44,7 @@ export function CardHeader({ children, className }: { children: ReactNode; class
         // Wraps rather than crushes when a title and a trailing control meet on
         // a narrow screen.
         'flex flex-wrap items-center justify-between gap-x-4 gap-y-2',
-        'border-b border-line px-4 py-3 sm:px-5 sm:py-4',
+        'border-b border-glass-bd px-4 py-3 sm:px-5 sm:py-4',
         className,
       )}
     >
@@ -61,7 +65,7 @@ export function CardFooter({ children, className }: { children: ReactNode; class
   return (
     <footer
       className={cn(
-        'flex flex-wrap items-center justify-end gap-2 border-t border-line px-4 py-3 sm:px-5',
+        'flex flex-wrap items-center justify-end gap-2 border-t border-glass-bd px-4 py-3 sm:px-5',
         className,
       )}
     >

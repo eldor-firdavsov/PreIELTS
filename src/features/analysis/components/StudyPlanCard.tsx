@@ -31,10 +31,10 @@ export function StudyPlanCard() {
   const enoughEvidence = generate.data?.enoughEvidence ?? stored.data?.enoughEvidence ?? true;
 
   return (
-    <section className="glass overflow-hidden rounded-lg">
-      <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-[18px]">
+    <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
+      <div className="flex items-center justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
         <h2 className="text-lg font-semibold text-ink sm:text-[20px]">What should I improve next?</h2>
-        <span className="rounded-pill border border-primary px-2.5 py-0.5 text-xs font-semibold text-primary">
+        <span className="glass-pill border border-primary/30 rounded-pill px-3 py-0.5 text-xs font-semibold text-primary">
           AI coach
         </span>
       </div>
@@ -42,7 +42,7 @@ export function StudyPlanCard() {
       {stored.isLoading && <PlanSkeleton />}
 
       {stored.error && (
-        <div className="p-4 sm:p-[18px]">
+        <div className="p-4 sm:p-5">
           <ErrorState
             title="Your plan could not be loaded"
             description={errorMessage(stored.error)}
@@ -65,7 +65,7 @@ export function StudyPlanCard() {
       )}
 
       {!stored.isLoading && !stored.error && enoughEvidence && !plan && (
-        <div className="flex flex-col items-start gap-3 p-4 sm:p-[18px]">
+        <div className="flex flex-col items-start gap-3 p-4 sm:p-5">
           <p className="max-w-2xl text-sm leading-relaxed text-ink-muted">
             The coach reads the counts below — your bands, your accuracy by question type and by
             section, and your timing — and says which one thing to work on next. It never sees a
@@ -79,7 +79,7 @@ export function StudyPlanCard() {
             Write my study plan
           </Button>
           {generate.isPending && (
-            <div className="w-full mt-2 pt-4 border-t border-line">
+            <div className="w-full mt-2 pt-4 border-t border-glass-bd">
               <PlanSkeleton />
             </div>
           )}
@@ -105,7 +105,7 @@ function PlanSkeleton() {
       role="status"
       aria-busy="true"
       aria-label="Loading study plan"
-      className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-[18px]"
+      className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-5"
     >
       <div>
         <Skeleton className="h-4 w-full" />
@@ -118,7 +118,7 @@ function PlanSkeleton() {
         <Skeleton className="mt-1.5 h-3.5 w-2/3" />
       </div>
       <div>
-        <div className="rounded-r-base border-l-2 border-primary/40 bg-surface p-3 sm:p-3.5 mb-4">
+        <div className="rounded-xl border border-primary/30 bg-primary-subtle/30 backdrop-blur-md p-3.5 sm:p-4 mb-4">
           <Skeleton className="h-3 w-24" />
           <Skeleton className="mt-2 h-4 w-48" />
           <Skeleton className="mt-1.5 h-3 w-full" />
@@ -134,7 +134,7 @@ function PlanSkeleton() {
 function PlanBody({ plan }: { plan: StudyPlan }) {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-[18px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-5">
         {/* Left Column: Strengths & Weaknesses */}
         <div>
           {plan.overall_diagnosis && (
@@ -171,7 +171,7 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
 
         {/* Right Column: Next action highlight & practice plan */}
         <div>
-          <div className="border-l-2 border-primary bg-primary-subtle rounded-r-base p-3 sm:p-3.5 mb-4.5">
+          <div className="border border-primary/30 bg-primary-subtle/40 backdrop-blur-md rounded-xl p-3.5 sm:p-4 mb-4.5">
             <div className="lbl text-primary">Next action ({SKILL_LABEL[plan.next_action.skill] ?? plan.next_action.skill})</div>
             <div className="text-sm sm:text-[15px] font-semibold text-ink mt-1">
               {plan.next_action.headline}
@@ -197,7 +197,7 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
       </div>
 
       {plan.evidence_caveat && (
-        <div className="border-t border-line px-4 py-2.5 sm:px-[18px] text-xs sm:text-[13px] text-warn">
+        <div className="border-t border-glass-bd px-4 py-2.5 sm:px-5 text-xs sm:text-[13px] text-warn">
           {plan.evidence_caveat}
         </div>
       )}

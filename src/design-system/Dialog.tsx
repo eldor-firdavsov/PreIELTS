@@ -45,13 +45,13 @@ export function Dialog({ open, onClose, title, description, children, footer, cl
         if (event.target === ref.current) onClose();
       }}
       className={cn(
-        'w-[calc(100%-2rem)] max-w-md rounded-lg border border-glass-bd bg-glass-strong p-0 text-ink shadow-float',
-        'backdrop:bg-overlay backdrop:backdrop-blur-sm',
+        'w-[calc(100%-2rem)] max-w-md rounded-2xl glass-panel p-0 text-ink shadow-float',
+        'backdrop:bg-overlay backdrop:backdrop-blur-md',
         'open:animate-in motion-reduce:animate-none',
         className,
       )}
     >
-      <div className="border-b border-line px-4 py-3 sm:px-5">
+      <div className="border-b border-glass-bd px-4 py-3.5 sm:px-5">
         <h2 id={titleId} className="text-lg font-semibold">{title}</h2>
         {description && (
           <p id={descriptionId} className="mt-1 text-sm text-ink-muted">{description}</p>
@@ -59,7 +59,7 @@ export function Dialog({ open, onClose, title, description, children, footer, cl
       </div>
       {children && <div className="px-4 py-4 sm:px-5">{children}</div>}
       {footer && (
-        <div className="flex flex-wrap items-center justify-end gap-2 border-t border-line px-4 py-3 sm:px-5">{footer}</div>
+        <div className="flex flex-wrap items-center justify-end gap-2 border-t border-glass-bd px-4 py-3.5 sm:px-5">{footer}</div>
       )}
     </dialog>
   );

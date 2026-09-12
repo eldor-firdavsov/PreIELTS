@@ -60,7 +60,7 @@ export default function HistoryPage() {
 
 function ResultCardSkeleton() {
   return (
-    <div className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest">
+    <div className="glass-panel flex w-full flex-col rounded-2xl p-5 min-h-[190px] shadow-rest">
       <div className="flex items-start justify-between gap-3.5">
         <div className="min-w-0 flex-1">
           <Skeleton className="h-5 w-3/4" />
@@ -76,7 +76,7 @@ function ResultCardSkeleton() {
         <Skeleton className="h-5 w-16 rounded-pill" />
       </div>
 
-      <div className="mt-auto flex items-baseline gap-6 sm:gap-7 border-t border-line mt-3.5 pt-3">
+      <div className="mt-auto flex items-baseline gap-6 sm:gap-7 border-t border-glass-bd mt-3.5 pt-3">
         <div className="flex flex-col gap-1">
           <Skeleton className="h-2.5 w-10" />
           <Skeleton className="h-4 w-12" />
@@ -98,9 +98,9 @@ function ResultCard({ row }: { row: HistoryRow }) {
     <Link
       to={`/results/${row.result_id}`}
       className={cn(
-        'glass group flex w-full flex-col rounded-lg p-[18px] shadow-rest',
-        'transition-[border-color,box-shadow] duration-150',
-        'hover:border-line-strong hover:shadow-lift',
+        'glass-panel group flex w-full flex-col rounded-2xl p-5 shadow-rest',
+        'transition-all duration-200',
+        'hover:border-primary/40 hover:shadow-lift hover:-translate-y-1 active:scale-[0.99]',
       )}
     >
       <div className="flex items-start justify-between gap-3.5">
@@ -139,7 +139,7 @@ function ResultCard({ row }: { row: HistoryRow }) {
         )}
       </div>
 
-      <dl className="mt-auto flex flex-wrap items-baseline gap-6 sm:gap-7 border-t border-line mt-3.5 pt-3">
+      <dl className="mt-auto flex flex-wrap items-baseline gap-6 sm:gap-7 border-t border-glass-bd mt-3.5 pt-3">
         <div className="flex flex-col">
           <dt className="lbl">Score</dt>
           <dd className="mono font-mono font-semibold text-sm sm:text-base text-ink">

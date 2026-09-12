@@ -158,7 +158,7 @@ export function ListeningPlayer({
       )}
 
       {source.data && (
-        <div className="glass rounded-2xl p-5 border border-border-subtle shadow-sm flex flex-col gap-4">
+        <div className="glass-panel rounded-2xl p-5 sm:p-6 shadow-lift flex flex-col gap-4.5">
           <audio
             ref={audioRef}
             src={source.data}
@@ -244,7 +244,7 @@ export function ListeningPlayer({
           </div>
 
           {/* Transport & Control Buttons */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-border-subtle/50">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-glass-bd">
             {/* Play/Pause & Skip Buttons */}
             <div className="flex items-center gap-2">
               {/* Skip Back 10s */}
@@ -253,7 +253,7 @@ export function ListeningPlayer({
                 onClick={() => skipTime(-10)}
                 title="Rewind 10 seconds"
                 aria-label="Rewind 10 seconds"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-surface text-ink hover:bg-surface-hover hover:text-ink transition-colors active:scale-95"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-glass-bd/80 bg-surface/60 backdrop-blur-md text-ink hover:bg-surface/90 hover:text-ink transition-colors active:scale-95"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.2 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/>
@@ -292,7 +292,7 @@ export function ListeningPlayer({
                 onClick={() => skipTime(10)}
                 title="Forward 10 seconds"
                 aria-label="Forward 10 seconds"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-surface text-ink hover:bg-surface-hover hover:text-ink transition-colors active:scale-95"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-glass-bd/80 bg-surface/60 backdrop-blur-md text-ink hover:bg-surface/90 hover:text-ink transition-colors active:scale-95"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M11.5 8c2.65 0 5.05.99 6.9 2.6L22 7v9h-9l3.62-3.62c-1.39-1.2-3.16-1.88-5.12-1.88-3.54 0-6.55 2.31-7.6 5.5l-2.37-.78C2.92 11.03 6.85 8 11.5 8z"/>
@@ -304,13 +304,13 @@ export function ListeningPlayer({
             {/* Speed & Volume Tools */}
             <div className="flex items-center gap-2.5">
               {/* Playback Rate Selector */}
-              <div className="flex items-center rounded-lg border border-border-subtle bg-surface p-0.5 text-xs font-medium">
+              <div className="flex items-center rounded-xl border border-glass-bd/80 bg-surface/60 backdrop-blur-md p-0.5 text-xs font-medium">
                 {[0.75, 1, 1.25, 1.5].map((rate) => (
                   <button
                     key={rate}
                     type="button"
                     onClick={() => setPlaybackRate(rate)}
-                    className={`rounded-md px-2 py-1 transition-colors ${
+                    className={`rounded-lg px-2 py-1 transition-colors ${
                       playbackRate === rate
                         ? 'bg-primary text-white font-semibold shadow-xs'
                         : 'text-ink-muted hover:text-ink'
@@ -328,7 +328,7 @@ export function ListeningPlayer({
                   onClick={() => setIsMuted((prev) => !prev)}
                   onMouseEnter={() => setShowVolumeSlider(true)}
                   title={isMuted ? 'Unmute' : 'Mute'}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-surface text-ink-muted hover:text-ink transition-colors"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-glass-bd/80 bg-surface/60 backdrop-blur-md text-ink-muted hover:text-ink transition-colors"
                 >
                   {isMuted || volume === 0 ? (
                     <svg className="w-4 h-4 fill-current text-danger" viewBox="0 0 24 24">
@@ -344,7 +344,7 @@ export function ListeningPlayer({
                 {showVolumeSlider && (
                   <div
                     onMouseLeave={() => setShowVolumeSlider(false)}
-                    className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-surface border border-border-subtle rounded-lg p-2 shadow-lg z-20 flex flex-col items-center gap-1"
+                    className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 glass-panel rounded-xl p-2 shadow-float z-20 flex flex-col items-center gap-1"
                   >
                     <input
                       type="range"
@@ -393,7 +393,7 @@ function ListeningPlayerSkeleton() {
       role="status"
       aria-busy="true"
       aria-label="Loading audio player"
-      className="glass rounded-2xl p-5 border border-border-subtle shadow-sm flex flex-col gap-4"
+      className="glass-panel rounded-2xl p-5 sm:p-6 shadow-lift flex flex-col gap-4.5"
     >
       {/* Time and Duration display */}
       <div className="flex items-baseline justify-between gap-3">

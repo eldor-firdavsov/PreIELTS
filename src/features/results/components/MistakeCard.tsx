@@ -70,7 +70,7 @@ function PlayMoment({ mistake }: { mistake: ResultMistake }) {
         {open ? 'Hide clip' : 'Play this moment'}
       </Button>
       {open && (
-        <div className="rounded-base border border-line p-3 mt-1">
+        <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-3.5 sm:p-4 mt-1">
           {evidence.text && (
             <p className="font-serif text-sm text-ink mb-2">
               <mark className="rounded-sm bg-primary-subtle px-0.5 text-primary">{evidence.text}</mark>
@@ -119,7 +119,7 @@ function ShowInPassage({ mistake }: { mistake: ResultMistake }) {
         {open ? 'Hide passage' : 'Show in passage'}
       </Button>
       {open && (
-        <div className="rounded-base border border-line bg-reading px-4 py-3 mt-1">
+        <div className="rounded-xl border border-glass-bd/80 bg-reading/80 backdrop-blur-md px-4 py-3.5 mt-1">
           {stimulus.isLoading && <SkeletonLines lines={3} />}
           {stimulus.error && (
             <ErrorState description={errorMessage(stimulus.error)} onRetry={() => void stimulus.refetch()} />
@@ -180,13 +180,13 @@ function WhyWasIWrong({ mistakeId, kind }: { mistakeId: string; kind: MistakeKin
         <div>
           <Button variant="primary" size="md" loading loadingLabel="Analysing…" disabled>Analysing…</Button>
         </div>
-        <div className="rounded-base border border-line p-4 space-y-3.5">
+        <div className="rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-4 space-y-3.5">
           <div className="space-y-1.5">
             <Skeleton className="h-3 w-24" />
             <Skeleton className="h-4 w-full" />
             <Skeleton className="h-4 w-5/6" />
           </div>
-          <div className="space-y-1.5 pt-2 border-t border-line/60">
+          <div className="space-y-1.5 pt-2 border-t border-glass-bd">
             <Skeleton className="h-3 w-32" />
             <Skeleton className="h-4 w-full" />
             <Skeleton className="h-4 w-4/5" />
@@ -231,7 +231,7 @@ function WhyWasIWrong({ mistakeId, kind }: { mistakeId: string; kind: MistakeKin
   return (
     <div className="flex flex-col gap-3 mt-2">
       <div className="lbl">Explanation</div>
-      <div className="rounded-base border border-line p-4 space-y-3">
+      <div className="rounded-xl border border-glass-bd/80 bg-surface/55 backdrop-blur-md p-4 sm:p-5 space-y-3">
         {readable(explanation).map(({ label, text }) => (
           <div key={label}>
             <div className="text-xs font-semibold text-ink-muted uppercase tracking-wider mb-0.5">{label}</div>
@@ -249,9 +249,9 @@ export function MistakeCard({ mistake }: { mistake: ResultMistake }) {
   const kind = analysableKind(mistake.section_kind);
 
   return (
-    <article className="glass overflow-hidden rounded-lg border border-line border-l-2 border-l-danger shadow-rest">
+    <article className="glass-panel overflow-hidden rounded-2xl border-l-4 border-l-danger/80 shadow-rest hover:shadow-lift transition-all duration-200">
       {/* Header */}
-      <div className="flex flex-wrap items-center gap-2.5 border-b border-line px-4 py-3 sm:px-[18px]">
+      <div className="flex flex-wrap items-center gap-2.5 border-b border-glass-bd px-4 py-3.5 sm:px-5">
         <span className="mono font-mono text-sm font-semibold text-ink">
           {mistake.question_ordinal ?? ''}
         </span>
@@ -265,23 +265,23 @@ export function MistakeCard({ mistake }: { mistake: ResultMistake }) {
         </span>
       </div>
 
-      <div className="flex flex-col gap-3 p-4 sm:p-[18px]">
+      <div className="flex flex-col gap-3.5 p-4 sm:p-5">
         {/* Question prompt */}
         <p className="font-serif text-base sm:text-[17px] text-ink leading-relaxed max-w-[68ch]">
           {mistake.prompt}
         </p>
 
         {/* Side-by-side answers */}
-        <div className="flex flex-wrap gap-px bg-border border border-border rounded-base overflow-hidden max-w-[600px]">
-          <div className="flex-1 min-w-[200px] bg-canvas p-3 sm:px-3.5 sm:py-3">
+        <div className="flex flex-wrap gap-2.5 max-w-[600px]">
+          <div className="flex-1 min-w-[200px] rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-3.5 sm:p-4">
             <div className="lbl">Your answer</div>
-            <div className={cn('text-sm font-semibold mt-0.5', unanswered ? 'text-ink-muted' : 'text-danger')}>
+            <div className={cn('text-sm font-semibold mt-1', unanswered ? 'text-ink-muted' : 'text-danger')}>
               {formatAnswer(mistake.user_answer)}
             </div>
           </div>
-          <div className="flex-1 min-w-[200px] bg-canvas p-3 sm:px-3.5 sm:py-3">
+          <div className="flex-1 min-w-[200px] rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-3.5 sm:p-4">
             <div className="lbl">Correct answer</div>
-            <div className="text-sm font-semibold text-success mt-0.5">
+            <div className="text-sm font-semibold text-success mt-1">
               {formatAnswer(mistake.correct_answer)}
             </div>
           </div>

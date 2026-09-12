@@ -66,7 +66,11 @@ export function CardGrid<Item>({
   }
 
   if (!loading && items.length === 0) {
-    return <EmptyState title={emptyTitle} description={emptyDescription} action={emptyAction} />;
+    return (
+      <div className="glass-panel rounded-2xl shadow-lift">
+        <EmptyState title={emptyTitle} description={emptyDescription} action={emptyAction} />
+      </div>
+    );
   }
 
   // One column on a phone, and more as the display earns them. The last step
@@ -85,7 +89,7 @@ export function CardGrid<Item>({
           ) : (
             <div
               key={i}
-              className="glass flex w-full flex-col rounded-lg p-[18px] min-h-[180px] shadow-rest"
+              className="glass-panel flex w-full flex-col rounded-2xl p-5 min-h-[190px] shadow-rest"
             >
               <div className="flex items-center gap-1.5">
                 <Skeleton className="h-5 w-16 rounded-pill" />
@@ -102,7 +106,7 @@ export function CardGrid<Item>({
                   <Skeleton className="h-4 w-8" />
                 </div>
               </div>
-              <div className="mt-3 border-t border-line pt-3">
+              <div className="mt-3 border-t border-glass-bd pt-3">
                 <Skeleton className="h-4 w-28" />
               </div>
             </div>
