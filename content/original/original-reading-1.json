@@ -1,0 +1,1327 @@
+{
+  "external_id": "original-reading-1",
+  "title": "Academic Reading 1 — Beavers, cities and attention",
+  "is_full_mock": false,
+  "is_published": true,
+  "source_provenance": {
+    "origin": "original",
+    "watermark": null,
+    "shippable": true,
+    "repaired_by": null
+  },
+  "sections": [
+    {
+      "external_id": "original-reading-1:s1",
+      "kind": "reading",
+      "ordinal": 1,
+      "duration_seconds": 1200,
+      "stimulus": {
+        "type": "passage",
+        "title": "The Return of the Beaver",
+        "paragraphs": [
+          {
+            "label": null,
+            "text": "For four hundred years the European beaver was absent from British rivers. It had been hunted to extinction by the sixteenth century, valued for its dense waterproof fur, for its meat, and for castoreum, a secretion once used in medicines and perfumes. Its disappearance was so complete that by the Victorian period most people regarded the animal as exotic, something belonging to Canadian forests rather than to the streams of Devon or Perthshire. The rivers themselves changed in its absence, though nobody at the time thought to record how."
+          },
+          {
+            "label": null,
+            "text": "The first legal reintroduction took place in Scotland in 2009, when eleven beavers from Norway were released into Knapdale Forest under a five-year trial. The trial was watched closely, and not only by conservationists. Farmers whose fields bordered the release site were sceptical, and some were openly hostile. A beaver can fell a mature willow in a single night, and a family group can flood several hectares of grazing land by damming a drainage ditch. These are not imagined complaints. They are the ordinary consequences of allowing a large rodent to rebuild a landscape according to its own preferences."
+          },
+          {
+            "label": null,
+            "text": "What the trial also produced was a body of measurement. Researchers recorded water chemistry above and below the new dams, counted invertebrates, and mapped the ponds that formed behind them. The results were consistent and, to many, surprising. Water leaving a beaver pond carried substantially less sediment than water entering it, because the still water allowed particles to settle. Nitrogen and phosphorus concentrations fell for the same reason. A structure built by an animal with no interest in water quality was, in effect, filtering the river."
+          },
+          {
+            "label": null,
+            "text": "The flood findings attracted more attention still. A beaver dam is not a wall but a leaky obstruction, and its effect on a river in spate is to slow the peak rather than to stop the water. On a small Devon stream monitored for five years, the arrival of a beaver family reduced peak flows during heavy rain by around thirty per cent. For a village downstream, thirty per cent can be the difference between a wet garden and a flooded kitchen. Engineered flood defences that achieve the same reduction cost a great deal and must be maintained; the beavers maintained their own."
+          },
+          {
+            "label": null,
+            "text": "None of this makes the animal straightforward to live with. The same instinct that slows a flood will block a culvert, and a blocked culvert can put a road under water. Beavers do not distinguish between a stream that needs damming and a drainage channel that a farmer dug at considerable expense. Where their ponds spread onto productive land, the loss is real and falls on one landowner while the benefit, spread across a catchment, falls on everyone else. This asymmetry, rather than any dispute about ecology, is what has made the reintroduction politically difficult."
+          },
+          {
+            "label": null,
+            "text": "Practical answers exist. A device known as a pond leveller, a pipe run through a dam and screened at the upstream end, allows water to pass at a rate the beavers cannot detect and therefore do not attempt to block. Culverts can be fenced. Trees of particular value can be wrapped in wire mesh at the base. Each of these costs money, and the argument in Britain has largely been about who should pay it rather than about whether the animal belongs. In 2022 the beaver was given legal protection in England, which settled the question of whether it could be removed without a licence, and sharpened the question of who compensates the farmer."
+          },
+          {
+            "label": null,
+            "text": "Elsewhere the transition is further advanced. Bavaria has had beavers since the 1960s and now supports more than twenty thousand of them. It also employs a network of trained volunteers who install levellers, negotiate with landowners, and, where nothing else will serve, trap and relocate a family. The scheme costs the state a modest sum each year, and its architects argue that this is simply the price of the flood protection and water treatment the animals provide without charge. The comparison is not perfect, but the accounting is at least honest about both sides."
+          },
+          {
+            "label": null,
+            "text": "What the British experience has clarified is that a reintroduction is not an ecological event with social consequences but a social arrangement with ecological consequences. The beaver will do what beavers do. Whether that is experienced as restoration or as damage depends almost entirely on whether the institutions around the river have been prepared for it."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-reading-1:s1:g1",
+          "ordinal": 1,
+          "instructions": "Questions 1-6\nComplete the notes below.\nChoose ONE WORD ONLY from the passage for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-reading-1:q1",
+              "ordinal": 1,
+              "type": "note_completion",
+              "prompt": "Beaver extinct in Britain by the ……… century",
+              "options": null,
+              "correct_answer": "sixteenth",
+              "accepted_variants": [
+                "16th",
+                "the sixteenth"
+              ],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 0,
+                "start": 115,
+                "end": 124,
+                "text": "sixteenth"
+              }
+            },
+            {
+              "external_id": "original-reading-1:q2",
+              "ordinal": 2,
+              "type": "note_completion",
+              "prompt": "Hunted for fur, meat and ………, used in medicines and perfumes",
+              "options": null,
+              "correct_answer": "castoreum",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 0,
+                "start": 193,
+                "end": 202,
+                "text": "castoreum"
+              }
+            },
+            {
+              "external_id": "original-reading-1:q3",
+              "ordinal": 3,
+              "type": "note_completion",
+              "prompt": "First legal reintroduction: 2009, at Knapdale Forest, using animals from ………",
+              "options": null,
+              "correct_answer": "Norway",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 1,
+                "start": 88,
+                "end": 94,
+                "text": "Norway"
+              }
+            },
+            {
+              "external_id": "original-reading-1:q4",
+              "ordinal": 4,
+              "type": "note_completion",
+              "prompt": "Water leaving a beaver pond carried less ……… than water entering it",
+              "options": null,
+              "correct_answer": "sediment",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 2,
+                "start": 301,
+                "end": 309,
+                "text": "sediment"
+              }
+            },
+            {
+              "external_id": "original-reading-1:q5",
+              "ordinal": 5,
+              "type": "note_completion",
+              "prompt": "A pipe run through a dam is called a pond ………",
+              "options": null,
+              "correct_answer": "leveller",
+              "accepted_variants": [
+                "leveler",
+                "pond leveller",
+                "pond leveler"
+              ],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q6",
+              "ordinal": 6,
+              "type": "note_completion",
+              "prompt": "In Bavaria, trained ……… install the devices and negotiate with landowners",
+              "options": null,
+              "correct_answer": "volunteers",
+              "accepted_variants": [
+                "volunteer"
+              ],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 6,
+                "start": 175,
+                "end": 185,
+                "text": "volunteers"
+              }
+            }
+          ]
+        },
+        {
+          "external_id": "original-reading-1:s1:g2",
+          "ordinal": 2,
+          "instructions": "Questions 7-13\nDo the following statements agree with the information given in Reading Passage 1?\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+          "shared_options": [
+            {
+              "label": "TRUE",
+              "text": ""
+            },
+            {
+              "label": "FALSE",
+              "text": ""
+            },
+            {
+              "label": "NOT GIVEN",
+              "text": ""
+            }
+          ],
+          "questions": [
+            {
+              "external_id": "original-reading-1:q7",
+              "ordinal": 7,
+              "type": "true_false_not_given",
+              "prompt": "Victorian observers recorded the changes that took place in rivers after beavers disappeared.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "FALSE",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q8",
+              "ordinal": 8,
+              "type": "true_false_not_given",
+              "prompt": "Some farmers near the Knapdale site opposed the trial.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "TRUE",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q9",
+              "ordinal": 9,
+              "type": "true_false_not_given",
+              "prompt": "The complaints made by farmers about beavers are exaggerated.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "FALSE",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q10",
+              "ordinal": 10,
+              "type": "true_false_not_given",
+              "prompt": "Beaver dams removed more nitrogen from the water than phosphorus.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NOT GIVEN",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q11",
+              "ordinal": 11,
+              "type": "true_false_not_given",
+              "prompt": "On the Devon stream, beavers cut peak flows during heavy rain by roughly a third.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "TRUE",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q12",
+              "ordinal": 12,
+              "type": "true_false_not_given",
+              "prompt": "Beavers can tell the difference between a natural stream and a drainage channel.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "FALSE",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q13",
+              "ordinal": 13,
+              "type": "true_false_not_given",
+              "prompt": "Bavaria's beaver programme is funded entirely by private donations.",
+              "options": [
+                {
+                  "label": "TRUE",
+                  "text": ""
+                },
+                {
+                  "label": "FALSE",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NOT GIVEN",
+              "accepted_variants": [],
+              "evidence": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "external_id": "original-reading-1:s2",
+      "kind": "reading",
+      "ordinal": 2,
+      "duration_seconds": 1200,
+      "stimulus": {
+        "type": "passage",
+        "title": "How Cities Cool Themselves",
+        "paragraphs": [
+          {
+            "label": "A",
+            "text": "A city is warmer than the countryside around it, and has been since cities were first built of stone. The effect was described in London in 1818 by the chemist Luke Howard, who noticed that his thermometer read consistently higher inside the city than at a station a few miles outside it. He attributed the difference to the burning of coal. He was partly right, but the larger cause was the fabric of the city itself: brick, stone and later asphalt absorb heat through the day and release it slowly through the night, so that a city never fully cools before the sun rises again."
+          },
+          {
+            "label": "B",
+            "text": "The modern term for this is the urban heat island, and its magnitude is larger than most residents assume. On a still, clear summer night, a large city may be eight degrees warmer than the farmland at its edge. The gap is greatest after dark, which is precisely when it matters most: a body that cannot shed heat overnight begins the next day already under strain. The excess deaths recorded during European heatwaves fall disproportionately on the upper floors of dense urban housing, where the night-time temperature barely falls at all."
+          },
+          {
+            "label": "C",
+            "text": "Trees are the intervention most often proposed, and the evidence for them is strong but frequently misstated. A tree cools in two ways. It shades the surfaces beneath it, preventing them from absorbing heat in the first place, and it transpires, converting liquid water to vapour and taking energy from the air to do so. Of the two, shade is by far the larger effect at street level. This matters for policy, because a tree planted where it shades a wall or a pavement does far more than the same tree planted in the middle of a park, and planting targets counted in trees rather than in shaded square metres reward the wrong choice."
+          },
+          {
+            "label": "D",
+            "text": "Cool roofs work on a different principle. A dark roof may reach seventy degrees on a summer afternoon; the same roof painted white will sit perhaps thirty degrees lower, because it reflects most of the sunlight that strikes it rather than absorbing it. The technique is cheap, requires no maintenance beyond repainting, and reduces the cooling load of the building below as well as the heat released into the street. Los Angeles has coated more than a hundred kilometres of road surface with a reflective seal on the same reasoning, though the results at street level have been mixed, since a surface that reflects heat upward can make a pedestrian standing on it less comfortable rather than more."
+          },
+          {
+            "label": "E",
+            "text": "Water is the oldest method and the least reliable. Fountains, canals and misting systems cool the air immediately around them, and a Persian courtyard garden remains an efficient piece of climate engineering. But evaporative cooling fails exactly when it is needed most, in humid heat, because air that is already close to saturation cannot take up much more vapour. Cities in humid climates that have invested in water features as a heat strategy have generally been disappointed. In dry heat the same features work extremely well, which is why the technique originated where it did. The distinction matters because water features are expensive to run and highly visible, which makes them attractive to a city wanting to be seen to act. A misting system installed in a humid summer will cost a great deal, photograph well, and lower the temperature by almost nothing. Engineers have understood this since the first psychrometric charts were drawn, and it is still the most commonly repeated mistake in urban heat policy."
+          },
+          {
+            "label": "F",
+            "text": "The most effective measures are the least visible. Ventilation corridors, streets and open spaces aligned with the prevailing summer wind, allow cooler air from outside to move through a city at night. Stuttgart has protected such corridors in its planning law since the 1930s, refusing permission for buildings that would block the flow of cold air down from the surrounding hills. No resident of the city can point to the intervention, and no photograph captures it. It is simply a set of buildings that were never built, which is a difficult thing for a mayor to celebrate and an easy thing for a later administration to give away."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-reading-1:s2:g1",
+          "ordinal": 1,
+          "instructions": "Questions 14-19\nReading Passage 2 has six sections, A-F.\nWhich section contains the following information?\nWrite the correct letter, A-F.",
+          "shared_options": [
+            {
+              "label": "A",
+              "text": ""
+            },
+            {
+              "label": "B",
+              "text": ""
+            },
+            {
+              "label": "C",
+              "text": ""
+            },
+            {
+              "label": "D",
+              "text": ""
+            },
+            {
+              "label": "E",
+              "text": ""
+            },
+            {
+              "label": "F",
+              "text": ""
+            }
+          ],
+          "questions": [
+            {
+              "external_id": "original-reading-1:q14",
+              "ordinal": 14,
+              "type": "matching_information",
+              "prompt": "a description of two distinct mechanisms by which a single measure works",
+              "options": [
+                {
+                  "label": "A",
+                  "text": ""
+                },
+                {
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "label": "F",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "C",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q15",
+              "ordinal": 15,
+              "type": "matching_information",
+              "prompt": "an early recorded observation of the phenomenon, with an incorrect explanation",
+              "options": [
+                {
+                  "label": "A",
+                  "text": ""
+                },
+                {
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "label": "F",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "A",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q16",
+              "ordinal": 16,
+              "type": "matching_information",
+              "prompt": "a measure whose benefit is impossible to photograph",
+              "options": [
+                {
+                  "label": "A",
+                  "text": ""
+                },
+                {
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "label": "F",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "F",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q17",
+              "ordinal": 17,
+              "type": "matching_information",
+              "prompt": "the reason a technique fails in one climate but succeeds in another",
+              "options": [
+                {
+                  "label": "A",
+                  "text": ""
+                },
+                {
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "label": "F",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "E",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q18",
+              "ordinal": 18,
+              "type": "matching_information",
+              "prompt": "a figure for the temperature difference between a city and its surroundings",
+              "options": [
+                {
+                  "label": "A",
+                  "text": ""
+                },
+                {
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "label": "F",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "B",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q19",
+              "ordinal": 19,
+              "type": "matching_information",
+              "prompt": "an example of a measure that may not help people at street level",
+              "options": [
+                {
+                  "label": "A",
+                  "text": ""
+                },
+                {
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "label": "F",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "D",
+              "accepted_variants": [],
+              "evidence": null
+            }
+          ]
+        },
+        {
+          "external_id": "original-reading-1:s2:g2",
+          "ordinal": 2,
+          "instructions": "Questions 20-23\nComplete the sentences below.\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-reading-1:q20",
+              "ordinal": 20,
+              "type": "sentence_completion",
+              "prompt": "Luke Howard believed the temperature difference he measured was caused by the burning of ……….",
+              "options": null,
+              "correct_answer": "coal",
+              "accepted_variants": [
+                "burning coal"
+              ],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 0,
+                "start": 336,
+                "end": 340,
+                "text": "coal"
+              }
+            },
+            {
+              "external_id": "original-reading-1:q21",
+              "ordinal": 21,
+              "type": "sentence_completion",
+              "prompt": "The urban heat island is at its largest after ……….",
+              "options": null,
+              "correct_answer": "dark",
+              "accepted_variants": [
+                "nightfall",
+                "after dark"
+              ],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q22",
+              "ordinal": 22,
+              "type": "sentence_completion",
+              "prompt": "Planting targets should be counted in shaded ……… rather than in numbers of trees.",
+              "options": null,
+              "correct_answer": "square metres",
+              "accepted_variants": [
+                "square meters",
+                "sq metres",
+                "sq m"
+              ],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 2,
+                "start": 595,
+                "end": 608,
+                "text": "square metres"
+              }
+            },
+            {
+              "external_id": "original-reading-1:q23",
+              "ordinal": 23,
+              "type": "sentence_completion",
+              "prompt": "Stuttgart has protected its ventilation corridors through its planning ……….",
+              "options": null,
+              "correct_answer": "law",
+              "accepted_variants": [
+                "planning law",
+                "its planning law"
+              ],
+              "evidence": {
+                "kind": "passage",
+                "paragraph_index": 5,
+                "start": 257,
+                "end": 260,
+                "text": "law"
+              }
+            }
+          ]
+        },
+        {
+          "external_id": "original-reading-1:s2:g3",
+          "ordinal": 3,
+          "instructions": "Questions 24-26\nChoose the correct letter, A, B, C or D.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-reading-1:q24",
+              "ordinal": 24,
+              "type": "multiple_choice",
+              "prompt": "The writer says the urban heat island matters most at night because",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "city residents are more likely to be indoors then."
+                },
+                {
+                  "label": "B",
+                  "text": "a body that cannot cool overnight starts the next day already strained."
+                },
+                {
+                  "label": "C",
+                  "text": "thermometers are more accurate after dark."
+                },
+                {
+                  "label": "D",
+                  "text": "the countryside cools more slowly than the city."
+                }
+              ],
+              "correct_answer": "B",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q25",
+              "ordinal": 25,
+              "type": "multiple_choice",
+              "prompt": "What does the writer suggest about tree-planting policy?",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "It should prioritise parks over streets."
+                },
+                {
+                  "label": "B",
+                  "text": "It relies on transpiration more than on shade."
+                },
+                {
+                  "label": "C",
+                  "text": "Counting trees rather than shade encourages poor decisions."
+                },
+                {
+                  "label": "D",
+                  "text": "It has been shown to be less effective than cool roofs."
+                }
+              ],
+              "correct_answer": "C",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q26",
+              "ordinal": 26,
+              "type": "multiple_choice",
+              "prompt": "The writer's main point about Stuttgart's ventilation corridors is that",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "they were introduced more recently than other measures."
+                },
+                {
+                  "label": "B",
+                  "text": "their invisibility makes them politically vulnerable."
+                },
+                {
+                  "label": "C",
+                  "text": "they cost more than the alternatives."
+                },
+                {
+                  "label": "D",
+                  "text": "they work only in cities surrounded by hills."
+                }
+              ],
+              "correct_answer": "B",
+              "accepted_variants": [],
+              "evidence": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "external_id": "original-reading-1:s3",
+      "kind": "reading",
+      "ordinal": 3,
+      "duration_seconds": 1200,
+      "stimulus": {
+        "type": "passage",
+        "title": "The Case Against Multitasking",
+        "paragraphs": [
+          {
+            "label": null,
+            "text": "The belief that a person can attend to two demanding things at once is remarkably durable, and remarkably unsupported. What the research shows is not that people multitask badly but that, for tasks requiring conscious attention, they do not multitask at all. They switch. Attention moves from one task to the other and back, and each move carries a cost in time and in accuracy. The cost is small enough to escape notice from the inside, which is why the belief survives, and large enough to matter in aggregate, which is why it should not."
+          },
+          {
+            "label": null,
+            "text": "The cost has a name. Psychologists call it the switch cost, and it has been measured in laboratories since the 1920s using tasks of deliberate simplicity: sort these cards by colour, now by suit, now by colour again. Alternating between the two rules is reliably slower than doing a run of each, even when the participant knows the sequence in advance and even after extensive practice. Practice reduces the cost. It has never been shown to eliminate it."
+          },
+          {
+            "label": null,
+            "text": "Two components make up the cost, and separating them explains a good deal. The first is the time taken to reconfigure, to load the rules of the new task into working memory. The second is interference from the task just abandoned, which does not vanish on command but decays. This second component is the reason that returning to a difficult piece of work after an interruption feels like starting again: some of it genuinely is starting again, because the mental state that made the work possible has partly dissipated and must be rebuilt."
+          },
+          {
+            "label": null,
+            "text": "The practical scale of this was estimated in a widely cited study of office workers, which found that a worker interrupted at a task took on average around twenty-three minutes to return to it. The figure is often quoted as though the whole period were lost, which it is not; the worker was doing other things, some of them useful. What the figure captures is the length of the detour, not the size of the waste. Even read carefully, though, it describes a working day in which sustained attention is the exception rather than the arrangement."
+          },
+          {
+            "label": null,
+            "text": "An obvious objection is that some people are simply better at this than others, and the objection turns out to be almost exactly backwards. When researchers at Stanford sorted participants by how much media multitasking they reported doing and then tested them, the heavy multitaskers performed worse on every measure of attentional control. They were more distracted by irrelevant information, slower to switch between tasks, and less able to hold the right items in memory. The finding does not establish that the habit caused the deficit; people who filter poorly may simply be drawn to environments that demand less filtering. But the confident self-assessment of the heavy multitaskers was not supported by anything measured."
+          },
+          {
+            "label": null,
+            "text": "There is one important qualification. Tasks that have been practised to the point of automaticity make almost no demand on conscious attention, and can genuinely be combined with tasks that do. An experienced driver on an empty motorway can hold a conversation. The same driver in unfamiliar traffic will stop talking, usually without noticing, because the driving has reclaimed the attention the conversation was borrowing. The distinction is not between important and unimportant tasks but between automatic and controlled ones, and it is a distinction people are poor at judging in their own case."
+          },
+          {
+            "label": null,
+            "text": "None of this argues for a working life of uninterrupted concentration, which no organisation has ever achieved and few would enjoy. It argues for treating attention as a resource with a price rather than a capacity that can be divided at no cost. The practical implications are modest and mostly unwelcome: fewer channels demanding immediate response, longer blocks protected from them, and an acceptance that the person who appears to be doing four things is doing one of them at a time and doing each of them slightly worse."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-reading-1:s3:g1",
+          "ordinal": 1,
+          "instructions": "Questions 27-32\nDo the following statements agree with the claims of the writer in Reading Passage 3?\nWrite YES if the statement agrees with the claims of the writer, NO if the statement contradicts the claims of the writer, or NOT GIVEN if it is impossible to say what the writer thinks about this.",
+          "shared_options": [
+            {
+              "label": "YES",
+              "text": ""
+            },
+            {
+              "label": "NO",
+              "text": ""
+            },
+            {
+              "label": "NOT GIVEN",
+              "text": ""
+            }
+          ],
+          "questions": [
+            {
+              "external_id": "original-reading-1:q27",
+              "ordinal": 27,
+              "type": "yes_no_not_given",
+              "prompt": "People are generally aware of the cost of switching between tasks.",
+              "options": [
+                {
+                  "label": "YES",
+                  "text": ""
+                },
+                {
+                  "label": "NO",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NO",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q28",
+              "ordinal": 28,
+              "type": "yes_no_not_given",
+              "prompt": "Practice can remove the switch cost entirely.",
+              "options": [
+                {
+                  "label": "YES",
+                  "text": ""
+                },
+                {
+                  "label": "NO",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NO",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q29",
+              "ordinal": 29,
+              "type": "yes_no_not_given",
+              "prompt": "The twenty-three minute figure represents time that is entirely wasted.",
+              "options": [
+                {
+                  "label": "YES",
+                  "text": ""
+                },
+                {
+                  "label": "NO",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NO",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q30",
+              "ordinal": 30,
+              "type": "yes_no_not_given",
+              "prompt": "Card-sorting experiments are a better method than studies of office workers.",
+              "options": [
+                {
+                  "label": "YES",
+                  "text": ""
+                },
+                {
+                  "label": "NO",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NOT GIVEN",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q31",
+              "ordinal": 31,
+              "type": "yes_no_not_given",
+              "prompt": "The Stanford study proved that media multitasking damages attention.",
+              "options": [
+                {
+                  "label": "YES",
+                  "text": ""
+                },
+                {
+                  "label": "NO",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "NO",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q32",
+              "ordinal": 32,
+              "type": "yes_no_not_given",
+              "prompt": "People find it hard to judge which of their own tasks are automatic.",
+              "options": [
+                {
+                  "label": "YES",
+                  "text": ""
+                },
+                {
+                  "label": "NO",
+                  "text": ""
+                },
+                {
+                  "label": "NOT GIVEN",
+                  "text": ""
+                }
+              ],
+              "correct_answer": "YES",
+              "accepted_variants": [],
+              "evidence": null
+            }
+          ]
+        },
+        {
+          "external_id": "original-reading-1:s3:g2",
+          "ordinal": 2,
+          "instructions": "Questions 33-36\nChoose the correct letter, A, B, C or D.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-reading-1:q33",
+              "ordinal": 33,
+              "type": "multiple_choice",
+              "prompt": "According to the writer, the belief in multitasking persists because",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "the research supporting it is widely published."
+                },
+                {
+                  "label": "B",
+                  "text": "the cost of switching is too small to be noticed from the inside."
+                },
+                {
+                  "label": "C",
+                  "text": "employers reward the appearance of busyness."
+                },
+                {
+                  "label": "D",
+                  "text": "most tasks are automatic rather than controlled."
+                }
+              ],
+              "correct_answer": "B",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q34",
+              "ordinal": 34,
+              "type": "multiple_choice",
+              "prompt": "The second component of the switch cost explains why",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "practice reduces switching time."
+                },
+                {
+                  "label": "B",
+                  "text": "simple tasks are used in laboratory studies."
+                },
+                {
+                  "label": "C",
+                  "text": "resuming difficult work after an interruption feels like beginning again."
+                },
+                {
+                  "label": "D",
+                  "text": "some workers are interrupted more often than others."
+                }
+              ],
+              "correct_answer": "C",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q35",
+              "ordinal": 35,
+              "type": "multiple_choice",
+              "prompt": "What does the writer say about the Stanford finding?",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "It has been contradicted by later work."
+                },
+                {
+                  "label": "B",
+                  "text": "It applies only to people who work in offices."
+                },
+                {
+                  "label": "C",
+                  "text": "It shows the direction of cause and effect clearly."
+                },
+                {
+                  "label": "D",
+                  "text": "It leaves the direction of cause and effect unresolved."
+                }
+              ],
+              "correct_answer": "D",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q36",
+              "ordinal": 36,
+              "type": "multiple_choice",
+              "prompt": "The driving example is used to illustrate",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "the difference between automatic and controlled tasks."
+                },
+                {
+                  "label": "B",
+                  "text": "the danger of conversation while driving."
+                },
+                {
+                  "label": "C",
+                  "text": "the benefits of extensive practice."
+                },
+                {
+                  "label": "D",
+                  "text": "the unreliability of self-report."
+                }
+              ],
+              "correct_answer": "A",
+              "accepted_variants": [],
+              "evidence": null
+            }
+          ]
+        },
+        {
+          "external_id": "original-reading-1:s3:g3",
+          "ordinal": 3,
+          "instructions": "Questions 37-40\nComplete the summary using the list of words, A-H, below.\nWrite the correct letter, A-H.\n\nFor tasks that need conscious attention, people do not divide their attention but engage in 37 ______ , which is slower than working in runs. Part of the delay comes from 38 ______ , as the rules of the new task are loaded into working memory. Heavy media multitaskers performed worst on attentional tests, so their confident 39 ______ was not borne out. The writer concludes that attention should be treated as 40 ______ rather than as something that can be split at no cost.",
+          "shared_options": [
+            {
+              "label": "A",
+              "text": "switching"
+            },
+            {
+              "label": "B",
+              "text": "interference"
+            },
+            {
+              "label": "C",
+              "text": "automaticity"
+            },
+            {
+              "label": "D",
+              "text": "self-assessment"
+            },
+            {
+              "label": "E",
+              "text": "reconfiguration"
+            },
+            {
+              "label": "F",
+              "text": "a resource with a price"
+            },
+            {
+              "label": "G",
+              "text": "a capacity to be divided"
+            },
+            {
+              "label": "H",
+              "text": "immediate response"
+            }
+          ],
+          "questions": [
+            {
+              "external_id": "original-reading-1:q37",
+              "ordinal": 37,
+              "type": "summary_completion",
+              "prompt": "switching between tasks, which is slower than working in runs",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "switching"
+                },
+                {
+                  "label": "B",
+                  "text": "interference"
+                },
+                {
+                  "label": "C",
+                  "text": "automaticity"
+                },
+                {
+                  "label": "D",
+                  "text": "self-assessment"
+                },
+                {
+                  "label": "E",
+                  "text": "reconfiguration"
+                },
+                {
+                  "label": "F",
+                  "text": "a resource with a price"
+                },
+                {
+                  "label": "G",
+                  "text": "a capacity to be divided"
+                },
+                {
+                  "label": "H",
+                  "text": "immediate response"
+                }
+              ],
+              "correct_answer": "A",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q38",
+              "ordinal": 38,
+              "type": "summary_completion",
+              "prompt": "loading the rules of the new task into working memory",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "switching"
+                },
+                {
+                  "label": "B",
+                  "text": "interference"
+                },
+                {
+                  "label": "C",
+                  "text": "automaticity"
+                },
+                {
+                  "label": "D",
+                  "text": "self-assessment"
+                },
+                {
+                  "label": "E",
+                  "text": "reconfiguration"
+                },
+                {
+                  "label": "F",
+                  "text": "a resource with a price"
+                },
+                {
+                  "label": "G",
+                  "text": "a capacity to be divided"
+                },
+                {
+                  "label": "H",
+                  "text": "immediate response"
+                }
+              ],
+              "correct_answer": "E",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q39",
+              "ordinal": 39,
+              "type": "summary_completion",
+              "prompt": "the heavy multitaskers' confident judgement of their own ability",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "switching"
+                },
+                {
+                  "label": "B",
+                  "text": "interference"
+                },
+                {
+                  "label": "C",
+                  "text": "automaticity"
+                },
+                {
+                  "label": "D",
+                  "text": "self-assessment"
+                },
+                {
+                  "label": "E",
+                  "text": "reconfiguration"
+                },
+                {
+                  "label": "F",
+                  "text": "a resource with a price"
+                },
+                {
+                  "label": "G",
+                  "text": "a capacity to be divided"
+                },
+                {
+                  "label": "H",
+                  "text": "immediate response"
+                }
+              ],
+              "correct_answer": "D",
+              "accepted_variants": [],
+              "evidence": null
+            },
+            {
+              "external_id": "original-reading-1:q40",
+              "ordinal": 40,
+              "type": "summary_completion",
+              "prompt": "what attention should be treated as",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "switching"
+                },
+                {
+                  "label": "B",
+                  "text": "interference"
+                },
+                {
+                  "label": "C",
+                  "text": "automaticity"
+                },
+                {
+                  "label": "D",
+                  "text": "self-assessment"
+                },
+                {
+                  "label": "E",
+                  "text": "reconfiguration"
+                },
+                {
+                  "label": "F",
+                  "text": "a resource with a price"
+                },
+                {
+                  "label": "G",
+                  "text": "a capacity to be divided"
+                },
+                {
+                  "label": "H",
+                  "text": "immediate response"
+                }
+              ],
+              "correct_answer": "F",
+              "accepted_variants": [],
+              "evidence": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

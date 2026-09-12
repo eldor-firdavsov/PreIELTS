@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+# Large audio assets — served locally, not committed.
+public/audio/*.mp3
+
+# Third-party test content. Never committed, never shipped.
+# See CLAUDE.md "Content provenance".
+content/raw/
+content/normalized/
+content/normalized-repaired/
+
+# IDE / OS
+.DS_Store
+*.swp
+.claude/

@@ -1,0 +1,34 @@
+{
+  "external_id": "full-cd-reading-m1",
+  "description": "Reading M1: two paragraphs of the 'Insect decision-making' passage were emitted inside the 'Fear of the Unknown' passage in the source file, leaving passage 2 with 4 paragraphs where questions 14-19 need A-F, and passage 3 with 9 where questions 27-33 need letters. Neither passage letters its paragraphs at all. Operations are ordered and each sees the result of the previous, so the second move uses the index the third paragraph shifted into.",
+  "operations": [
+    {
+      "op": "move_paragraph",
+      "from_section": 3,
+      "from_index": 6,
+      "to_section": 2,
+      "to_index": 4,
+      "reason": "Paragraph 'How quickly they accomplish the transfer to a new home...' is about ants relocating a nest and belongs to the insect passage, not the innovation passage. Placed at position E, where heading key answer 18=iv 'How urgency can affect the process of finding a new home' matches it."
+    },
+    {
+      "op": "move_paragraph",
+      "from_section": 3,
+      "from_index": 6,
+      "to_section": 2,
+      "to_index": 5,
+      "reason": "Paragraph 'Once the suitable new nest is identified, the chosen ants begin to lead...' likewise belongs to the insect passage. Index 6 again because the previous move shifted it down one. Placed at position F, where heading key answer 19=ii 'The need to instruct additional insect guides' matches it."
+    },
+    {
+      "op": "set_paragraph_labels",
+      "section": 2,
+      "letters": ["A", "B", "C", "D", "E", "F"],
+      "reason": "Questions 14-19 ask for a heading per paragraph A-F. After the two moves the passage has exactly six paragraphs, and all six heading answers verify against them: A=vii jury size, B=iii waggle-dance signalling, C=vi computer model, D=i robotic cockroaches, E=iv urgency of relocation, F=ii leading additional ants."
+    },
+    {
+      "op": "set_paragraph_labels",
+      "section": 3,
+      "letters": ["A", "B", "C", "D", "E", "F", "G"],
+      "reason": "Questions 27-33 answer with paragraph letters A-G. After the two paragraphs are removed the passage has seven, and every answer used (A, B, C, E, F, G) names one. The group's select still offers H, which names no paragraph; that is a source defect left unrepaired because no answer depends on it."
+    }
+  ]
+}

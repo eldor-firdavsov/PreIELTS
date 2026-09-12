@@ -1,0 +1,1338 @@
+{
+  "external_id": "original-listening-1",
+  "title": "Listening 1 — Sports centre, botanic garden, river study, standard time",
+  "is_full_mock": false,
+  "is_published": false,
+  "source_provenance": {
+    "origin": "original",
+    "watermark": null,
+    "shippable": true,
+    "repaired_by": null
+  },
+  "sections": [
+    {
+      "external_id": "original-listening-1:s1",
+      "kind": "listening",
+      "ordinal": 1,
+      "duration_seconds": 510,
+      "stimulus": {
+        "type": "audio",
+        "audio_url": "audio/original-listening-1.mp3",
+        "transcript": [
+          {
+            "speaker": null,
+            "text": "Section one. You will hear a telephone conversation between a woman and a member of staff at a community sports centre. First you have some time to look at questions one to ten."
+          },
+          {
+            "speaker": "Woman",
+            "text": "Good morning, Fairfield Community Sports Centre, Rosa speaking."
+          },
+          {
+            "speaker": "Man",
+            "text": "Oh, hello. I'd like to join the centre, if that's possible over the phone."
+          },
+          {
+            "speaker": "Woman",
+            "text": "Of course. I'll take your details. Can I start with your full name?"
+          },
+          {
+            "speaker": "Man",
+            "text": "It's Daniel Ashcroft. Ashcroft is spelled A-S-H-C-R-O-F-T."
+          },
+          {
+            "speaker": "Woman",
+            "text": "Thank you. And your date of birth?"
+          },
+          {
+            "speaker": "Man",
+            "text": "The twelfth of March, nineteen ninety-four."
+          },
+          {
+            "speaker": "Woman",
+            "text": "Lovely. What's the best address for us?"
+          },
+          {
+            "speaker": "Man",
+            "text": "Forty-two Wilton Road. That's W-I-L-T-O-N."
+          },
+          {
+            "speaker": "Woman",
+            "text": "And a contact number?"
+          },
+          {
+            "speaker": "Man",
+            "text": "Oh seven double seven, nine oh four, three one six."
+          },
+          {
+            "speaker": "Woman",
+            "text": "Perfect. Now, we have three types of membership. There's Standard, which is thirty-two pounds a month, Off-Peak at twenty-four, and Family at fifty-five."
+          },
+          {
+            "speaker": "Man",
+            "text": "I only really get here in the mornings, so the Off-Peak one sounds right."
+          },
+          {
+            "speaker": "Woman",
+            "text": "That's the sensible choice then. Off-Peak runs until four in the afternoon on weekdays, and all day at weekends."
+          },
+          {
+            "speaker": "Man",
+            "text": "That works. What about the pool?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "The pool is included, but do note it closes on Tuesdays for maintenance."
+          },
+          {
+            "speaker": "Man",
+            "text": "Right, I'll avoid Tuesdays. Do I need to bring anything on my first visit?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "Just some photo identification, and we'll take your picture for the card here."
+          },
+          {
+            "speaker": "Man",
+            "text": "And is there parking?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "There is, but it's for two hours only unless you buy a permit, which is fifteen pounds a year."
+          },
+          {
+            "speaker": "Man",
+            "text": "I'll probably walk. One last thing, when does the membership actually start?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "We'll activate it on the first of next month, so you get a full month."
+          },
+          {
+            "speaker": "Man",
+            "text": "Excellent. Thank you very much."
+          },
+          {
+            "speaker": null,
+            "text": "That is the end of section one. You now have half a minute to check your answers."
+          },
+          {
+            "speaker": null,
+            "text": "Section two. You will hear a talk given to new volunteers at a city botanic garden. First you have some time to look at questions eleven to twenty."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "Welcome, everybody, and thank you for giving up your Saturday. I'm Priya, and I coordinate the volunteer programme here at the garden."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "A little history first. The garden was founded in eighteen eighty-six by a local textile manufacturer who wanted somewhere for mill workers to walk on a Sunday."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "It covers eleven hectares, which makes it the second largest green space in the city after the main park."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "We hold around four thousand plant species, and about a fifth of those are grown from seed collected in the wild."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "Now, the practical side. Volunteers work in one of four teams. The propagation team works in the glasshouses and needs no previous experience."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "The borders team does the heavier planting outdoors, so we do ask for a reasonable level of fitness there."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "The third team looks after the herbarium, which is our collection of dried and pressed specimens. That work is indoors and quite detailed."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "And the fourth team runs guided walks for visitors, which means a little training in public speaking, provided free by us."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "Whichever team you join, please sign in at the wooden hut by the east gate, not at the main reception."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "Tools are kept in the shed behind the glasshouses, and the code for the padlock changes every January."
+          },
+          {
+            "speaker": "Speaker",
+            "text": "Finally, lunch. There's a staff room above the shop with a kettle and a fridge, and volunteers get a third off anything in the cafe."
+          },
+          {
+            "speaker": null,
+            "text": "That is the end of section two."
+          },
+          {
+            "speaker": null,
+            "text": "Section three. You will hear two students, Mei and Tom, discussing a project with their tutor. First you have some time to look at questions twenty-one to thirty."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Come in, both of you. How's the river study coming along?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "Reasonably well. We've finished the sampling, but we're arguing about how to present it."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Arguing is usually a good sign at this stage. What's the disagreement?"
+          },
+          {
+            "speaker": "Man",
+            "text": "Mei wants to lead with the water chemistry. I think the invertebrate counts tell the story better."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "And why do you think that, Tom?"
+          },
+          {
+            "speaker": "Man",
+            "text": "Because the chemistry only shows what the river was like on the day we sampled. The invertebrates reflect months of conditions."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "That's a fair point, and it's the standard argument for biological monitoring. Mei, what's your case?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "Only that the chemistry is what our reader will expect. But I take Tom's point, and I'd rather be right than conventional."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Then lead with the invertebrates and use the chemistry to support them. What about the sampling itself, did you manage all six sites?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "Five. The sixth was inaccessible after the flooding in February."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "That's worth stating plainly in your methods rather than hoping nobody counts. Now, your kick-sampling technique, how long did you sample at each site?"
+          },
+          {
+            "speaker": "Man",
+            "text": "Three minutes, following the standard protocol."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Good. And did you record the substrate type?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "We did, though only as a rough category. Gravel, sand, or silt."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "That's enough for this project. What surprised you most?"
+          },
+          {
+            "speaker": "Man",
+            "text": "The site downstream of the treatment works was healthier than the one upstream. We expected the opposite."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "That happens more often than people assume. What explanation are you offering?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "We think it's the shade. The upstream site has no tree cover at all, so it warms up considerably in summer."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Plausible, but you'll need the temperature data to support it. Do you have it?"
+          },
+          {
+            "speaker": "Man",
+            "text": "We have spot readings, not continuous logging."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Then present it as a hypothesis rather than a conclusion. When can I see a draft?"
+          },
+          {
+            "speaker": "Woman",
+            "text": "We were hoping for the end of next week, if that's not too late."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "That's fine. Bring the raw data as well as the write-up."
+          },
+          {
+            "speaker": null,
+            "text": "That is the end of section three."
+          },
+          {
+            "speaker": null,
+            "text": "Section four. You will hear part of a lecture about the history of standardised time. First you have some time to look at questions thirty-one to forty."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Before the railways, every town in Britain kept its own time, set by the sun. Bristol clocks ran about ten minutes behind London, and nobody found this inconvenient."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "What changed was not technology but scheduling. A timetable is meaningless if the two ends of the line disagree about when noon is."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "The Great Western Railway adopted London time across its network in eighteen forty, and other companies followed within the decade."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "For some years the two systems ran side by side. A number of town clocks were fitted with a second minute hand showing railway time."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Resistance was real, and it was mostly legal rather than sentimental. Court cases turned on which time a contract referred to."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "The most cited example is a case in eighteen fifty-eight in Dorchester, where a hearing was lost because the judge used local time and the defendant arrived on railway time."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "Parliament did not settle the matter until eighteen eighty, when Greenwich Mean Time was given legal force throughout Great Britain."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "The international problem was harder, and it was solved by a conference in Washington in eighteen eighty-four, which chose Greenwich as the prime meridian."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "The vote was not unanimous. France abstained, and continued to define its own time by reference to Paris for another quarter of a century."
+          },
+          {
+            "speaker": "Tutor",
+            "text": "What I want you to take from this is that standardisation is rarely a technical achievement. It is almost always a negotiation, and the winner is usually whoever already runs the network."
+          },
+          {
+            "speaker": null,
+            "text": "That is the end of section four. You now have ten minutes to transfer your answers to the answer sheet."
+          }
+        ],
+        "markers": [
+          {
+            "question_ordinal": 1,
+            "time_seconds": 34.3,
+            "text": "It's Daniel Ashcroft. Ashcroft is spelled A-S-H-C-R-O-F-T."
+          },
+          {
+            "question_ordinal": 2,
+            "time_seconds": 41.8,
+            "text": "The twelfth of March, nineteen ninety-four."
+          },
+          {
+            "question_ordinal": 3,
+            "time_seconds": 48.6,
+            "text": "Forty-two Wilton Road. That's W-I-L-T-O-N."
+          },
+          {
+            "question_ordinal": 4,
+            "time_seconds": 54.6,
+            "text": "Oh seven double seven, nine oh four, three one six."
+          },
+          {
+            "question_ordinal": 5,
+            "time_seconds": 70.1,
+            "text": "I only really get here in the mornings, so the Off-Peak one sounds right."
+          },
+          {
+            "question_ordinal": 6,
+            "time_seconds": 75.2,
+            "text": "That's the sensible choice then. Off-Peak runs until four in the afternoon on weekdays, and all day at weekends."
+          },
+          {
+            "question_ordinal": 7,
+            "time_seconds": 85.8,
+            "text": "The pool is included, but do note it closes on Tuesdays for maintenance."
+          },
+          {
+            "question_ordinal": 8,
+            "time_seconds": 96.8,
+            "text": "Just some photo identification, and we'll take your picture for the card here."
+          },
+          {
+            "question_ordinal": 9,
+            "time_seconds": 104.2,
+            "text": "There is, but it's for two hours only unless you buy a permit, which is fifteen pounds a year."
+          },
+          {
+            "question_ordinal": 10,
+            "time_seconds": 116.3,
+            "text": "We'll activate it on the first of next month, so you get a full month."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-listening-1:s1:g1",
+          "ordinal": 1,
+          "instructions": "Questions 1-10\nComplete the form below.\nWrite ONE WORD AND/OR A NUMBER for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q1",
+              "ordinal": 1,
+              "type": "form_completion",
+              "prompt": "Surname: ………",
+              "options": null,
+              "correct_answer": "Ashcroft",
+              "accepted_variants": [
+                "ASHCROFT"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 34.3,
+                "text": "It's Daniel Ashcroft. Ashcroft is spelled A-S-H-C-R-O-F-T."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q2",
+              "ordinal": 2,
+              "type": "form_completion",
+              "prompt": "Date of birth: ………",
+              "options": null,
+              "correct_answer": "12 March 1994",
+              "accepted_variants": [
+                "12th March 1994",
+                "12/3/1994",
+                "March 12 1994"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 41.8,
+                "text": "The twelfth of March, nineteen ninety-four."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q3",
+              "ordinal": 3,
+              "type": "form_completion",
+              "prompt": "Address: 42 ……… Road",
+              "options": null,
+              "correct_answer": "Wilton",
+              "accepted_variants": [
+                "Wilton Road",
+                "42 Wilton Road"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 48.6,
+                "text": "Forty-two Wilton Road. That's W-I-L-T-O-N."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q4",
+              "ordinal": 4,
+              "type": "form_completion",
+              "prompt": "Phone: ………",
+              "options": null,
+              "correct_answer": "0777904316",
+              "accepted_variants": [
+                "0777 904 316",
+                "0777-904-316"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 54.6,
+                "text": "Oh seven double seven, nine oh four, three one six."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q5",
+              "ordinal": 5,
+              "type": "form_completion",
+              "prompt": "Membership type chosen: ………",
+              "options": null,
+              "correct_answer": "Off-Peak",
+              "accepted_variants": [
+                "Off Peak",
+                "offpeak"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 70.1,
+                "text": "I only really get here in the mornings, so the Off-Peak one sounds right."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q6",
+              "ordinal": 6,
+              "type": "form_completion",
+              "prompt": "Off-peak ends at ……… p.m. on weekdays",
+              "options": null,
+              "correct_answer": "four",
+              "accepted_variants": [
+                "4",
+                "4pm",
+                "four o'clock"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 75.2,
+                "text": "That's the sensible choice then. Off-Peak runs until four in the afternoon on weekdays, and all day at weekends."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q7",
+              "ordinal": 7,
+              "type": "form_completion",
+              "prompt": "Pool closed on ……… for maintenance",
+              "options": null,
+              "correct_answer": "Tuesdays",
+              "accepted_variants": [
+                "Tuesday"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 85.8,
+                "text": "The pool is included, but do note it closes on Tuesdays for maintenance."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q8",
+              "ordinal": 8,
+              "type": "form_completion",
+              "prompt": "Bring on first visit: ………",
+              "options": null,
+              "correct_answer": "photo identification",
+              "accepted_variants": [
+                "photo ID",
+                "identification"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 96.8,
+                "text": "Just some photo identification, and we'll take your picture for the card here."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q9",
+              "ordinal": 9,
+              "type": "form_completion",
+              "prompt": "Parking permit costs £……… a year",
+              "options": null,
+              "correct_answer": "15",
+              "accepted_variants": [
+                "fifteen",
+                "15 pounds",
+                "£15"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 104.2,
+                "text": "There is, but it's for two hours only unless you buy a permit, which is fifteen pounds a year."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q10",
+              "ordinal": 10,
+              "type": "form_completion",
+              "prompt": "Membership starts on the ……… of next month",
+              "options": null,
+              "correct_answer": "first",
+              "accepted_variants": [
+                "1st",
+                "the first"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 116.3,
+                "text": "We'll activate it on the first of next month, so you get a full month."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "external_id": "original-listening-1:s2",
+      "kind": "listening",
+      "ordinal": 2,
+      "duration_seconds": 510,
+      "stimulus": {
+        "type": "audio",
+        "audio_url": "audio/original-listening-1.mp3",
+        "transcript": [],
+        "markers": [
+          {
+            "question_ordinal": 11,
+            "time_seconds": 164.1,
+            "text": "A little history first. The garden was founded in eighteen eighty-six by a local textile manufacturer who wanted somewhere for mill workers to walk on a Sunday."
+          },
+          {
+            "question_ordinal": 12,
+            "time_seconds": 174.7,
+            "text": "It covers eleven hectares, which makes it the second largest green space in the city after the main park."
+          },
+          {
+            "question_ordinal": 13,
+            "time_seconds": 181.9,
+            "text": "We hold around four thousand plant species, and about a fifth of those are grown from seed collected in the wild."
+          },
+          {
+            "question_ordinal": 14,
+            "time_seconds": 189.5,
+            "text": "Now, the practical side. Volunteers work in one of four teams. The propagation team works in the glasshouses and needs no previous experience."
+          },
+          {
+            "question_ordinal": 15,
+            "time_seconds": 200.4,
+            "text": "The borders team does the heavier planting outdoors, so we do ask for a reasonable level of fitness there."
+          },
+          {
+            "question_ordinal": 16,
+            "time_seconds": 207.5,
+            "text": "The third team looks after the herbarium, which is our collection of dried and pressed specimens. That work is indoors and quite detailed."
+          },
+          {
+            "question_ordinal": 17,
+            "time_seconds": 217.2,
+            "text": "And the fourth team runs guided walks for visitors, which means a little training in public speaking, provided free by us."
+          },
+          {
+            "question_ordinal": 18,
+            "time_seconds": 225.6,
+            "text": "Whichever team you join, please sign in at the wooden hut by the east gate, not at the main reception."
+          },
+          {
+            "question_ordinal": 19,
+            "time_seconds": 232.5,
+            "text": "Tools are kept in the shed behind the glasshouses, and the code for the padlock changes every January."
+          },
+          {
+            "question_ordinal": 20,
+            "time_seconds": 239.5,
+            "text": "Finally, lunch. There's a staff room above the shop with a kettle and a fridge, and volunteers get a third off anything in the cafe."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-listening-1:s2:g1",
+          "ordinal": 1,
+          "instructions": "Questions 11-20\nComplete the notes below.\nWrite ONE WORD AND/OR A NUMBER for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q11",
+              "ordinal": 11,
+              "type": "note_completion",
+              "prompt": "Garden founded in ………",
+              "options": null,
+              "correct_answer": "1886",
+              "accepted_variants": [
+                "eighteen eighty-six"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 164.1,
+                "text": "A little history first. The garden was founded in eighteen eighty-six by a local textile manufacturer who wanted somewhere for mill workers to walk on a Sunday."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q12",
+              "ordinal": 12,
+              "type": "note_completion",
+              "prompt": "Covers ……… hectares",
+              "options": null,
+              "correct_answer": "eleven",
+              "accepted_variants": [
+                "11"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 174.7,
+                "text": "It covers eleven hectares, which makes it the second largest green space in the city after the main park."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q13",
+              "ordinal": 13,
+              "type": "note_completion",
+              "prompt": "About a fifth of species grown from ………",
+              "options": null,
+              "correct_answer": "seed",
+              "accepted_variants": [
+                "from seed"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 181.9,
+                "text": "We hold around four thousand plant species, and about a fifth of those are grown from seed collected in the wild."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q14",
+              "ordinal": 14,
+              "type": "note_completion",
+              "prompt": "Team working in the glasshouses: ……… team",
+              "options": null,
+              "correct_answer": "propagation",
+              "accepted_variants": [
+                "Propagation"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 189.5,
+                "text": "Now, the practical side. Volunteers work in one of four teams. The propagation team works in the glasshouses and needs no previous experience."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q15",
+              "ordinal": 15,
+              "type": "note_completion",
+              "prompt": "Borders team requires a reasonable level of ………",
+              "options": null,
+              "correct_answer": "fitness",
+              "accepted_variants": [
+                "level of fitness"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 200.4,
+                "text": "The borders team does the heavier planting outdoors, so we do ask for a reasonable level of fitness there."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q16",
+              "ordinal": 16,
+              "type": "note_completion",
+              "prompt": "Third team looks after the ………",
+              "options": null,
+              "correct_answer": "herbarium",
+              "accepted_variants": [
+                "Herbarium"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 207.5,
+                "text": "The third team looks after the herbarium, which is our collection of dried and pressed specimens. That work is indoors and quite detailed."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q17",
+              "ordinal": 17,
+              "type": "note_completion",
+              "prompt": "Guided-walks team receives training in ………",
+              "options": null,
+              "correct_answer": "public speaking",
+              "accepted_variants": [
+                "speaking"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 217.2,
+                "text": "And the fourth team runs guided walks for visitors, which means a little training in public speaking, provided free by us."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q18",
+              "ordinal": 18,
+              "type": "note_completion",
+              "prompt": "Volunteers sign in at the hut by the ………",
+              "options": null,
+              "correct_answer": "east gate",
+              "accepted_variants": [
+                "the east gate",
+                "east"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 225.6,
+                "text": "Whichever team you join, please sign in at the wooden hut by the east gate, not at the main reception."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q19",
+              "ordinal": 19,
+              "type": "note_completion",
+              "prompt": "Shed padlock code changes every ………",
+              "options": null,
+              "correct_answer": "January",
+              "accepted_variants": [
+                "every January"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 232.5,
+                "text": "Tools are kept in the shed behind the glasshouses, and the code for the padlock changes every January."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q20",
+              "ordinal": 20,
+              "type": "note_completion",
+              "prompt": "Volunteers get ……… off in the cafe",
+              "options": null,
+              "correct_answer": "a third",
+              "accepted_variants": [
+                "third",
+                "one third",
+                "1/3"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 239.5,
+                "text": "Finally, lunch. There's a staff room above the shop with a kettle and a fridge, and volunteers get a third off anything in the cafe."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "external_id": "original-listening-1:s3",
+      "kind": "listening",
+      "ordinal": 3,
+      "duration_seconds": 510,
+      "stimulus": {
+        "type": "audio",
+        "audio_url": "audio/original-listening-1.mp3",
+        "transcript": [],
+        "markers": [
+          {
+            "question_ordinal": 21,
+            "time_seconds": 292.7,
+            "text": "Mei wants to lead with the water chemistry. I think the invertebrate counts tell the story better."
+          },
+          {
+            "question_ordinal": 22,
+            "time_seconds": 302.6,
+            "text": "Because the chemistry only shows what the river was like on the day we sampled. The invertebrates reflect months of conditions."
+          },
+          {
+            "question_ordinal": 23,
+            "time_seconds": 318.5,
+            "text": "Only that the chemistry is what our reader will expect. But I take Tom's point, and I'd rather be right than conventional."
+          },
+          {
+            "question_ordinal": 24,
+            "time_seconds": 335.8,
+            "text": "Five. The sixth was inaccessible after the flooding in February."
+          },
+          {
+            "question_ordinal": 25,
+            "time_seconds": 351.3,
+            "text": "Three minutes, following the standard protocol."
+          },
+          {
+            "question_ordinal": 26,
+            "time_seconds": 358.9,
+            "text": "We did, though only as a rough category. Gravel, sand, or silt."
+          },
+          {
+            "question_ordinal": 27,
+            "time_seconds": 368.6,
+            "text": "The site downstream of the treatment works was healthier than the one upstream. We expected the opposite."
+          },
+          {
+            "question_ordinal": 28,
+            "time_seconds": 381.4,
+            "text": "We think it's the shade. The upstream site has no tree cover at all, so it warms up considerably in summer."
+          },
+          {
+            "question_ordinal": 29,
+            "time_seconds": 394.7,
+            "text": "We have spot readings, not continuous logging."
+          },
+          {
+            "question_ordinal": 30,
+            "time_seconds": 404.3,
+            "text": "We were hoping for the end of next week, if that's not too late."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-listening-1:s3:g1",
+          "ordinal": 1,
+          "instructions": "Questions 21-23\nChoose the correct letter, A, B or C.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q21",
+              "ordinal": 21,
+              "type": "multiple_choice",
+              "prompt": "Mei and Tom disagree about",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "how many sites to sample"
+                },
+                {
+                  "label": "B",
+                  "text": "which data should lead the report"
+                },
+                {
+                  "label": "C",
+                  "text": "how long to sample at each site"
+                }
+              ],
+              "correct_answer": "B",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 292.7,
+                "text": "Mei wants to lead with the water chemistry. I think the invertebrate counts tell the story better."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q22",
+              "ordinal": 22,
+              "type": "multiple_choice",
+              "prompt": "Tom prefers the invertebrate counts because",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "they are easier to collect"
+                },
+                {
+                  "label": "B",
+                  "text": "they show conditions on the sampling day"
+                },
+                {
+                  "label": "C",
+                  "text": "they reflect conditions over months"
+                }
+              ],
+              "correct_answer": "C",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 302.6,
+                "text": "Because the chemistry only shows what the river was like on the day we sampled. The invertebrates reflect months of conditions."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q23",
+              "ordinal": 23,
+              "type": "multiple_choice",
+              "prompt": "Mei's reason for preferring the chemistry is that",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "readers will expect it"
+                },
+                {
+                  "label": "B",
+                  "text": "it is more reliable"
+                },
+                {
+                  "label": "C",
+                  "text": "it was collected first"
+                }
+              ],
+              "correct_answer": "A",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 318.5,
+                "text": "Only that the chemistry is what our reader will expect. But I take Tom's point, and I'd rather be right than conventional."
+              }
+            }
+          ]
+        },
+        {
+          "external_id": "original-listening-1:s3:g2",
+          "ordinal": 2,
+          "instructions": "Questions 24-26\nComplete the sentences below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q24",
+              "ordinal": 24,
+              "type": "sentence_completion",
+              "prompt": "They sampled ……… of the six sites.",
+              "options": null,
+              "correct_answer": "five",
+              "accepted_variants": [
+                "5"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 335.8,
+                "text": "Five. The sixth was inaccessible after the flooding in February."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q25",
+              "ordinal": 25,
+              "type": "sentence_completion",
+              "prompt": "They sampled for ……… at each site.",
+              "options": null,
+              "correct_answer": "three minutes",
+              "accepted_variants": [
+                "3 minutes",
+                "three"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 351.3,
+                "text": "Three minutes, following the standard protocol."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q26",
+              "ordinal": 26,
+              "type": "sentence_completion",
+              "prompt": "They recorded the ……… type as a rough category.",
+              "options": null,
+              "correct_answer": "substrate",
+              "accepted_variants": [
+                "substrate type"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 358.9,
+                "text": "We did, though only as a rough category. Gravel, sand, or silt."
+              }
+            }
+          ]
+        },
+        {
+          "external_id": "original-listening-1:s3:g3",
+          "ordinal": 3,
+          "instructions": "Questions 27-28\nChoose the correct letter, A, B or C.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q27",
+              "ordinal": 27,
+              "type": "multiple_choice",
+              "prompt": "The result that surprised them was that",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "every site scored the same"
+                },
+                {
+                  "label": "B",
+                  "text": "the site below the treatment works was healthier"
+                },
+                {
+                  "label": "C",
+                  "text": "the upstream site had the most species"
+                }
+              ],
+              "correct_answer": "B",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 368.6,
+                "text": "The site downstream of the treatment works was healthier than the one upstream. We expected the opposite."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q28",
+              "ordinal": 28,
+              "type": "multiple_choice",
+              "prompt": "Their explanation for that result is",
+              "options": [
+                {
+                  "label": "A",
+                  "text": "the upstream site has no tree cover"
+                },
+                {
+                  "label": "B",
+                  "text": "the February flooding"
+                },
+                {
+                  "label": "C",
+                  "text": "the substrate type"
+                }
+              ],
+              "correct_answer": "A",
+              "accepted_variants": [],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 381.4,
+                "text": "We think it's the shade. The upstream site has no tree cover at all, so it warms up considerably in summer."
+              }
+            }
+          ]
+        },
+        {
+          "external_id": "original-listening-1:s3:g4",
+          "ordinal": 4,
+          "instructions": "Questions 29-30\nComplete the sentences below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q29",
+              "ordinal": 29,
+              "type": "sentence_completion",
+              "prompt": "For temperature they have only ………, not continuous logging.",
+              "options": null,
+              "correct_answer": "spot readings",
+              "accepted_variants": [
+                "spot"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 394.7,
+                "text": "We have spot readings, not continuous logging."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q30",
+              "ordinal": 30,
+              "type": "sentence_completion",
+              "prompt": "They will send a draft by the end of ……….",
+              "options": null,
+              "correct_answer": "next week",
+              "accepted_variants": [
+                "end of next week"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 404.3,
+                "text": "We were hoping for the end of next week, if that's not too late."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "external_id": "original-listening-1:s4",
+      "kind": "listening",
+      "ordinal": 4,
+      "duration_seconds": 510,
+      "stimulus": {
+        "type": "audio",
+        "audio_url": "audio/original-listening-1.mp3",
+        "transcript": [],
+        "markers": [
+          {
+            "question_ordinal": 31,
+            "time_seconds": 440.6,
+            "text": "Before the railways, every town in Britain kept its own time, set by the sun. Bristol clocks ran about ten minutes behind London, and nobody found this inconvenient."
+          },
+          {
+            "question_ordinal": 32,
+            "time_seconds": 452.9,
+            "text": "What changed was not technology but scheduling. A timetable is meaningless if the two ends of the line disagree about when noon is."
+          },
+          {
+            "question_ordinal": 33,
+            "time_seconds": 461.8,
+            "text": "The Great Western Railway adopted London time across its network in eighteen forty, and other companies followed within the decade."
+          },
+          {
+            "question_ordinal": 34,
+            "time_seconds": 470.4,
+            "text": "For some years the two systems ran side by side. A number of town clocks were fitted with a second minute hand showing railway time."
+          },
+          {
+            "question_ordinal": 35,
+            "time_seconds": 479.7,
+            "text": "Resistance was real, and it was mostly legal rather than sentimental. Court cases turned on which time a contract referred to."
+          },
+          {
+            "question_ordinal": 36,
+            "time_seconds": 488.9,
+            "text": "The most cited example is a case in eighteen fifty-eight in Dorchester, where a hearing was lost because the judge used local time and the defendant arrived on railway time."
+          },
+          {
+            "question_ordinal": 37,
+            "time_seconds": 500.4,
+            "text": "Parliament did not settle the matter until eighteen eighty, when Greenwich Mean Time was given legal force throughout Great Britain."
+          },
+          {
+            "question_ordinal": 38,
+            "time_seconds": 508.6,
+            "text": "The international problem was harder, and it was solved by a conference in Washington in eighteen eighty-four, which chose Greenwich as the prime meridian."
+          },
+          {
+            "question_ordinal": 39,
+            "time_seconds": 518.2,
+            "text": "The vote was not unanimous. France abstained, and continued to define its own time by reference to Paris for another quarter of a century."
+          },
+          {
+            "question_ordinal": 40,
+            "time_seconds": 528.0,
+            "text": "What I want you to take from this is that standardisation is rarely a technical achievement. It is almost always a negotiation, and the winner is usually whoever already runs the network."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "external_id": "original-listening-1:s4:g1",
+          "ordinal": 1,
+          "instructions": "Questions 31-40\nComplete the sentences below.\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          "shared_options": null,
+          "questions": [
+            {
+              "external_id": "original-listening-1:q31",
+              "ordinal": 31,
+              "type": "sentence_completion",
+              "prompt": "Bristol clocks ran about ……… behind London.",
+              "options": null,
+              "correct_answer": "ten minutes",
+              "accepted_variants": [
+                "10 minutes",
+                "ten"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 440.6,
+                "text": "Before the railways, every town in Britain kept its own time, set by the sun. Bristol clocks ran about ten minutes behind London, and nobody found this inconvenient."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q32",
+              "ordinal": 32,
+              "type": "sentence_completion",
+              "prompt": "What forced the change was not technology but ……….",
+              "options": null,
+              "correct_answer": "scheduling",
+              "accepted_variants": [
+                "timetables"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 452.9,
+                "text": "What changed was not technology but scheduling. A timetable is meaningless if the two ends of the line disagree about when noon is."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q33",
+              "ordinal": 33,
+              "type": "sentence_completion",
+              "prompt": "The Great Western Railway adopted London time in ……….",
+              "options": null,
+              "correct_answer": "1840",
+              "accepted_variants": [
+                "eighteen forty"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 461.8,
+                "text": "The Great Western Railway adopted London time across its network in eighteen forty, and other companies followed within the decade."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q34",
+              "ordinal": 34,
+              "type": "sentence_completion",
+              "prompt": "Some town clocks were fitted with a second ……… showing railway time.",
+              "options": null,
+              "correct_answer": "minute hand",
+              "accepted_variants": [
+                "second minute hand"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 470.4,
+                "text": "For some years the two systems ran side by side. A number of town clocks were fitted with a second minute hand showing railway time."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q35",
+              "ordinal": 35,
+              "type": "sentence_completion",
+              "prompt": "Resistance to the change was mostly ……… rather than sentimental.",
+              "options": null,
+              "correct_answer": "legal",
+              "accepted_variants": [
+                "law"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 479.7,
+                "text": "Resistance was real, and it was mostly legal rather than sentimental. Court cases turned on which time a contract referred to."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q36",
+              "ordinal": 36,
+              "type": "sentence_completion",
+              "prompt": "The most cited court case took place in ……….",
+              "options": null,
+              "correct_answer": "Dorchester",
+              "accepted_variants": [
+                "dorchester"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 488.9,
+                "text": "The most cited example is a case in eighteen fifty-eight in Dorchester, where a hearing was lost because the judge used local time and the defendant arrived on railway time."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q37",
+              "ordinal": 37,
+              "type": "sentence_completion",
+              "prompt": "Greenwich Mean Time was given legal force in ……….",
+              "options": null,
+              "correct_answer": "1880",
+              "accepted_variants": [
+                "eighteen eighty"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 500.4,
+                "text": "Parliament did not settle the matter until eighteen eighty, when Greenwich Mean Time was given legal force throughout Great Britain."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q38",
+              "ordinal": 38,
+              "type": "sentence_completion",
+              "prompt": "The international conference was held in ……….",
+              "options": null,
+              "correct_answer": "Washington",
+              "accepted_variants": [
+                "washington"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 508.6,
+                "text": "The international problem was harder, and it was solved by a conference in Washington in eighteen eighty-four, which chose Greenwich as the prime meridian."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q39",
+              "ordinal": 39,
+              "type": "sentence_completion",
+              "prompt": "……… abstained from the vote and kept its own time.",
+              "options": null,
+              "correct_answer": "France",
+              "accepted_variants": [
+                "france"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 518.2,
+                "text": "The vote was not unanimous. France abstained, and continued to define its own time by reference to Paris for another quarter of a century."
+              }
+            },
+            {
+              "external_id": "original-listening-1:q40",
+              "ordinal": 40,
+              "type": "sentence_completion",
+              "prompt": "The lecturer argues standardisation is almost always a ……….",
+              "options": null,
+              "correct_answer": "negotiation",
+              "accepted_variants": [
+                "a negotiation"
+              ],
+              "evidence": {
+                "kind": "transcript",
+                "time_seconds": 528.0,
+                "text": "What I want you to take from this is that standardisation is rarely a technical achievement. It is almost always a negotiation, and the winner is usually whoever already runs the network."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

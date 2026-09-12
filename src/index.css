@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+@import './design-system/tokens.css';
+
+/*
+ * Base layer only. Everything else belongs to a design-system component.
+ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    /* Anchors and question jumps land clear of the sticky exam header. */
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    background-image:
+      radial-gradient(900px 460px at 10% -10%, rgb(192 38 31 / 0.16), transparent 62%),
+      radial-gradient(760px 420px at 94% 2%, rgb(160 110 30 / 0.13), transparent 62%);
+    background-attachment: fixed;
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* A phone's address bar must not be able to reveal a different colour
+       behind the app. */
+    min-height: 100dvh;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) body {
+      background-image:
+        radial-gradient(900px 460px at 10% -10%, rgb(255 106 94 / 0.22), transparent 62%),
+        radial-gradient(760px 420px at 94% 2%, rgb(120 80 40 / 0.20), transparent 62%);
+    }
+  }
+
+  :root[data-theme='dark'] body {
+    background-image:
+      radial-gradient(900px 460px at 10% -10%, rgb(255 106 94 / 0.22), transparent 62%),
+      radial-gradient(760px 420px at 94% 2%, rgb(120 80 40 / 0.20), transparent 62%);
+  }
+
+  /* Band scores and counts must not shift width as digits change. */
+  .numeric {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Headings set their own tighter measure; body copy keeps 1.6 from above. */
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  /*
+   * Focus is always visible. Exam software is used by keyboard, and the ring
+   * is the only thing telling a student which of forty answer boxes their
+   * next keystroke lands in.
+   *
+   * Two tokens rather than one colour: the ring sits on whatever surface is
+   * behind it, and `--primary` clears 3:1 on both the canvas and a card in
+   * both themes.
+   */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Never remove it. If a control needs a different indicator it overrides
+     `outline-color`, never `outline: none`. */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  ::selection {
+    background: var(--primary-subtle);
+    color: var(--fg);
+  }
+
+  /* Scrollbars inside the exam panes, which scroll independently. */
+  * {
+    scrollbar-color: var(--border-strong) transparent;
+    scrollbar-width: thin;
+  }
+}
+
+@layer utilities {
+  /*
+   * Exam material, set to be read rather than scanned.
+   *
+   * The line this draws is worth keeping: serif is the paper — passages, task
+   * prompts, cue cards, the student's own essay — and sans is the product
+   * talking to you. A student learns that distinction in one session and then
+   * knows at a glance which parts of the screen are the test and which parts
+   * are the software.
+   */
+  .reading-prose {
+    font-family: var(--font-serif);
+    font-size: var(--text-md);
+    line-height: 1.75;
+    letter-spacing: 0.003em;
+    /* Stops a long word or a URL in a passage from widening the pane. */
+    overflow-wrap: break-word;
+  }
+
+  /* The app shell's content column. Grows with the viewport rather than
+     stopping dead at a fixed width, which left two thirds of an ultrawide
+     display empty, but never lets a line of prose outrun the eye. */
+  .shell {
+    width: 100%;
+    max-width: var(--shell-max);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 3.5vw, 3rem);
+  }
+
+  /* Long-form reading. Caps the measure regardless of container width. */
+  .measure {
+    max-width: var(--measure);
+  }
+
+  /*
+   * Frosted surface from the Band layout. Cards, the app header and the exam
+   * chrome sit on this rather than on opaque white, so the canvas wash shows
+   * through. The inset highlight is the glass edge; the rest shadow is the lift.
+   */
+  .glass {
+    background: var(--glass);
+    border: 1px solid var(--glass-bd);
+    box-shadow: var(--shadow-rest), inset 0 1px 0 var(--glass-hi);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  }
+
+  .glass-strong {
+    background: var(--glass-strong);
+    border-color: var(--glass-bd);
+    backdrop-filter: blur(20px) saturate(1.5);
+    -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  }
+
+  /* Micro labels: skill names, table heads, "Band". */
+  .lbl {
+    font-size: var(--text-2xs);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  /* Monospace figures */
+  .mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tn {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .strip::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+}
+

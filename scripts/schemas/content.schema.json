@@ -1,0 +1,454 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ieltsiq.local/schemas/content.schema.json",
+  "title": "NormalizedTest",
+  "description": "Normalized IELTS test content. Mirrors tests/sections/question_groups/questions in supabase/migrations/0001_init.sql. Produced only by scripts/ingest.ts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "external_id",
+    "title",
+    "is_full_mock",
+    "is_published",
+    "source_provenance",
+    "sections"
+  ],
+  "properties": {
+    "external_id": {
+      "$ref": "#/$defs/externalId"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "is_full_mock": {
+      "type": "boolean"
+    },
+    "is_published": {
+      "type": "boolean"
+    },
+    "source_provenance": {
+      "$ref": "#/$defs/sourceProvenance"
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    }
+  },
+  "$defs": {
+    "externalId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "childExternalId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(?::[a-z0-9-]+)+$"
+    },
+    "sectionKind": {
+      "enum": [
+        "reading",
+        "listening"
+      ]
+    },
+    "questionType": {
+      "enum": [
+        "multiple_choice",
+        "multi_select",
+        "true_false_not_given",
+        "yes_no_not_given",
+        "matching_headings",
+        "matching_information",
+        "sentence_completion",
+        "summary_completion",
+        "short_answer",
+        "form_completion",
+        "note_completion",
+        "map_labelling"
+      ]
+    },
+    "sourceProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "watermark",
+        "shippable",
+        "repaired_by"
+      ],
+      "properties": {
+        "origin": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Original filename under content/raw/, or 'original' for material authored for this product."
+        },
+        "watermark": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shippable": {
+          "type": "boolean",
+          "description": "False for everything under content/raw/. True only for original material in content/original/, which validate.ts checks by load path, not by trusting this field."
+        },
+        "repaired_by": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Path of the repair overlay applied by scripts/repair.ts, or null."
+        }
+      }
+    },
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "text"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "paragraph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "text"
+      ],
+      "properties": {
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z]$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "passageStimulus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "title",
+        "paragraphs"
+      ],
+      "properties": {
+        "type": {
+          "const": "passage"
+        },
+        "title": {
+          "type": "string"
+        },
+        "paragraphs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/paragraph"
+          }
+        }
+      }
+    },
+    "audioStimulus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "audio_url",
+        "transcript",
+        "markers"
+      ],
+      "properties": {
+        "type": {
+          "const": "audio"
+        },
+        "audio_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transcript": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "speaker",
+              "text"
+            ],
+            "properties": {
+              "speaker": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "markers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "question_ordinal",
+              "time_seconds",
+              "text"
+            ],
+            "properties": {
+              "question_ordinal": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "time_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "paragraph_index",
+            "start",
+            "end",
+            "text"
+          ],
+          "properties": {
+            "kind": {
+              "const": "passage"
+            },
+            "paragraph_index": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "start": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "end": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "text": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "time_seconds",
+            "text"
+          ],
+          "properties": {
+            "kind": {
+              "const": "transcript"
+            },
+            "time_seconds": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "text": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "ordinal",
+        "type",
+        "prompt",
+        "options",
+        "correct_answer",
+        "accepted_variants",
+        "evidence"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/childExternalId"
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "type": {
+          "$ref": "#/$defs/questionType"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "options": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/option"
+          }
+        },
+        "correct_answer": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          ]
+        },
+        "accepted_variants": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "evidence": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/evidence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "ordinal",
+        "instructions",
+        "shared_options",
+        "questions"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/childExternalId"
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "instructions": {
+          "type": "string"
+        },
+        "shared_options": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/$defs/option"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/question"
+          }
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "external_id",
+        "kind",
+        "ordinal",
+        "duration_seconds",
+        "stimulus",
+        "groups"
+      ],
+      "properties": {
+        "external_id": {
+          "$ref": "#/$defs/childExternalId"
+        },
+        "kind": {
+          "$ref": "#/$defs/sectionKind"
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "duration_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "stimulus": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/passageStimulus"
+            },
+            {
+              "$ref": "#/$defs/audioStimulus"
+            }
+          ]
+        },
+        "groups": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/$defs/group"
+          }
+        }
+      }
+    }
+  }
+}

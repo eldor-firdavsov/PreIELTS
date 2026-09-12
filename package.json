@@ -1,0 +1,43 @@
+{
+  "name": "ieltsiq",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ingest": "tsx scripts/ingest.ts",
+    "repair": "tsx scripts/repair.ts",
+    "validate": "tsx scripts/validate.ts",
+    "upload-audio": "tsx scripts/upload-audio.ts",
+    "seed": "tsx scripts/seed.ts",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "types:gen": "supabase gen types typescript --project-id ofzglwomrcpjzxkdfuny > src/lib/supabase/types.generated.ts",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "audit": "tsx scripts/audit.ts"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.4.1",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "acorn": "^8.14.0",
+    "ajv": "^8.20.0",
+    "linkedom": "^0.18.9",
+    "pg": "^8.23.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.115.0",
+    "@tanstack/react-query": "^5.102.8",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3",
+    "zustand": "^5.0.15"
+  }
+}
