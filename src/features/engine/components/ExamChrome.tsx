@@ -105,7 +105,7 @@ export function ExamChrome({
     <div className="flex h-dvh flex-col bg-surface">
       {/* --------------------------------------------------------- header */}
       <header className="flex h-[54px] shrink-0 items-center gap-3 border-b border-glass-bd/80 bg-glass-strong backdrop-blur-2xl px-3 sm:gap-4 sm:px-5 shadow-xs">
-        <span className="min-w-0 flex-1 truncate text-sm font-semibold text-ink">{title}</span>
+        <span className="min-w-0 flex-1 truncate text-sm font-heading font-bold text-ink">{title}</span>
         <div className="flex shrink-0 items-center gap-2 sm:gap-4">
           {/* The save indicator is prose and costs more room than it earns on a
               phone. The clock and the submit button are never dropped. */}

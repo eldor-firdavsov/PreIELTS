@@ -33,8 +33,8 @@ export function StudyPlanCard() {
   return (
     <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
       <div className="flex items-center justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
-        <h2 className="text-lg font-semibold text-ink sm:text-[20px]">What should I improve next?</h2>
-        <span className="glass-pill border border-primary/30 rounded-pill px-3 py-0.5 text-xs font-semibold text-primary">
+        <h2 className="font-heading text-lg font-bold text-ink sm:text-[20px]">What should I improve next?</h2>
+        <span className="glass-pill border border-primary/30 rounded-pill px-3 py-0.5 text-[11px] font-heading font-extrabold uppercase tracking-wider text-primary">
           AI coach
         </span>
       </div>
@@ -141,7 +141,7 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
             <p className="text-sm leading-relaxed text-ink mb-4">{plan.overall_diagnosis}</p>
           )}
 
-          <div className="lbl">Strengths</div>
+          <div className="h6l mb-1">Strengths</div>
           <div className="mt-1.5 mb-4.5 space-y-2">
             {plan.strengths.length > 0 ? (
               plan.strengths.map((strength) => (
@@ -154,7 +154,7 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
             )}
           </div>
 
-          <div className="lbl mt-4">Weaknesses</div>
+          <div className="h6l mb-1 mt-4">Weaknesses</div>
           <div className="mt-1.5 space-y-2">
             {plan.weaknesses.length > 0 ? (
               plan.weaknesses.map((weakness) => (
@@ -172,8 +172,8 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
         {/* Right Column: Next action highlight & practice plan */}
         <div>
           <div className="border border-primary/30 bg-primary-subtle/40 backdrop-blur-md rounded-xl p-3.5 sm:p-4 mb-4.5">
-            <div className="lbl text-primary">Next action ({SKILL_LABEL[plan.next_action.skill] ?? plan.next_action.skill})</div>
-            <div className="text-sm sm:text-[15px] font-semibold text-ink mt-1">
+            <div className="h6l text-primary mb-1">Next action ({SKILL_LABEL[plan.next_action.skill] ?? plan.next_action.skill})</div>
+            <div className="font-heading text-sm sm:text-[15px] font-bold text-ink mt-1">
               {plan.next_action.headline}
             </div>
             {plan.next_action.detail && (
@@ -183,7 +183,7 @@ function PlanBody({ plan }: { plan: StudyPlan }) {
 
           {plan.practice_plan.length > 0 && (
             <div>
-              <div className="lbl">Practice plan</div>
+              <div className="h6l mb-1">Practice plan</div>
               <ol className="list-decimal pl-5 text-sm text-ink-muted mt-2 space-y-1.5 leading-relaxed">
                 {plan.practice_plan.map((step) => (
                   <li key={step.focus}>

@@ -73,7 +73,7 @@ export function CountdownTimer({ secondsRemaining }: { secondsRemaining: number 
         role="timer"
         aria-label={`Time remaining ${minutes} minutes ${seconds} seconds`}
         className={cn(
-          'mono font-mono text-base sm:text-[20px] font-semibold tracking-tight tabular-nums',
+          'mono font-mono text-base sm:text-[20px] font-bold tracking-tight tabular-nums',
           low ? 'text-warn' : 'text-ink',
         )}
       >

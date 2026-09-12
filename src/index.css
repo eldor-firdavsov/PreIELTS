@@ -56,12 +56,23 @@
     font-variant-numeric: tabular-nums;
   }
 
-  /* Headings set their own tighter measure; body copy keeps 1.6 from above. */
-  h1, h2, h3, h4 {
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+  /* Headings set their own tighter measure in Archivo 800 */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
     text-wrap: balance;
+  }
+
+  /* Modernist uppercase micro-kickers */
+  .h6l, .lbl {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
   }
 
   /*

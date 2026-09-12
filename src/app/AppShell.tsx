@@ -56,7 +56,7 @@ export function AppShell() {
 
       <header className="sticky top-0 z-30 border-b border-glass-bd/80 bg-glass-strong backdrop-blur-2xl shadow-xs transition-all duration-200">
         <div className="shell flex h-14 items-center gap-3 sm:gap-6">
-          <span className="text-base font-bold tracking-tight text-ink">
+          <span className="font-heading text-lg font-extrabold tracking-tight text-ink">
             IELTS <span className="text-primary">Practice</span>
           </span>
 
@@ -67,9 +67,9 @@ export function AppShell() {
                 to={item.to}
                 className={({ isActive }) =>
                   cn(
-                    'rounded-pill px-3.5 py-1.5 text-sm font-semibold transition-all duration-200 active:scale-[0.97]',
+                    'rounded-pill px-3.5 py-1.5 text-sm font-heading font-semibold transition-all duration-200 active:scale-[0.97]',
                     isActive
-                      ? 'bg-primary-subtle text-primary shadow-xs'
+                      ? 'bg-primary-subtle text-primary shadow-xs font-bold'
                       : 'text-ink-muted hover:bg-surface/60 hover:text-ink',
                   )
                 }

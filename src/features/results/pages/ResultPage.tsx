@@ -60,7 +60,7 @@ export default function ResultPage() {
   return (
     <div className="flex flex-col gap-5 sm:gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">
+        <h1 className="font-heading text-2xl font-extrabold tracking-tight text-ink sm:text-[31px]">
           {formatTestTitle(overview.test_title, null, only)}
         </h1>
         <p className="mt-1 text-sm text-ink-muted">
@@ -77,7 +77,7 @@ export default function ResultPage() {
 
       <section className="flex flex-col gap-3.5">
         <div className="flex items-baseline justify-between">
-          <h2 className="text-lg sm:text-[20px] font-semibold text-ink">
+          <h2 className="font-heading text-lg sm:text-[20px] font-bold text-ink">
             {mistakes.length === 0
               ? 'Every question correct'
               : `${mistakes.length} question${mistakes.length === 1 ? '' : 's'} to review`}

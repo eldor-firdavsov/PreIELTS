@@ -39,7 +39,7 @@ export default function DashboardPage() {
   return (
     <div className="flex flex-col gap-5 sm:gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">
+        <h1 className="font-heading text-2xl font-extrabold tracking-tight text-ink sm:text-[31px]">
           {loading ? 'Dashboard' : data?.fullName ? `Hello, ${data.fullName}` : 'Dashboard'}
         </h1>
         <p className="mt-1 text-sm text-ink-muted">
@@ -50,7 +50,7 @@ export default function DashboardPage() {
       {/* ------------------------------------------------- band per skill */}
       <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
         <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
-          <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Estimated band by skill</h2>
+          <h2 className="font-heading text-lg font-bold text-ink sm:text-[20px]">Estimated band by skill</h2>
           {!loading && data?.targetBand !== null && data?.targetBand !== undefined && (
             <span className="text-xs text-ink-muted sm:text-[13px]">
               {`Target ${formatBand(data.targetBand)}`}
@@ -85,10 +85,10 @@ export default function DashboardPage() {
                   key={kind}
                   className="rounded-xl border border-glass-bd/80 bg-surface/55 backdrop-blur-md p-4 sm:p-5 transition-all duration-200 hover:bg-surface/75 hover:shadow-xs"
                 >
-                  <div className="lbl">{SKILL_LABEL[kind] ?? kind}</div>
+                  <div className="h6l">{SKILL_LABEL[kind] ?? kind}</div>
                   <div
                     className={cn(
-                      'mono font-mono text-2xl font-semibold leading-[1.1] sm:text-[31px] mt-1.5',
+                      'mono font-mono text-2xl font-extrabold leading-[1] sm:text-[31px] mt-1.5',
                       hasBand ? 'text-ink' : 'text-ink-faint',
                     )}
                   >
@@ -128,7 +128,7 @@ export default function DashboardPage() {
       {(loading || (data && data.recent.length > 0)) && (
         <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
           <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
-            <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Recent tests</h2>
+            <h2 className="font-heading text-lg font-bold text-ink sm:text-[20px]">Recent tests</h2>
             <Link
               to="/history"
               className="text-xs font-semibold text-primary hover:underline hover:text-primary-hover sm:text-[13px]"
@@ -164,7 +164,7 @@ export default function DashboardPage() {
                   <span className="shrink-0 text-xs text-ink-muted sm:text-[13px]">
                     {formatDate(row.createdAt)}
                   </span>
-                  <span className="mono font-mono w-10 shrink-0 text-right text-sm font-semibold text-ink sm:text-base">
+                  <span className="mono font-mono w-10 shrink-0 text-right text-sm font-bold text-ink sm:text-base">
                     {formatBand(row.band)}
                   </span>
                 </div>
@@ -223,13 +223,13 @@ function NextAction({
     <section className="relative overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-[#2a0c09]/95 via-[#38100c]/90 to-[#1f0806]/95 text-[#fdf6f4] shadow-lift backdrop-blur-2xl">
       <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/20 blur-[70px]" aria-hidden="true" />
       <div className="relative flex items-center justify-between gap-3 border-b border-[#f7f5f1]/15 px-4 py-3.5 sm:px-5">
-        <h2 className="text-lg font-semibold text-[#fdf6f4] sm:text-[20px]">Recommended next action</h2>
-        <span className="rounded-pill border border-white/20 bg-white/10 px-3 py-0.5 text-xs font-semibold text-[#fdf6f4] backdrop-blur-md">
+        <h2 className="font-heading text-lg font-bold text-[#fdf6f4] sm:text-[20px]">Recommended next action</h2>
+        <span className="rounded-pill border border-white/20 bg-white/10 px-3 py-0.5 text-[11px] font-heading font-extrabold uppercase tracking-wider text-[#fdf6f4] backdrop-blur-md">
           {SKILL[action.skill] ?? action.skill}
         </span>
       </div>
       <div className="relative flex flex-col items-start gap-2.5 p-4 sm:p-5 sm:py-5.5">
-        <div className="max-w-[36ch] text-xl font-bold tracking-tight text-[#fdf6f4] sm:text-2xl text-balance">
+        <div className="max-w-[36ch] font-heading text-xl font-extrabold tracking-tight text-[#fdf6f4] sm:text-2xl text-balance">
           {action.headline}
         </div>
         <p className="max-w-[68ch] text-sm leading-relaxed text-[#fdf6f4]/85 sm:text-[15px] text-pretty">
@@ -239,7 +239,7 @@ function NextAction({
           to={`/tests?skill=${action.skill}`}
           className={cn(
             'mt-2 inline-flex min-h-[48px] items-center justify-center rounded-base px-5 py-3',
-            'bg-[#fdf6f4] text-sm font-bold text-[#2a0c09] shadow-sm transition-all sm:text-base',
+            'bg-[#fdf6f4] text-sm font-heading font-extrabold text-[#2a0c09] shadow-sm transition-all sm:text-base',
             'hover:bg-white hover:scale-[1.01] active:scale-[0.98]',
           )}
         >

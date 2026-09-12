@@ -230,11 +230,11 @@ function WhyWasIWrong({ mistakeId, kind }: { mistakeId: string; kind: MistakeKin
 
   return (
     <div className="flex flex-col gap-3 mt-2">
-      <div className="lbl">Explanation</div>
+      <div className="h6l">Explanation</div>
       <div className="rounded-xl border border-glass-bd/80 bg-surface/55 backdrop-blur-md p-4 sm:p-5 space-y-3">
         {readable(explanation).map(({ label, text }) => (
           <div key={label}>
-            <div className="text-xs font-semibold text-ink-muted uppercase tracking-wider mb-0.5">{label}</div>
+            <div className="h6l mb-1">{label}</div>
             <p className="font-serif text-[15px] leading-relaxed text-ink max-w-[68ch]">{text}</p>
           </div>
         ))}
@@ -252,7 +252,7 @@ export function MistakeCard({ mistake }: { mistake: ResultMistake }) {
     <article className="glass-panel overflow-hidden rounded-2xl border-l-4 border-l-danger/80 shadow-rest hover:shadow-lift transition-all duration-200">
       {/* Header */}
       <div className="flex flex-wrap items-center gap-2.5 border-b border-glass-bd px-4 py-3.5 sm:px-5">
-        <span className="mono font-mono text-sm font-semibold text-ink">
+        <span className="mono font-mono text-sm font-bold text-ink">
           {mistake.question_ordinal ?? ''}
         </span>
         <Badge tone="primary">{(mistake.question_type ?? '').replace(/_/g, ' ')}</Badge>
@@ -274,13 +274,13 @@ export function MistakeCard({ mistake }: { mistake: ResultMistake }) {
         {/* Side-by-side answers */}
         <div className="flex flex-wrap gap-2.5 max-w-[600px]">
           <div className="flex-1 min-w-[200px] rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-3.5 sm:p-4">
-            <div className="lbl">Your answer</div>
+            <div className="h6l mb-1">Your answer</div>
             <div className={cn('text-sm font-semibold mt-1', unanswered ? 'text-ink-muted' : 'text-danger')}>
               {formatAnswer(mistake.user_answer)}
             </div>
           </div>
           <div className="flex-1 min-w-[200px] rounded-xl border border-glass-bd/80 bg-surface/50 backdrop-blur-md p-3.5 sm:p-4">
-            <div className="lbl">Correct answer</div>
+            <div className="h6l mb-1">Correct answer</div>
             <div className="text-sm font-semibold text-success mt-1">
               {formatAnswer(mistake.correct_answer)}
             </div>

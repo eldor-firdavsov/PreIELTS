@@ -84,7 +84,7 @@ export default function AnalysisPage() {
   return (
     <div className="flex flex-col gap-5 sm:gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">Analysis</h1>
+        <h1 className="font-heading text-2xl font-extrabold tracking-tight text-ink sm:text-[31px]">Analysis</h1>
         <p className="mt-1 text-sm text-ink-muted">
           Long-term progression, recurring mistakes and what to improve next.
         </p>
@@ -95,7 +95,7 @@ export default function AnalysisPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
           <div className="flex items-center justify-between gap-3 border-b border-glass-bd px-4 py-3 sm:px-5">
-            <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Band over time</h2>
+            <h2 className="font-heading text-lg font-bold text-ink sm:text-[20px]">Band over time</h2>
             <Select
               label="Skill"
               labelHidden
@@ -120,7 +120,7 @@ export default function AnalysisPage() {
 
         <section className="glass-panel overflow-hidden rounded-2xl shadow-lift">
           <div className="flex items-baseline justify-between gap-3 border-b border-glass-bd px-4 py-3.5 sm:px-5">
-            <h2 className="text-lg font-semibold text-ink sm:text-[20px]">Accuracy by question type</h2>
+            <h2 className="font-heading text-lg font-bold text-ink sm:text-[20px]">Accuracy by question type</h2>
             {!analysis.isLoading && analysis.data && (
               <span className="text-xs text-ink-muted sm:text-[13px]">
                 {`Across ${analysis.data.resultsCounted} marked test${analysis.data.resultsCounted === 1 ? '' : 's'}`}

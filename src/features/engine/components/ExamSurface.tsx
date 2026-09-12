@@ -173,7 +173,7 @@ export function ExamSurface({
 
               {group.sharedOptions && (
                 <div className="mb-5 rounded-base bg-sunken p-3.5 sm:p-4 text-sm">
-                  <div className="text-sm font-bold text-ink mb-1">List of options</div>
+                  <div className="h6l mb-1 text-ink">List of options</div>
                   <div className="font-serif text-base sm:text-[17px] leading-[1.8] text-ink">
                     {group.sharedOptions.map((option, idx) => (
                       <span key={option.label}>

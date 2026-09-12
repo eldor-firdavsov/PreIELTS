@@ -82,7 +82,7 @@ export function Table<Row>({
                 key={column.key}
                 scope="col"
                 className={cn(
-                  'px-[18px] py-2.5 text-2xs font-semibold uppercase tracking-wider text-ink-muted',
+                  'px-[18px] py-2.5 text-[11px] font-heading font-extrabold uppercase tracking-wider text-ink-muted',
                   column.numeric ? 'text-right' : 'text-left',
                   column.hideBelow && HIDE[column.hideBelow],
                 )}

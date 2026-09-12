@@ -31,7 +31,7 @@ export default function HistoryPage() {
   return (
     <div className="flex flex-col gap-5 sm:gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">History</h1>
+        <h1 className="font-heading text-2xl font-extrabold tracking-tight text-ink sm:text-[31px]">History</h1>
         <p className="mt-1 text-sm text-ink-muted">
           Every test you have taken, with scores and timings.
         </p>
@@ -105,7 +105,7 @@ function ResultCard({ row }: { row: HistoryRow }) {
     >
       <div className="flex items-start justify-between gap-3.5">
         <div className="min-w-0 flex-1">
-          <h2 className="text-sm sm:text-[15px] font-semibold leading-snug text-ink group-hover:text-primary transition-colors">
+          <h2 className="font-heading text-sm sm:text-[15px] font-bold leading-snug text-ink group-hover:text-primary transition-colors">
             {formatTestTitle(row.test_title)}
           </h2>
           <p className="mt-1 text-xs text-ink-muted sm:text-[13px]">{formatDate(row.created_at)}</p>
@@ -117,13 +117,13 @@ function ResultCard({ row }: { row: HistoryRow }) {
         <div className="shrink-0 text-right">
           <div
             className={cn(
-              'mono font-mono text-3xl sm:text-[40px] font-semibold leading-[0.95]',
+              'mono font-mono text-3xl sm:text-[40px] font-extrabold leading-[0.95]',
               hasBand ? 'text-ink' : 'text-ink-faint',
             )}
           >
             {band}
           </div>
-          <div className="lbl text-right mt-1">Band</div>
+          <div className="h6l text-right mt-1">Band</div>
         </div>
       </div>
 
@@ -141,14 +141,14 @@ function ResultCard({ row }: { row: HistoryRow }) {
 
       <dl className="mt-auto flex flex-wrap items-baseline gap-6 sm:gap-7 border-t border-glass-bd mt-3.5 pt-3">
         <div className="flex flex-col">
-          <dt className="lbl">Score</dt>
-          <dd className="mono font-mono font-semibold text-sm sm:text-base text-ink">
+          <dt className="h6l">Score</dt>
+          <dd className="mono font-mono font-bold text-sm sm:text-base text-ink">
             {row.raw_total ? `${row.raw_score} / ${row.raw_total}` : '—'}
           </dd>
         </div>
         <div className="flex flex-col">
-          <dt className="lbl">Time</dt>
-          <dd className="mono font-mono font-semibold text-sm sm:text-base text-ink">
+          <dt className="h6l">Time</dt>
+          <dd className="mono font-mono font-bold text-sm sm:text-base text-ink">
             {formatDuration(row.total_time_seconds)}
           </dd>
         </div>

@@ -63,7 +63,7 @@ export function QuestionNav({
             if (isActive) {
               return (
                 <div key={sec.id} className="flex items-center gap-3 shrink-0">
-                  <span className="font-bold text-ink text-sm sm:text-[15px] select-none shrink-0 tracking-tight">
+                  <span className="font-heading font-bold text-ink text-sm sm:text-[15px] select-none shrink-0 tracking-tight">
                     {label}
                   </span>
                   <div className="flex items-center gap-1.5 shrink-0">
@@ -82,7 +82,7 @@ export function QuestionNav({
                           aria-current={isCurrent ? 'true' : undefined}
                           aria-label={`Question ${question.order}${answered ? ', answered' : ', not answered'}${isFlg ? ', flagged' : ''}`}
                           className={cn(
-                            'relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] text-xs sm:text-[13px] transition-all select-none',
+                            'relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] text-xs sm:text-[13px] font-mono font-bold transition-all select-none',
                             isCurrent
                               ? 'bg-[#2563eb] text-white font-bold border border-[#2563eb] shadow-xs'
                               : 'border border-[#d1d5db] bg-white text-ink hover:border-ink hover:text-ink dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200',
@@ -119,7 +119,7 @@ export function QuestionNav({
                 className="group flex items-center gap-2 px-1 py-1 text-sm cursor-pointer shrink-0 select-none"
                 title={`Switch to ${label}`}
               >
-                <span className="font-bold text-ink group-hover:text-primary transition-colors text-sm sm:text-[15px]">
+                <span className="font-heading font-bold text-ink group-hover:text-primary transition-colors text-sm sm:text-[15px]">
                   {label}
                 </span>
                 <span className="font-normal text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm">
@@ -171,7 +171,7 @@ export function QuestionNav({
               onClick={() => onSelect(question.id)}
               aria-current={current ? 'true' : undefined}
               className={cn(
-                'relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] text-xs sm:text-[13px] transition-all select-none',
+                'relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[3px] text-xs sm:text-[13px] font-mono font-bold transition-all select-none',
                 current
                   ? 'bg-[#2563eb] text-white font-bold border border-[#2563eb] shadow-xs'
                   : 'border border-[#d1d5db] bg-white text-ink hover:border-ink hover:text-ink dark:border-white/20 dark:bg-neutral-800 dark:text-neutral-200',

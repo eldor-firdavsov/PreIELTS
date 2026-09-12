@@ -78,15 +78,15 @@
   --fg-faint: #6e6959;
 
   /* ── primary: interactive, and only interactive ───────────────────── */
-  --primary:        #c0261f;
-  --primary-hover:  #8f1a14;
-  --primary-solid:  #c0261f;
+  --primary:        #ec3013;
+  --primary-hover:  #dd2b0f;
+  --primary-solid:  #ec3013;
   --primary-on:     #ffffff;
-  --primary-subtle: #fbeae7;
+  --primary-subtle: #fff2ef;
 
   /* ── status ───────────────────────────────────────────────────────── */
   /* Danger is darker than primary so an error is never a call to action. */
-  --danger:         #6e120d;
+  --danger:         #a8261c;
   --danger-subtle:  #f8e8e6;
   --success:        #1f6340;
   --success-subtle: #e7f2eb;
@@ -127,12 +127,13 @@
   --radius-pill: 999px;
 
   /* ── type ─────────────────────────────────────────────────────────── */
-  --font-sans:  'Source Sans 3', ui-sans-serif, system-ui, -apple-system,
-                'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: 'Source Serif 4', Iowan Old Style, 'Palatino Linotype',
-                Palatino, Georgia, Cambria, 'Times New Roman', serif;
-  --font-mono:  'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo,
-                Consolas, 'Liberation Mono', monospace;
+  --font-sans:    'Archivo', ui-sans-serif, system-ui, -apple-system,
+                  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-serif:   'Source Serif 4', Iowan Old Style, 'Palatino Linotype',
+                  Palatino, Georgia, Cambria, 'Times New Roman', serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo,
+                  Consolas, 'Liberation Mono', monospace;
 
   /* A fifth-based scale. Body sits at 15px: 14 was tight for the long reading
      passages this product is mostly made of. */
@@ -299,9 +300,10 @@
   --shadow-lift:  var(--shadow-lift);
   --shadow-float: var(--shadow-float);
 
-  --font-sans:  var(--font-sans);
-  --font-serif: var(--font-serif);
-  --font-mono:  var(--font-mono);
+  --font-sans:    var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-serif:   var(--font-serif);
+  --font-mono:    var(--font-mono);
 
   --text-2xs:  var(--text-2xs);
   --text-xs:   var(--text-xs);

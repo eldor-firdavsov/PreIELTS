@@ -51,7 +51,7 @@ export default function TestsPage() {
   return (
     <div className="flex flex-col gap-5 sm:gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">Tests</h1>
+        <h1 className="font-heading text-2xl font-extrabold tracking-tight text-ink sm:text-[31px]">Tests</h1>
         <p className="mt-1 text-sm text-ink-muted">
           Reading and listening papers, marked against the answer key the moment
           you submit.
@@ -150,7 +150,7 @@ function TestCard({ test }: { test: TestSummary }) {
 
       <h2
         className={cn(
-          'mt-2 text-sm sm:text-base font-semibold leading-snug',
+          'mt-2 text-sm sm:text-base font-heading font-bold leading-snug',
           route ? 'text-ink group-hover:text-primary transition-colors' : 'text-ink',
         )}
       >
@@ -161,16 +161,16 @@ function TestCard({ test }: { test: TestSummary }) {
       <dl className="mt-auto flex flex-wrap items-baseline gap-6 pt-3">
         {test.durationSeconds > 0 && (
           <div className="flex flex-col">
-            <dt className="lbl">Takes</dt>
-            <dd className="mono font-mono font-semibold text-sm sm:text-base text-ink">
+            <dt className="h6l">Takes</dt>
+            <dd className="mono font-mono font-bold text-sm sm:text-base text-ink">
               {formatDuration(test.durationSeconds)}
             </dd>
           </div>
         )}
         {test.sectionCount > 0 && (
           <div className="flex flex-col">
-            <dt className="lbl">{test.sectionCount === 1 ? 'Part' : 'Parts'}</dt>
-            <dd className="mono font-mono font-semibold text-sm sm:text-base text-ink">
+            <dt className="h6l">{test.sectionCount === 1 ? 'Part' : 'Parts'}</dt>
+            <dd className="mono font-mono font-bold text-sm sm:text-base text-ink">
               {test.sectionCount}
             </dd>
           </div>
