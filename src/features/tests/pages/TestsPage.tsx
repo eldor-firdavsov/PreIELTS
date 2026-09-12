@@ -37,7 +37,9 @@ export default function TestsPage() {
   const skill = params.get('skill');
   const active = SKILLS.find((value) => value === skill) ?? null;
 
-  const rows = (tests.data ?? []).filter((row) => active === null || row.kinds.includes(active));
+  const rows = (tests.data ?? [])
+    .filter((row) => active === null || row.kinds.includes(active))
+    .sort((a, b) => a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' }));
 
   function setSkill(next: string | null) {
     const draft = new URLSearchParams(params);
@@ -109,7 +111,6 @@ function TestCardSkeleton() {
         <Skeleton className="h-5 w-16 rounded-pill" />
       </div>
       <Skeleton className="mt-2.5 h-5 w-3/4" />
-      <Skeleton className="mt-1.5 h-4 w-1/2" />
       <div className="mt-auto flex items-baseline gap-6 pt-3">
         <div className="flex flex-col gap-1">
           <Skeleton className="h-2.5 w-10" />

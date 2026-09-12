@@ -7,6 +7,7 @@ import {
   readStudyPlanInputs,
   type StudyNextAction,
 } from '../../../lib/ai/study-plan.ts';
+import { formatTestTitle } from '../../engine/index.ts';
 
 /**
  * What the student sees on arrival: where they are, and what is missing.
@@ -84,7 +85,7 @@ export async function fetchDashboard(): Promise<Dashboard> {
       .filter((row) => row.result_id !== null)
       .map((row) => ({
         resultId: row.result_id as string,
-        title: row.test_title ?? 'Untitled test',
+        title: formatTestTitle(row.test_title),
         band: row.overall_band,
         createdAt: row.created_at as string,
       })),

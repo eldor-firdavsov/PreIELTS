@@ -9,7 +9,7 @@ export { Dialog } from './Dialog.tsx';
 export { Table } from './Table.tsx';
 export { CardGrid } from './CardGrid.tsx';
 export type { Column } from './Table.tsx';
-export { Skeleton, SkeletonLines, SkeletonRegion } from './Skeleton.tsx';
+export { Skeleton, SkeletonBadge, SkeletonStat, SkeletonLines, SkeletonRegion } from './Skeleton.tsx';
 export { EmptyState } from './EmptyState.tsx';
 export { ErrorState, errorMessage } from './ErrorState.tsx';
 export { Stat } from './Stat.tsx';

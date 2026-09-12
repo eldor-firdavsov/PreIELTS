@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Badge, CardGrid, Skeleton } from '../../../design-system/index.ts';
 import { formatBand, formatDate, formatDuration } from '../../../lib/utils/format.ts';
+import { formatTestTitle } from '../../engine/index.ts';
 import { cn } from '../../../lib/utils/cn.ts';
 import { useHistory } from '../hooks/useHistory.ts';
 import type { HistoryRow } from '../services/historyService.ts';
@@ -75,7 +76,7 @@ function ResultCardSkeleton() {
         <Skeleton className="h-5 w-16 rounded-pill" />
       </div>
 
-      <div className="mt-auto flex items-baseline gap-6 pt-3">
+      <div className="mt-auto flex items-baseline gap-6 sm:gap-7 border-t border-line mt-3.5 pt-3">
         <div className="flex flex-col gap-1">
           <Skeleton className="h-2.5 w-10" />
           <Skeleton className="h-4 w-12" />
@@ -84,10 +85,6 @@ function ResultCardSkeleton() {
           <Skeleton className="h-2.5 w-10" />
           <Skeleton className="h-4 w-14" />
         </div>
-      </div>
-
-      <div className="mt-3 border-t border-line pt-3">
-        <Skeleton className="h-4 w-32" />
       </div>
     </div>
   );
@@ -109,7 +106,7 @@ function ResultCard({ row }: { row: HistoryRow }) {
       <div className="flex items-start justify-between gap-3.5">
         <div className="min-w-0 flex-1">
           <h2 className="text-sm sm:text-[15px] font-semibold leading-snug text-ink group-hover:text-primary transition-colors">
-            {row.test_title ?? 'Untitled test'}
+            {formatTestTitle(row.test_title)}
           </h2>
           <p className="mt-1 text-xs text-ink-muted sm:text-[13px]">{formatDate(row.created_at)}</p>
         </div>

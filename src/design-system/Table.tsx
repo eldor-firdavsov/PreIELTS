@@ -101,7 +101,18 @@ export function Table<Row>({
                     key={column.key}
                     className={cn('px-3 py-3 sm:px-4', column.hideBelow && HIDE[column.hideBelow])}
                   >
-                    <Skeleton className="h-4 w-full" />
+                    <Skeleton
+                      className={cn(
+                        'h-4',
+                        column.numeric
+                          ? 'ml-auto w-10'
+                          : rowIndex % 3 === 0
+                            ? 'w-4/5'
+                            : rowIndex % 3 === 1
+                              ? 'w-3/5'
+                              : 'w-2/3',
+                      )}
+                    />
                   </td>
                 ))}
               </tr>

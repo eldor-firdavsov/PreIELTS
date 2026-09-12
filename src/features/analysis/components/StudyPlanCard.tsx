@@ -39,30 +39,7 @@ export function StudyPlanCard() {
         </span>
       </div>
 
-      {stored.isLoading && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-[18px] animate-pulse">
-          <div>
-            <Skeleton className="h-4 w-full" />
-            <Skeleton className="mt-1.5 h-4 w-4/5" />
-            <Skeleton className="mt-5 h-3 w-20" />
-            <Skeleton className="mt-2 h-3.5 w-full" />
-            <Skeleton className="mt-1.5 h-3.5 w-3/4" />
-            <Skeleton className="mt-5 h-3 w-24" />
-            <Skeleton className="mt-2 h-3.5 w-5/6" />
-            <Skeleton className="mt-1.5 h-3.5 w-2/3" />
-          </div>
-          <div>
-            <div className="rounded-r-base border-l-2 border-primary/40 bg-surface p-3 sm:p-3.5 mb-4">
-              <Skeleton className="h-3 w-24" />
-              <Skeleton className="mt-2 h-4 w-48" />
-              <Skeleton className="mt-1.5 h-3 w-full" />
-            </div>
-            <Skeleton className="h-3 w-24" />
-            <Skeleton className="mt-2 h-3.5 w-full" />
-            <Skeleton className="mt-1.5 h-3.5 w-4/5" />
-          </div>
-        </div>
-      )}
+      {stored.isLoading && <PlanSkeleton />}
 
       {stored.error && (
         <div className="p-4 sm:p-[18px]">
@@ -101,6 +78,11 @@ export function StudyPlanCard() {
           >
             Write my study plan
           </Button>
+          {generate.isPending && (
+            <div className="w-full mt-2 pt-4 border-t border-line">
+              <PlanSkeleton />
+            </div>
+          )}
           {generate.isError && (
             <ErrorState
               title="The plan could not be written"
@@ -114,6 +96,38 @@ export function StudyPlanCard() {
 
       {plan && <PlanBody plan={plan} />}
     </section>
+  );
+}
+
+function PlanSkeleton() {
+  return (
+    <div
+      role="status"
+      aria-busy="true"
+      aria-label="Loading study plan"
+      className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-[18px]"
+    >
+      <div>
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="mt-1.5 h-4 w-4/5" />
+        <Skeleton className="mt-5 h-3 w-20" />
+        <Skeleton className="mt-2 h-3.5 w-full" />
+        <Skeleton className="mt-1.5 h-3.5 w-3/4" />
+        <Skeleton className="mt-5 h-3 w-24" />
+        <Skeleton className="mt-2 h-3.5 w-5/6" />
+        <Skeleton className="mt-1.5 h-3.5 w-2/3" />
+      </div>
+      <div>
+        <div className="rounded-r-base border-l-2 border-primary/40 bg-surface p-3 sm:p-3.5 mb-4">
+          <Skeleton className="h-3 w-24" />
+          <Skeleton className="mt-2 h-4 w-48" />
+          <Skeleton className="mt-1.5 h-3 w-full" />
+        </div>
+        <Skeleton className="h-3 w-24" />
+        <Skeleton className="mt-2 h-3.5 w-full" />
+        <Skeleton className="mt-1.5 h-3.5 w-4/5" />
+      </div>
+    </div>
   );
 }
 

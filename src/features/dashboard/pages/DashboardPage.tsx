@@ -102,11 +102,11 @@ export default function DashboardPage() {
       </section>
 
       {/* ------------------------------------------------ what to do next */}
-      {!untested && !loading && (
-        <NextAction action={nextAction.data ?? null} loading={nextAction.isLoading} />
-      )}
-
-      {untested && (
+      {loading || nextAction.isLoading ? (
+        <NextActionSkeleton />
+      ) : !untested ? (
+        <NextAction action={nextAction.data ?? null} loading={false} />
+      ) : (
         <section className="glass rounded-lg p-5 sm:p-7">
           <h2 className="text-lg font-semibold text-ink sm:text-[20px]">No results yet</h2>
           <p className="mt-1.5 max-w-prose text-sm text-ink-muted">
@@ -137,9 +137,12 @@ export default function DashboardPage() {
             {loading ? (
               <SkeletonRegion label="Loading your recent tests" className="flex flex-col gap-3 py-3">
                 {Array.from({ length: 3 }, (_, i) => (
-                  <div key={i} className="flex items-center justify-between gap-4">
-                    <Skeleton className="h-4 w-56" />
-                    <Skeleton className="h-4 w-10" />
+                  <div key={i} className="flex items-center justify-between gap-4 py-1">
+                    <Skeleton className={cn('h-4', i === 0 ? 'w-56' : i === 1 ? 'w-48' : 'w-64')} />
+                    <div className="flex items-center gap-3">
+                      <Skeleton className="h-3.5 w-16" />
+                      <Skeleton className="h-4 w-8" />
+                    </div>
                   </div>
                 ))}
               </SkeletonRegion>
@@ -235,6 +238,27 @@ function NextAction({
         >
           {`Start a ${SKILL[action.skill]?.toLowerCase() ?? action.skill} test →`}
         </Link>
+      </div>
+    </section>
+  );
+}
+
+function NextActionSkeleton() {
+  return (
+    <section
+      role="status"
+      aria-label="Loading recommendation"
+      className="glass overflow-hidden rounded-lg sm:rounded-2xl shadow-lift"
+    >
+      <div className="flex items-center justify-between gap-3 border-b border-line px-4 py-3.5 sm:px-5">
+        <Skeleton className="h-5 w-48" />
+        <Skeleton className="h-5 w-16 rounded-pill" />
+      </div>
+      <div className="flex flex-col items-start gap-3 p-4 sm:p-5 sm:py-5.5">
+        <Skeleton className="h-7 w-3/4 max-w-md sm:h-8" />
+        <Skeleton className="h-4 w-full max-w-xl" />
+        <Skeleton className="h-4 w-2/3 max-w-lg" />
+        <Skeleton className="mt-2 h-12 w-48 rounded-base" />
       </div>
     </section>
   );

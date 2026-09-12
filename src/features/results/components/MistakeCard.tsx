@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badge, Button, ErrorState, SkeletonLines, errorMessage } from '../../../design-system/index.ts';
+import { Badge, Button, ErrorState, Skeleton, SkeletonLines, errorMessage } from '../../../design-system/index.ts';
 import { ANALYSIS_SECTIONS } from '../../../lib/ai/reading-analysis.ts';
 import { LISTENING_ANALYSIS_SECTIONS } from '../../../lib/ai/listening-analysis.ts';
 import { formatDuration } from '../../../lib/utils/format.ts';
@@ -173,10 +173,26 @@ function WhyWasIWrong({ mistakeId, kind }: { mistakeId: string; kind: MistakeKin
     );
   }
 
-  // Asked, loading — show loading state on the button itself
+  // Asked, loading — show loading state on the button and a placeholder skeleton card
   if (busy && !explanation) {
     return (
-      <Button variant="primary" size="md" loading loadingLabel="Analysing…" disabled>Analysing…</Button>
+      <div className="flex flex-col gap-3 mt-2" role="status" aria-busy="true" aria-label="Analysing mistake">
+        <div>
+          <Button variant="primary" size="md" loading loadingLabel="Analysing…" disabled>Analysing…</Button>
+        </div>
+        <div className="rounded-base border border-line p-4 space-y-3.5">
+          <div className="space-y-1.5">
+            <Skeleton className="h-3 w-24" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-5/6" />
+          </div>
+          <div className="space-y-1.5 pt-2 border-t border-line/60">
+            <Skeleton className="h-3 w-32" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-4/5" />
+          </div>
+        </div>
+      </div>
     );
   }
 

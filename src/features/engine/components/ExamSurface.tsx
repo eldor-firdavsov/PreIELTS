@@ -271,7 +271,7 @@ export function ExamGate({ session }: { session: { error: unknown; refetch: () =
     );
   }
   return (
-    <div className="flex h-screen flex-col overflow-hidden bg-bg-canvas animate-pulse" role="status" aria-label="Loading test">
+    <div className="flex h-screen flex-col overflow-hidden bg-bg-canvas" role="status" aria-busy="true" aria-label="Loading test">
       {/* Top chrome bar */}
       <header className="flex h-14 shrink-0 items-center justify-between border-b border-line px-4 sm:px-6">
         <div className="flex items-center gap-3">

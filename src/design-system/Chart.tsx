@@ -1,6 +1,6 @@
 import { useId } from 'react';
 import { cn } from '../lib/utils/cn.ts';
-import { Skeleton, SkeletonRegion } from './Skeleton.tsx';
+import { SkeletonRegion } from './Skeleton.tsx';
 import { EmptyState } from './EmptyState.tsx';
 import { ErrorState } from './ErrorState.tsx';
 
@@ -49,8 +49,44 @@ export function Chart({
 
   if (loading) {
     return (
-      <SkeletonRegion label="Loading chart" className={className}>
-        <Skeleton className="h-56 w-full rounded-base" />
+      <SkeletonRegion label="Loading chart" className={cn('w-full', className)}>
+        <svg
+          viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`}
+          role="img"
+          aria-label="Loading chart"
+          className="h-auto w-full max-h-64 opacity-50"
+        >
+          {/* Horizontal gridlines */}
+          <g stroke="var(--border)" strokeWidth="1">
+            {[40, 80, 120, 160].map((y) => (
+              <line key={y} x1={PAD_LEFT - 4} y1={y} x2={VIEW_WIDTH - PAD_RIGHT} y2={y} />
+            ))}
+          </g>
+          {/* Baseline */}
+          <line
+            x1={PAD_LEFT - 4}
+            y1={PAD_TOP + (VIEW_HEIGHT - PAD_TOP - PAD_BOTTOM)}
+            x2={VIEW_WIDTH - PAD_RIGHT}
+            y2={PAD_TOP + (VIEW_HEIGHT - PAD_TOP - PAD_BOTTOM)}
+            stroke="var(--border-strong)"
+            strokeWidth="1"
+          />
+          {/* Simulated chart polyline skeleton */}
+          <polyline
+            points="50,150 140,130 230,110 320,85 410,70 490,60"
+            fill="none"
+            stroke="var(--skeleton)"
+            strokeWidth="2.5"
+            strokeDasharray="4 4"
+            className="animate-pulse"
+          />
+          {/* Pulsing nodes */}
+          {[
+            [50, 150], [140, 130], [230, 110], [320, 85], [410, 70], [490, 60]
+          ].map(([cx, cy], i) => (
+            <circle key={i} cx={cx} cy={cy} r="4" fill="var(--skeleton)" className="animate-pulse" />
+          ))}
+        </svg>
       </SkeletonRegion>
     );
   }

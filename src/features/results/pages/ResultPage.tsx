@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { Card, EmptyState, ErrorState, Skeleton, errorMessage } from '../../../design-system/index.ts';
 import { formatDate } from '../../../lib/utils/format.ts';
+import { formatTestTitle } from '../../engine/index.ts';
 import { useResult } from '../hooks/useResult.ts';
 import { ScoreSummary } from '../components/ScoreSummary.tsx';
 import { AccuracyBySection, AccuracyByType } from '../components/AccuracyTables.tsx';
@@ -59,7 +60,9 @@ export default function ResultPage() {
   return (
     <div className="flex flex-col gap-5 sm:gap-6">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">{overview.test_title}</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-[31px]">
+          {formatTestTitle(overview.test_title, null, only)}
+        </h1>
         <p className="mt-1 text-sm text-ink-muted">
           {`${skillName} result, completed ${formatDate(overview.created_at)}`}
         </p>
@@ -101,7 +104,7 @@ export default function ResultPage() {
 
 function ResultPageSkeleton() {
   return (
-    <div className="flex flex-col gap-5 sm:gap-6 animate-pulse" role="status" aria-label="Loading test results">
+    <div className="flex flex-col gap-5 sm:gap-6" role="status" aria-busy="true" aria-label="Loading test results">
       <div>
         <Skeleton className="h-8 w-64 sm:w-80" />
         <Skeleton className="mt-2 h-4 w-48" />

@@ -39,6 +39,7 @@ import type {
   NormalizedTest, NormalizedSection, NormalizedGroup, NormalizedQuestion,
   Option, Paragraph, SectionKind, Evidence, TranscriptLine, TranscriptMarker,
 } from '../src/types/content.ts';
+import { formatTestTitle } from '../src/features/engine/utils/testTitle.ts';
 
 export const RAW_DIR = resolve('content/raw');
 export const OUT_DIR = resolve('content/normalized');
@@ -514,7 +515,7 @@ export function ingestFile(path: string): { test: NormalizedTest | null; report:
 
   const test: NormalizedTest = {
     external_id,
-    title: clean(document.querySelector('title')?.textContent) || external_id,
+    title: formatTestTitle(clean(document.querySelector('title')?.textContent), external_id, report.kind),
     is_full_mock: false,
     is_published: false,
     source_provenance: {

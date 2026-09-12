@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { signAudioUrl } from '../../engine/index.ts';
-import { EmptyState, ErrorState, SkeletonLines, errorMessage } from '../../../design-system/index.ts';
+import { EmptyState, ErrorState, Skeleton, errorMessage } from '../../../design-system/index.ts';
 
 function clock(totalSeconds: number): string {
   const safe = Math.max(0, Math.floor(totalSeconds));
@@ -147,7 +147,7 @@ export function ListeningPlayer({
         )}
       </div>
 
-      {source.isLoading && <SkeletonLines lines={2} />}
+      {source.isLoading && <ListeningPlayerSkeleton />}
 
       {source.error && (
         <ErrorState
@@ -383,6 +383,48 @@ export function ListeningPlayer({
           )}
         </div>
       )}
+    </div>
+  );
+}
+
+function ListeningPlayerSkeleton() {
+  return (
+    <div
+      role="status"
+      aria-busy="true"
+      aria-label="Loading audio player"
+      className="glass rounded-2xl p-5 border border-border-subtle shadow-sm flex flex-col gap-4"
+    >
+      {/* Time and Duration display */}
+      <div className="flex items-baseline justify-between gap-3">
+        <Skeleton className="h-8 w-24" />
+        <Skeleton className="h-4 w-16" />
+      </div>
+
+      {/* Interactive Scrubbing Slider */}
+      <div className="flex flex-col gap-1 py-1">
+        <div className="relative w-full h-3 flex items-center">
+          <Skeleton className="w-full h-2 rounded-pill" />
+        </div>
+        <div className="flex justify-between text-[11px] font-mono px-0.5">
+          <Skeleton className="h-3 w-8" />
+          <Skeleton className="h-3 w-8" />
+        </div>
+      </div>
+
+      {/* Transport & Control Buttons */}
+      <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-border-subtle/50">
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-9 w-9 rounded-lg" />
+          <Skeleton className="h-11 w-24 rounded-xl" />
+          <Skeleton className="h-9 w-9 rounded-lg" />
+        </div>
+
+        <div className="flex items-center gap-2.5">
+          <Skeleton className="h-7 w-32 rounded-lg" />
+          <Skeleton className="h-7 w-8 rounded-lg hidden sm:block" />
+        </div>
+      </div>
     </div>
   );
 }

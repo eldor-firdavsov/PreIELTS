@@ -26,3 +26,4 @@ export { QuestionNav } from './components/QuestionNav.tsx';
 export { listTests, testRoute } from './services/contentService.ts';
 export type { TestSummary } from './services/contentService.ts';
 export { signAudioUrl } from './services/audioService.ts';
+export { formatTestTitle, CANONICAL_TEST_TITLES } from './utils/testTitle.ts';

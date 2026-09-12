@@ -1,9 +1,7 @@
 import { supabase } from '../../../lib/supabase/client.ts';
 import type { Json } from '../../../lib/supabase/types.generated.ts';
-import type {
-  Option, Paragraph, Question, QuestionGroup, QuestionType,
-  SectionDefinition, SectionKind, Stimulus, TestDefinition,
-} from '../types.ts';
+import type { Option, Paragraph, Question, QuestionGroup, QuestionType, SectionDefinition, SectionKind, Stimulus, TestDefinition } from '../types.ts';
+import { formatTestTitle } from '../utils/testTitle.ts';
 
 /**
  * Loads test content for the engine.
@@ -122,7 +120,7 @@ export async function loadTestDefinition(testId: string): Promise<TestDefinition
   return {
     id: test.id,
     externalId: test.external_id,
-    title: test.title,
+    title: formatTestTitle(test.title, test.external_id, definition[0]?.kind),
     isFullMock: test.is_full_mock,
     sections: definition,
   };
@@ -164,7 +162,7 @@ export async function listTests(): Promise<TestSummary[]> {
     return {
       id: row.id,
       external_id: row.external_id,
-      title: row.title,
+      title: formatTestTitle(row.title, row.external_id, KIND_ORDER.find((kind) => present.has(kind))),
       is_full_mock: row.is_full_mock,
       created_at: row.created_at,
       kinds: KIND_ORDER.filter((kind) => present.has(kind)),
